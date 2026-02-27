@@ -1,0 +1,117 @@
+/* ============================================================
+   LAYOUT — Page wrapper, containers, section spacing
+   ============================================================ */
+
+/* ── Page skeleton ─────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ── Containers ─────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--container-sm);
+}
+
+.container--md {
+  max-width: var(--container-md);
+}
+
+.container--wide {
+  max-width: var(--container-xl);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* ── Sections ───────────────────────────────────────────────── */
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.section--sm {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.section--lg {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+.section--bg {
+  background-color: var(--color-bg-subtle);
+}
+
+.section--pink {
+  background-color: var(--color-accent-light);
+}
+
+/* ── Dividers ───────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-12) 0;
+}
+
+/* ── Two-column split ───────────────────────────────────────── */
+.split {
+  display: grid;
+  gap: var(--space-10);
+}
+
+@media (min-width: 768px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+  }
+
+  .split--1-2 {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* ── Stack ──────────────────────────────────────────────────── */
+.stack > * + * {
+  margin-top: var(--space-6);
+}
+
+.stack--sm > * + * {
+  margin-top: var(--space-3);
+}
+
+.stack--lg > * + * {
+  margin-top: var(--space-10);
+}
+
+/* ── Cluster (horizontal group) ─────────────────────────────── */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}

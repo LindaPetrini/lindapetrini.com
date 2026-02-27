@@ -1,0 +1,93 @@
+/* ============================================================
+   BASE — Body, headings, links, typographic defaults
+   ============================================================ */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: var(--leading-relaxed);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--text-4xl); font-weight: var(--weight-semibold); }
+h2 { font-size: var(--text-2xl); font-weight: var(--weight-semibold); }
+h3 { font-size: var(--text-xl);  font-weight: var(--weight-medium); }
+h4 { font-size: var(--text-lg);  font-weight: var(--weight-medium); }
+
+@media (min-width: 768px) {
+  h1 { font-size: var(--text-5xl); }
+  h2 { font-size: var(--text-3xl); }
+}
+
+/* Paragraph & running text */
+p {
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+p + p {
+  margin-top: var(--space-4);
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration-color: currentColor;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: var(--space-6);
+}
+
+li {
+  margin-bottom: var(--space-2);
+}
+
+/* Emphasis */
+strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+
+em {
+  font-style: italic;
+}
+
+/* Blockquote */
+blockquote {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text-light);
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+/* Images */
+img {
+  height: auto;
+}
+
+/* Focus ring — accessible */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}

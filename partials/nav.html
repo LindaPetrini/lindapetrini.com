@@ -1,0 +1,40 @@
+<!-- CANONICAL NAV — edit here first, then sync to all 6 pages -->
+<!-- Copy the <header> block below into each HTML file, changing aria-current="page" -->
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="/index.html" class="nav__name">Linda Petrini</a>
+
+      <button
+        class="nav__hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+      </button>
+
+      <ul class="nav__links" role="list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/writing.html">Writing</a></li>
+        <li><a href="/coaching.html">Coaching</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+
+      <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Book a call</a>
+    </div>
+
+    <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation">
+      <a href="/about.html">About</a>
+      <a href="/work.html">Work</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/coaching.html">Coaching</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top: 0.5rem; width: 100%; justify-content: center;">Book a free call</a>
+    </nav>
+  </nav>
+</header>
