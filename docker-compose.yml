@@ -1,0 +1,21 @@
+services:
+  claude-website:
+    build: .
+    container_name: claude-website
+    working_dir: /workspace
+    volumes:
+      # Project files - read/write
+      - .:/workspace
+      # Host credentials staged for entrypoint to copy with correct perms
+      - /root/.claude/.credentials.json:/tmp/claude-creds/.credentials.json:ro
+      # GSD commands and config (read-only so container can't corrupt host setup)
+      - /root/.claude/commands:/home/claude/.claude/commands:ro
+      - /root/.claude/get-shit-done:/home/claude/.claude/get-shit-done:ro
+      - /root/.claude/hooks:/home/claude/.claude/hooks:ro
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - NODE_OPTIONS=--use-openssl-ca
+      - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
