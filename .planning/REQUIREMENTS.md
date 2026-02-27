@@ -113,23 +113,55 @@
 
 ## Traceability
 
-*Populated by roadmapper — pending*
+*Populated by roadmapper — 2026-02-27*
 
-| Requirement | Phase | Status |
-|-------------|-------|--------|
-| FOUND-01 through FOUND-07 | Phase 1 | Pending |
-| HOME-01 through HOME-06 | Phase 3 | Pending |
-| ABOUT-01 through ABOUT-03 | Phase 4 | Pending |
-| WORK-01 through WORK-03 | Phase 4 | Pending |
-| WRIT-01 through WRIT-03 | Phase 4 | Pending |
-| COACH-01 through COACH-05 | Phase 4 | Pending |
-| CONT-01 through CONT-03 | Phase 4 | Pending |
-| SEO-01 through SEO-06 | Phase 5 | Pending |
-| PERF-01 through PERF-05 | Phase 5 | Pending |
+| Requirement | Phase | Phase Name | Status |
+|-------------|-------|------------|--------|
+| FOUND-01 | 1 | Foundation | ○ Pending |
+| FOUND-02 | 1 | Foundation | ○ Pending |
+| FOUND-03 | 1 | Foundation | ○ Pending |
+| FOUND-04 | 1 | Foundation | ○ Pending |
+| FOUND-05 | 1 | Foundation | ○ Pending |
+| FOUND-06 | 1 | Foundation | ○ Pending |
+| FOUND-07 | 1 | Foundation | ○ Pending |
+| HOME-01 | 2 | Home Page | ○ Pending |
+| HOME-02 | 2 | Home Page | ○ Pending |
+| HOME-03 | 2 | Home Page | ○ Pending |
+| HOME-04 | 2 | Home Page | ○ Pending |
+| HOME-05 | 2 | Home Page | ○ Pending |
+| HOME-06 | 2 | Home Page | ○ Pending |
+| ABOUT-01 | 3 | Inner Pages | ○ Pending |
+| ABOUT-02 | 3 | Inner Pages | ○ Pending |
+| ABOUT-03 | 3 | Inner Pages | ○ Pending |
+| WORK-01 | 3 | Inner Pages | ○ Pending |
+| WORK-02 | 3 | Inner Pages | ○ Pending |
+| WORK-03 | 3 | Inner Pages | ○ Pending |
+| WRIT-01 | 3 | Inner Pages | ○ Pending |
+| WRIT-02 | 3 | Inner Pages | ○ Pending |
+| WRIT-03 | 3 | Inner Pages | ○ Pending |
+| COACH-01 | 3 | Inner Pages | ○ Pending |
+| COACH-02 | 3 | Inner Pages | ○ Pending |
+| COACH-03 | 3 | Inner Pages | ○ Pending |
+| COACH-04 | 3 | Inner Pages | ○ Pending |
+| COACH-05 | 3 | Inner Pages | ○ Pending |
+| CONT-01 | 3 | Inner Pages | ○ Pending |
+| CONT-02 | 3 | Inner Pages | ○ Pending |
+| CONT-03 | 3 | Inner Pages | ○ Pending |
+| SEO-01 | 4 | SEO & Analytics | ○ Pending |
+| SEO-02 | 4 | SEO & Analytics | ○ Pending |
+| SEO-03 | 4 | SEO & Analytics | ○ Pending |
+| SEO-04 | 4 | SEO & Analytics | ○ Pending |
+| SEO-05 | 4 | SEO & Analytics | ○ Pending |
+| SEO-06 | 4 | SEO & Analytics | ○ Pending |
+| PERF-01 | 5 | Performance & Polish | ○ Pending |
+| PERF-02 | 5 | Performance & Polish | ○ Pending |
+| PERF-03 | 5 | Performance & Polish | ○ Pending |
+| PERF-04 | 5 | Performance & Polish | ○ Pending |
+| PERF-05 | 5 | Performance & Polish | ○ Pending |
 
 **Coverage:**
-- v1 requirements: 37 total
-- Mapped to phases: 37
+- v1 requirements: 41 total
+- Mapped to phases: 41
 - Unmapped: 0 ✓
 
 ---
