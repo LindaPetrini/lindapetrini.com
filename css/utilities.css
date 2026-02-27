@@ -2,6 +2,22 @@
    UTILITIES — Single-purpose helper classes
    ============================================================ */
 
+/* Skip link — accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-pink-600);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+  z-index: 9999;
+}
+.skip-link:focus { top: 0; }
+
 /* Text alignment */
 .text-center { text-align: center; }
 .text-left   { text-align: left; }

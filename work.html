@@ -22,6 +22,8 @@
   <meta name="twitter:image"       content="https://lindapetrini.com/images/og.jpg">
 
   <link rel="preload" href="/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/newsreader-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <!-- Plausible Analytics — privacy-friendly, no cookie banner needed -->
   <!-- TODO: Replace lindapetrini.com with your domain if different -->
   <script defer data-domain="lindapetrini.com" src="https://plausible.io/js/script.outbound-links.js"></script>
@@ -29,6 +31,8 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- NAV -->
   <header>
@@ -64,7 +68,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- PAGE HERO -->
     <section class="page-hero">
@@ -99,8 +103,8 @@
               An analysis of potential development trajectories for advanced AI systems and their
               implications for safety and governance.
             </p>
-            <!-- TODO: find URL -->
-            <a href="#" class="pub-card__link" target="_blank" rel="noopener">Read the report</a>
+            <!-- URL needed — link hidden until confirmed -->
+            <span class="pub-card__link" style="opacity:0.4;cursor:default;" aria-hidden="true">Link coming soon</span>
           </div>
 
           <div class="pub-card">
@@ -153,8 +157,8 @@
           <div class="logo-bar__logos" style="justify-content:flex-start;gap:var(--space-10);">
 
             <div class="logo-bar__logo" style="flex-direction:column;align-items:flex-start;filter:none;opacity:1;">
-              <!-- <img src="/images/logos/anthropic.svg" alt="Anthropic" width="140" height="28"> -->
-              <span style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Anthropic</span>
+              <img src="/images/logos/anthropic.svg" alt="Anthropic" width="140" height="28" loading="lazy">
+              <span style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);display:none;">Anthropic</span>
               <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Research support</span>
             </div>
 
