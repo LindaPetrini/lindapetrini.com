@@ -10,7 +10,7 @@ Target audience: researchers, organisations, individuals interested in AI safety
 - Static HTML/CSS — no build step, no framework, no JavaScript bundler
 - CSS: custom design system with tokens, modular CSS files (main.css imports chain)
 - JS: one file (main.js) — hamburger nav, email obfuscation, hash redirects
-- Analytics: Plausible (privacy-friendly, domain: lindapetrini.com)
+- Analytics: Umami self-hosted (analytics.lindapetrini.com, privacy-friendly, no cookie banner)
 - Booking: Cal.com (https://cal.com/lindapetrini/20min)
 - Newsletter/waitlist: Beehiiv embed
 - Fonts: Inter (variable) + Newsreader (variable) — WOFF2, self-hosted in /fonts/
@@ -50,7 +50,7 @@ docker exec -it claude-website bash  # shell in container
 - All pages: canonical URLs, OG/Twitter meta, descriptive titles
 - Target: Lighthouse ≥90 Performance, ≥95 SEO/Accessibility on mobile
 - Sitemap submitted to Google Search Console after launch
-- Plausible analytics (no cookie banner needed)
+- Umami analytics self-hosted (no cookie banner needed)
 
 ## Agent Instructions
 

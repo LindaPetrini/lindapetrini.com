@@ -27,12 +27,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <!-- Plausible Analytics — privacy-friendly, no cookie banner needed -->
+  <!-- Umami Analytics — privacy-friendly, no cookie banner needed -->
+  <script defer src="https://analytics.lindapetrini.com/script.js"
+          data-website-id="YOUR-WEBSITE-UUID"></script>
 
   <link rel="stylesheet" href="/css/main.css">
-  <!-- Cloudflare Web Analytics -->
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9610ce87d97c4d87a554f33e8bcea3e1"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+
 </head>
 <body>
 
@@ -58,7 +58,7 @@
           <li><a href="/contact.html">Contact</a></li>
         </ul>
 
-        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Book a call</a>
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary nav__cta" data-umami-event="book-call">Book a call</a>
       </div>
 
       <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation">
@@ -67,7 +67,7 @@
         <a href="/writing.html">Writing</a>
         <a href="/coaching.html">Coaching</a>
         <a href="/contact.html">Contact</a>
-        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:0.5rem;width:100%;justify-content:center;">Book a free call</a>
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:0.5rem;width:100%;justify-content:center;" data-umami-event="book-call">Book a free call</a>
       </nav>
     </nav>
   </header>
@@ -163,7 +163,7 @@
                 If anything resonates, let's talk.
               </p>
               <div class="cluster">
-                <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a free intro call</a>
+                <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" data-umami-event="book-call">Book a free intro call</a>
                 <a href="/contact.html" class="btn btn--ghost">Get in touch</a>
               </div>
             </div>
@@ -191,9 +191,9 @@
           <li><a href="/contact.html">Contact</a></li>
         </ul>
         <ul class="footer__social" role="list">
-          <li><a href="https://twitter.com/petrini_linda" target="_blank" rel="noopener">Twitter</a></li>
-          <li><a href="https://linkedin.com/in/petrinilinda" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://lindapetrini.substack.com" target="_blank" rel="noopener">Substack</a></li>
+          <li><a href="https://twitter.com/petrini_linda" target="_blank" rel="noopener" data-umami-event="social-twitter">Twitter</a></li>
+          <li><a href="https://linkedin.com/in/petrinilinda" target="_blank" rel="noopener" data-umami-event="social-linkedin">LinkedIn</a></li>
+          <li><a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" data-umami-event="social-substack">Substack</a></li>
         </ul>
       </div>
       <div class="footer__bottom">

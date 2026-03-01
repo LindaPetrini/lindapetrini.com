@@ -27,12 +27,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <!-- Plausible Analytics — privacy-friendly, no cookie banner needed -->
+  <!-- Umami Analytics — privacy-friendly, no cookie banner needed -->
+  <script defer src="https://analytics.lindapetrini.com/script.js"
+          data-website-id="YOUR-WEBSITE-UUID"></script>
 
   <link rel="stylesheet" href="/css/main.css">
-  <!-- Cloudflare Web Analytics -->
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9610ce87d97c4d87a554f33e8bcea3e1"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+
 </head>
 <body>
 
@@ -58,7 +58,7 @@
           <li><a href="/contact.html">Contact</a></li>
         </ul>
 
-        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Book a call</a>
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary nav__cta" data-umami-event="book-call">Book a call</a>
       </div>
 
       <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation">
@@ -67,7 +67,7 @@
         <a href="/writing.html" aria-current="page">Writing</a>
         <a href="/coaching.html">Coaching</a>
         <a href="/contact.html">Contact</a>
-        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:0.5rem;width:100%;justify-content:center;">Book a free call</a>
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:0.5rem;width:100%;justify-content:center;" data-umami-event="book-call">Book a free call</a>
       </nav>
     </nav>
   </header>
@@ -129,7 +129,7 @@
             <p class="section-header__label">Articles</p>
             <h2 class="section-header__title" style="margin-bottom:0;">Selected pieces</h2>
           </div>
-          <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--outline">Full archive on Substack →</a>
+          <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--outline" data-umami-event="substack-subscribe">Full archive on Substack →</a>
         </div>
 
         <div class="article-grid">
@@ -137,43 +137,43 @@
           <div class="article-card">
             <h3 class="article-card__title">Grief Before the Loss</h3>
             <p class="article-card__desc">An essay on the strange anticipatory grief that arrives before things are actually gone — exploring what we mourn as AI reshapes the texture of everyday life.</p>
-            <a href="https://lindapetrini.substack.com/p/grief-before-the-loss" class="article-card__link" target="_blank" rel="noopener">Read on Substack</a>
+            <a href="https://lindapetrini.substack.com/p/grief-before-the-loss" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
           </div>
 
           <div class="article-card">
             <h3 class="article-card__title">Building My Own AI Context System</h3>
             <p class="article-card__desc">A hands-on account of designing a personal AI memory system to maintain continuity and coherence across conversations and working sessions.</p>
-            <a href="https://lindapetrini.substack.com/p/building-my-own-ai-context-system" class="article-card__link" target="_blank" rel="noopener">Read on Substack</a>
+            <a href="https://lindapetrini.substack.com/p/building-my-own-ai-context-system" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
           </div>
 
           <div class="article-card">
             <h3 class="article-card__title">On Befriending Claude</h3>
             <p class="article-card__desc">A candid reflection on what it means to spend hours each day with an AI assistant, and whether a relationship built on inference and tokens can be called friendship.</p>
-            <a href="https://lindapetrini.substack.com/p/on-befriending-claude" class="article-card__link" target="_blank" rel="noopener">Read on Substack</a>
+            <a href="https://lindapetrini.substack.com/p/on-befriending-claude" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
           </div>
 
           <div class="article-card">
             <h3 class="article-card__title">Feeling With and About AI: Emotional Checkpoints, Personal Insights</h3>
             <p class="article-card__desc">Personal checkpoints on the shifting emotions that arise from working deeply with AI — from curiosity to unease to something that starts to feel like care.</p>
-            <a href="https://lindapetrini.substack.com/p/feeling-with-and-about-ai-emotional" class="article-card__link" target="_blank" rel="noopener">Read on Substack</a>
+            <a href="https://lindapetrini.substack.com/p/feeling-with-and-about-ai-emotional" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
           </div>
 
           <div class="article-card">
             <h3 class="article-card__title">Toxic Overload: How I'm Cleaning Up My Tech, Environment, and Body</h3>
             <p class="article-card__desc">A personal reckoning with digital and physical overwhelm, and the practical steps taken to reduce toxic load across all dimensions of life — screen time included.</p>
-            <a href="https://lindapetrini.substack.com/p/toxic-overload-how-im-cleaning-up" class="article-card__link" target="_blank" rel="noopener">Read on Substack</a>
+            <a href="https://lindapetrini.substack.com/p/toxic-overload-how-im-cleaning-up" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
           </div>
 
           <div class="article-card">
             <h3 class="article-card__title">Linda's October 2025 Newsletter</h3>
             <p class="article-card__desc">A monthly dispatch covering AI research highlights, personal reflections, and resources for navigating life alongside increasingly capable machines.</p>
-            <a href="https://lindapetrini.substack.com/p/lindas-october-2025-newsletter" class="article-card__link" target="_blank" rel="noopener">Read on Substack</a>
+            <a href="https://lindapetrini.substack.com/p/lindas-october-2025-newsletter" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
           </div>
 
         </div>
 
         <div style="text-align:center;margin-top:var(--space-10);">
-          <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--outline btn--lg">All articles on Substack →</a>
+          <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--outline btn--lg" data-umami-event="substack-subscribe">All articles on Substack →</a>
         </div>
 
       </div>
@@ -197,9 +197,9 @@
           <li><a href="/contact.html">Contact</a></li>
         </ul>
         <ul class="footer__social" role="list">
-          <li><a href="https://twitter.com/petrini_linda" target="_blank" rel="noopener">Twitter</a></li>
-          <li><a href="https://linkedin.com/in/petrinilinda" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://lindapetrini.substack.com" target="_blank" rel="noopener">Substack</a></li>
+          <li><a href="https://twitter.com/petrini_linda" target="_blank" rel="noopener" data-umami-event="social-twitter">Twitter</a></li>
+          <li><a href="https://linkedin.com/in/petrinilinda" target="_blank" rel="noopener" data-umami-event="social-linkedin">LinkedIn</a></li>
+          <li><a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" data-umami-event="social-substack">Substack</a></li>
         </ul>
       </div>
       <div class="footer__bottom">
