@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peach Blossom — Refined Preview</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Colors */
+      --cream:       #FBF6F2;
+      --rose:        #D9A3A3;
+      --rose-deep:   #C07878;
+      --chocolate:   #2C1810;
+      --mauve:       #9B7F7F;
+      --blush:       #F5E8E8;
+      --blush-mid:   #EDD8D8;
+      --rose-border: #E8C8C8;
+      --sage:        #B5CDBE;
+      --sage-light:  #EBF3EE;
+
+      /* Typography */
+      --font-serif:  'Cormorant Garamond', Georgia, serif;
+      --font-sans:   'Jost', system-ui, sans-serif;
+
+      /* Spacing scale */
+      --s1:  0.25rem;
+      --s2:  0.5rem;
+      --s3:  0.75rem;
+      --s4:  1rem;
+      --s5:  1.25rem;
+      --s6:  1.5rem;
+      --s8:  2rem;
+      --s10: 2.5rem;
+      --s12: 3rem;
+      --s16: 4rem;
+      --s20: 5rem;
+      --s24: 6rem;
+      --s32: 8rem;
+
+      /* Layout */
+      --container-max: 1200px;
+      --container-md:  760px;
+      --gutter: 2rem;
+
+      /* Transitions */
+      --transition: 0.22s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--chocolate);
+      background-color: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul[role="list"] {
+      list-style: none;
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    @keyframes blob-drift {
+      0%   { transform: translate(0, 0) scale(1); }
+      33%  { transform: translate(30px, -20px) scale(1.04); }
+      66%  { transform: translate(-15px, 25px) scale(0.97); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes orbit-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes orbit-spin-reverse {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(-360deg); }
+    }
+
+    /* ============================================================
+       CONTAINER
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    /* ============================================================
+       SKIP LINK
+    ============================================================ */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--s4);
+      background: var(--chocolate);
+      color: var(--cream);
+      padding: var(--s2) var(--s4);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      z-index: 9999;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ============================================================
+       HAIRLINE RULE UTILITY
+    ============================================================ */
+    .rule {
+      border: none;
+      border-top: 1px solid var(--rose-border);
+    }
+
+    /* ============================================================
+       SECTION LABEL UTILITY
+    ============================================================ */
+    .section-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: var(--s4);
+    }
+
+    /* ============================================================
+       ANIMATED UNDERLINE LINK
+    ============================================================ */
+    .ul-link {
+      position: relative;
+      display: inline-block;
+      color: var(--chocolate);
+    }
+    .ul-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      right: 50%;
+      height: 1px;
+      background: var(--rose);
+      transition: left var(--transition), right var(--transition);
+    }
+    .ul-link:hover::after {
+      left: 0;
+      right: 0;
+    }
+
+    /* ============================================================
+       BUTTONS — square edges, outlined style
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s2);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.875rem 2rem;
+      border-radius: 0;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn--primary {
+      background: var(--rose);
+      color: var(--cream);
+      border-color: var(--rose);
+    }
+    .btn--primary:hover {
+      background: var(--rose-deep);
+      border-color: var(--rose-deep);
+      box-shadow: 0 4px 24px rgba(217, 163, 163, 0.4);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--chocolate);
+      border-color: var(--blush-mid);
+    }
+    .btn--ghost:hover {
+      background: var(--blush);
+      border-color: var(--rose);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--rose-deep);
+      border-color: var(--rose);
+    }
+    .btn--outline:hover {
+      background: var(--rose);
+      color: var(--cream);
+    }
+
+    .btn--lg {
+      padding: 1.0625rem 2.5rem;
+      font-size: 0.875rem;
+    }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 246, 242, 0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rose-border);
+      transition: box-shadow 0.3s ease;
+    }
+    .nav.scrolled {
+      box-shadow: 0 2px 24px rgba(44, 24, 16, 0.07);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      gap: var(--s8);
+      height: 68px;
+    }
+
+    .nav__name {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1.1875rem;
+      letter-spacing: 0.02em;
+      color: var(--chocolate);
+      flex-shrink: 0;
+      margin-right: auto;
+    }
+
+    .nav__links {
+      display: none;
+      list-style: none;
+      gap: var(--s8);
+      align-items: center;
+    }
+    .nav__links a {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      transition: color var(--transition);
+      position: relative;
+      display: inline-block;
+    }
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      right: 50%;
+      height: 1px;
+      background: var(--rose);
+      transition: left var(--transition), right var(--transition);
+    }
+    .nav__links a:hover {
+      color: var(--chocolate);
+    }
+    .nav__links a:hover::after {
+      left: 0; right: 0;
+    }
+
+    .nav__cta {
+      flex-shrink: 0;
+    }
+
+    /* Hamburger */
+    .nav__hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: var(--s2);
+      margin-left: auto;
+    }
+    .nav__hamburger-bar {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--chocolate);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .nav__hamburger[aria-expanded="true"] .nav__hamburger-bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .nav__hamburger[aria-expanded="true"] .nav__hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .nav__hamburger[aria-expanded="true"] .nav__hamburger-bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile nav */
+    .nav__mobile {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: var(--cream);
+      border-top: 1px solid var(--rose-border);
+      padding: var(--s4) var(--gutter) var(--s6);
+    }
+    .nav__mobile.open {
+      display: flex;
+    }
+    .nav__mobile a {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 1.0625rem;
+      letter-spacing: 0.04em;
+      color: var(--chocolate);
+      padding: var(--s3) 0;
+      border-bottom: 1px solid var(--blush-mid);
+    }
+    .nav__mobile a:last-child {
+      border-bottom: none;
+    }
+    .nav__mobile .btn {
+      margin-top: var(--s4);
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* Desktop nav */
+    @media (min-width: 768px) {
+      .nav__hamburger { display: none; }
+      .nav__links { display: flex; }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      padding-block: var(--s20) var(--s16);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Soft ambient blob — from Design 4 spirit */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 232, 232, 0.7) 0%, rgba(245, 232, 232, 0) 70%);
+      animation: blob-drift 18s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s12);
+      align-items: center;
+    }
+
+    .hero__content {
+      order: 2;
+    }
+
+    .hero__photo-col {
+      order: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.6875rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: var(--s4);
+    }
+    .hero__eyebrow-rule {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--rose);
+      margin-bottom: var(--s5);
+    }
+
+    .hero__heading {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--chocolate);
+      margin-bottom: var(--s6);
+    }
+
+    .hero__intro {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 1.1875rem;
+      line-height: 1.75;
+      color: var(--mauve);
+      max-width: 520px;
+      margin-bottom: var(--s8);
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s3);
+      margin-bottom: var(--s12);
+    }
+
+    /* Logo bar */
+    .hero__logo-bar {
+      padding-top: var(--s8);
+      border-top: 1px solid var(--rose-border);
+    }
+    .hero__logo-label {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: var(--s5);
+    }
+    .hero__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--s6) var(--s8);
+    }
+    .hero__logos img {
+      height: 20px;
+      width: auto;
+      filter: grayscale(1) opacity(0.4);
+      transition: filter var(--transition);
+    }
+    .hero__logos img:hover {
+      filter: grayscale(0.3) opacity(0.65);
+    }
+
+    /* ── Orbit rings around photo — inspired by Design 3 ── */
+    .hero__orbit-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero__orbit {
+      position: absolute;
+      inset: -28px;
+      border-radius: 50%;
+      border: 1px solid rgba(217, 163, 163, 0.35);
+      animation: orbit-spin 28s linear infinite;
+      pointer-events: none;
+    }
+    /* Dot on the orbit ring */
+    .hero__orbit::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--rose);
+      box-shadow: 0 0 10px rgba(217, 163, 163, 0.6);
+      transform: translateY(-50%);
+    }
+
+    .hero__orbit--outer {
+      inset: -52px;
+      border-color: rgba(217, 163, 163, 0.18);
+      animation: orbit-spin-reverse 42s linear infinite;
+    }
+    .hero__orbit--outer::after {
+      width: 5px;
+      height: 5px;
+      background: var(--blush-mid);
+      box-shadow: none;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    /* Hero photo frame */
+    .hero__photo-wrap {
+      position: relative;
+      max-width: 380px;
+      width: 100%;
+    }
+    .hero__photo-frame {
+      position: relative;
+      padding: var(--s3);
+      background: var(--blush);
+      border: 1px solid var(--rose-border);
+      box-shadow: 8px 12px 48px rgba(44, 24, 16, 0.1), 0 2px 8px rgba(217, 163, 163, 0.15);
+    }
+    .hero__photo-frame picture,
+    .hero__photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+    /* Decorative corner brackets */
+    .hero__photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 72px;
+      height: 72px;
+      border-top: 1px solid var(--rose);
+      border-right: 1px solid var(--rose);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .hero__photo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: -12px;
+      width: 72px;
+      height: 72px;
+      border-bottom: 1px solid var(--rose);
+      border-left: 1px solid var(--rose);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+      .hero__split {
+        grid-template-columns: 1fr auto;
+        gap: var(--s16);
+      }
+      .hero__content { order: 1; }
+      .hero__photo-col { order: 2; }
+    }
+
+    /* ============================================================
+       WAVE DIVIDERS — from Design 4 spirit, in cream/blush palette
+    ============================================================ */
+    .wave-divider {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+    }
+
+    /* ============================================================
+       SECTION WRAPPER
+    ============================================================ */
+    .section {
+      padding-block: var(--s20);
+    }
+    .section--blush {
+      background: var(--blush);
+    }
+    .section--divider {
+      border-top: 1px solid var(--rose-border);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: var(--s16);
+    }
+    .section-header__title {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(2rem, 4.5vw, 3.125rem);
+      line-height: 1.12;
+      color: var(--chocolate);
+      margin-bottom: var(--s4);
+    }
+    .section-header__desc {
+      font-size: 1.125rem;
+      color: var(--mauve);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       ROLE CARDS — no emojis, decorative accent line instead
+    ============================================================ */
+    .role-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s6);
+    }
+
+    @media (min-width: 640px) {
+      .role-cards { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 768px) {
+      .role-cards { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .role-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--blush);
+      border: 1px solid var(--rose-border);
+      padding: var(--s8) var(--s6) var(--s6);
+      text-decoration: none;
+      color: var(--chocolate);
+      transition: box-shadow var(--transition), transform var(--transition), background var(--transition);
+      position: relative;
+    }
+    .role-card:hover {
+      background: var(--cream);
+      box-shadow: 0 8px 40px rgba(44, 24, 16, 0.08);
+      transform: translateY(-3px);
+    }
+
+    /* Decorative top accent line replacing the emoji */
+    .role-card__accent {
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--rose);
+      margin-bottom: var(--s5);
+    }
+
+    .role-card__title {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1.625rem;
+      letter-spacing: 0.01em;
+      margin-bottom: var(--s3);
+      color: var(--chocolate);
+    }
+
+    .role-card__desc {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--mauve);
+      flex: 1;
+      margin-bottom: var(--s6);
+    }
+
+    .role-card__link {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose-deep);
+      margin-top: auto;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s8);
+      margin-bottom: var(--s12);
+    }
+
+    @media (min-width: 768px) {
+      .testimonials { grid-template-columns: 1fr 1fr; gap: var(--s10); }
+    }
+
+    .testimonial {
+      position: relative;
+      padding: var(--s10) var(--s6) var(--s6);
+      background: var(--cream);
+      border: 1px solid var(--rose-border);
+    }
+    .testimonial::before {
+      content: '\201C';
+      position: absolute;
+      top: -0.2rem;
+      left: var(--s4);
+      font-family: var(--font-serif);
+      font-size: 5.5rem;
+      line-height: 1;
+      color: var(--rose);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .testimonial__quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1875rem;
+      line-height: 1.72;
+      color: var(--chocolate);
+      margin-bottom: var(--s6);
+    }
+
+    .testimonial__attribution {
+      border-top: 1px solid var(--rose-border);
+      padding-top: var(--s4);
+    }
+
+    .testimonial__name {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      color: var(--chocolate);
+      margin-bottom: var(--s1);
+    }
+
+    .testimonial__role {
+      font-size: 0.875rem;
+      color: var(--mauve);
+      letter-spacing: 0.03em;
+    }
+
+    .testimonials-cta {
+      text-align: center;
+    }
+    .testimonials-cta__sub {
+      margin-top: var(--s3);
+      font-size: 0.875rem;
+      color: var(--mauve);
+    }
+
+    /* ============================================================
+       NEWSLETTER
+    ============================================================ */
+    .newsletter {
+      background: var(--blush);
+      border-top: 1px solid var(--rose-border);
+      border-bottom: 1px solid var(--rose-border);
+    }
+
+    .newsletter__inner {
+      max-width: var(--container-md);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .newsletter__heading {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--chocolate);
+      margin-bottom: var(--s4);
+    }
+
+    .newsletter__desc {
+      font-size: 1.0625rem;
+      color: var(--mauve);
+      margin-bottom: var(--s8);
+      line-height: 1.7;
+    }
+
+    .newsletter__sub {
+      margin-top: var(--s4);
+      font-size: 0.875rem;
+      color: var(--mauve);
+    }
+    .newsletter__sub a {
+      color: var(--chocolate);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .newsletter__sub a:hover {
+      color: var(--rose-deep);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      border-top: 1px solid var(--rose-border);
+      padding-block: var(--s12) var(--s8);
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s8);
+      margin-bottom: var(--s10);
+    }
+
+    @media (min-width: 640px) {
+      .footer__inner {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .footer__inner {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    .footer__brand {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1.3125rem;
+      color: var(--chocolate);
+      display: block;
+      margin-bottom: var(--s2);
+    }
+
+    .footer__tagline {
+      font-size: 0.875rem;
+      color: var(--mauve);
+      letter-spacing: 0.04em;
+    }
+
+    .footer__links,
+    .footer__social {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+    }
+
+    .footer__links a,
+    .footer__social a {
+      font-size: 0.9375rem;
+      color: var(--mauve);
+      transition: color var(--transition);
+      position: relative;
+      display: inline-block;
+    }
+    .footer__links a::after,
+    .footer__social a::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      right: 50%;
+      height: 1px;
+      background: var(--rose);
+      transition: left var(--transition), right var(--transition);
+    }
+    .footer__links a:hover,
+    .footer__social a:hover {
+      color: var(--chocolate);
+    }
+    .footer__links a:hover::after,
+    .footer__social a:hover::after {
+      left: 0;
+      right: 0;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid var(--rose-border);
+      padding-top: var(--s5);
+    }
+
+    .footer__copy {
+      font-size: 0.875rem;
+      color: var(--mauve);
+    }
+
+    /* ============================================================
+       RESPONSIVE REFINEMENTS
+    ============================================================ */
+    @media (max-width: 639px) {
+      :root { --gutter: 1.25rem; }
+      .hero {
+        padding-block: var(--s16) var(--s12);
+      }
+      .hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero__orbit, .hero__orbit--outer {
+        display: none; /* hide rings on small mobile */
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 767px) {
+      .hero__photo-wrap { max-width: 340px; }
+    }
+
+    /* ============================================================
+       DESIGN PREVIEW LABEL
+    ============================================================ */
+    .preview-banner {
+      background: var(--chocolate);
+      color: var(--cream);
+      text-align: center;
+      padding: var(--s2) var(--gutter);
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-banner">Design Preview &mdash; Peach Blossom &middot; Refined</div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="/index.html" class="nav__name" aria-label="Linda Petrini — home">Linda Petrini</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/work.html">Work</a></li>
+          <li><a href="/writing.html">Writing</a></li>
+          <li><a href="/coaching.html">Coaching</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary nav__cta" style="display:none;">Book a call</a>
+
+        <button
+          class="nav__hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          id="hamburger-btn"
+        >
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+        </button>
+      </div>
+
+      <div id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation">
+        <a href="/about.html">About</a>
+        <a href="/work.html">Work</a>
+        <a href="/writing.html">Writing</a>
+        <a href="/coaching.html">Coaching</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__split">
+
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              <span class="hero__eyebrow-rule"></span>
+              Researcher &middot; Writer &middot; Coach
+            </p>
+            <h1 class="hero__heading">A bridge between<br>AI and being human.</h1>
+            <p class="hero__intro">
+              I'm Linda Petrini. I hold both the technical and the human side of AI &mdash; I research it,
+              write about it, and help people process what it actually feels like to live through
+              this acceleration.
+            </p>
+            <div class="hero__actions">
+              <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Book a free intro call</a>
+              <a href="/work.html" class="btn btn--ghost btn--lg">See my work</a>
+            </div>
+
+            <div class="hero__logo-bar">
+              <p class="hero__logo-label">Trusted by</p>
+              <div class="hero__logos">
+                <img src="/images/logos/palisade.svg" alt="Palisade Research" loading="lazy">
+                <img src="/images/logos/foresight-institute.svg" alt="Foresight Institute" loading="lazy">
+                <img src="/images/logos/anthropic.svg" alt="Anthropic" loading="lazy">
+                <img src="/images/logos/bezos-earth-fund.svg" alt="Bezos Earth Fund" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__photo-col">
+            <!-- Orbit rings from Design 3, softened to cream/rose palette -->
+            <div class="hero__orbit-wrap">
+              <div class="hero__orbit" aria-hidden="true"></div>
+              <div class="hero__orbit hero__orbit--outer" aria-hidden="true"></div>
+              <div class="hero__photo-wrap">
+                <div class="hero__photo-frame">
+                  <picture>
+                    <source srcset="/images/linda-petrini.webp" type="image/webp">
+                    <img
+                      src="/images/linda-petrini.jpg"
+                      alt="Linda Petrini — AI researcher, writer, and coach"
+                      width="420"
+                      height="525"
+                      fetchpriority="high"
+                    >
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 48 C240 16, 480 40, 720 24 C960 8, 1200 36, 1440 20 L1440 0 L0 0 Z" fill="#FBF6F2"/>
+        <path d="M0 48 C240 16, 480 40, 720 24 C960 8, 1200 36, 1440 20" stroke="#E8C8C8" stroke-width="0.75" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- WHAT I DO -->
+    <section class="section section--blush" style="padding-top: var(--s16);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I do</span>
+          <h2 class="section-header__title">Research. Write. Coach.</h2>
+          <p class="section-header__desc">Three ways to work with me &mdash; or just explore what I&rsquo;m thinking about.</p>
+        </div>
+
+        <div class="role-cards">
+
+          <a href="/work.html" class="role-card">
+            <span class="role-card__accent" aria-hidden="true"></span>
+            <h3 class="role-card__title">Research</h3>
+            <p class="role-card__desc">
+              Technical reports and analysis at the intersection of AI and policy &mdash;
+              published with Anthropic, Palisade Research, the Bezos Earth Fund, and Foresight Institute.
+            </p>
+            <span class="role-card__link">See my work &rarr;</span>
+          </a>
+
+          <a href="/writing.html" class="role-card">
+            <span class="role-card__accent" aria-hidden="true"></span>
+            <h3 class="role-card__title">Writing</h3>
+            <p class="role-card__desc">
+              Essays on AI, technology, and what it means to be human in an age of increasingly
+              capable machines. Published on Substack &mdash; subscribe for new pieces.
+            </p>
+            <span class="role-card__link">Read my writing &rarr;</span>
+          </a>
+
+          <a href="/coaching.html" class="role-card">
+            <span class="role-card__accent" aria-hidden="true"></span>
+            <h3 class="role-card__title">Coaching</h3>
+            <p class="role-card__desc">
+              1:1 sessions to help you understand AI &mdash; technically and emotionally &mdash; without getting
+              lost in the hype. Plus an upcoming course on digital sovereignty.
+            </p>
+            <span class="role-card__link">Explore coaching &rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave divider (flipped) -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 0 C240 32, 480 8, 720 24 C960 40, 1200 12, 1440 28 L1440 48 L0 48 Z" fill="#FBF6F2"/>
+        <path d="M0 0 C240 32, 480 8, 720 24 C960 40, 1200 12, 1440 28" stroke="#E8C8C8" stroke-width="0.75" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" style="padding-top: var(--s16);" aria-labelledby="testimonials-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">What people say</span>
+          <h2 class="section-header__title" id="testimonials-heading">From researchers, clients &amp; students</h2>
+        </div>
+
+        <div class="testimonials">
+
+          <div class="testimonial">
+            <blockquote class="testimonial__quote">
+              In the 10 years I have been involved in hiring contractors for various technical writing
+              at Foresight, Linda has been the best writer I&rsquo;ve worked with, both in terms of the quality
+              of result she delivers and in terms of working style. Even if the topic is technically complex
+              and outside her domain knowledge, she communicates concepts correctly, effectively and with an
+              interesting lens. She hits deadlines, is kind, patient, reliable and a great communicator.
+              In a self-directed manner, she brings structure to projects whose scope is rather unclear &mdash;
+              frequently exceeding expectations.
+            </blockquote>
+            <div class="testimonial__attribution">
+              <p class="testimonial__name">Allison Duettmann</p>
+              <p class="testimonial__role">President, Foresight Institute</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <blockquote class="testimonial__quote">
+              Linda is one of my favourite coaches to work with. Her presence is steady &mdash; both
+              authentically caring and sensitive to what feels tender, and simultaneously, relaxedly
+              fearless and direct. This helps me drop into the deeper, underlying feelings that are harder
+              to access and work on. I feel safe and seen with her, while exploring complex and
+              multifaceted issues and experiences.
+            </blockquote>
+            <div class="testimonial__attribution">
+              <p class="testimonial__name">Lalita</p>
+              <p class="testimonial__role">Coaching client</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonials-cta">
+          <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Book a free intro call</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter">
+      <div class="container">
+        <div class="newsletter__inner">
+          <span class="section-label">Stay in the loop</span>
+          <h2 class="newsletter__heading">Essays on AI, technology<br>&amp; what it means to be human</h2>
+          <p class="newsletter__desc">New pieces go out on Substack. Subscribe to receive them in your inbox.</p>
+          <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--primary">Subscribe on Substack</a>
+          <p class="newsletter__sub">Or <a href="/writing.html">browse the archive</a> first.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div>
+          <a href="/index.html" class="footer__brand">Linda Petrini</a>
+          <p class="footer__tagline">Researcher &middot; Writer &middot; Coach</p>
+        </div>
+
+        <ul class="footer__links" role="list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/work.html">Work</a></li>
+          <li><a href="/writing.html">Writing</a></li>
+          <li><a href="/coaching.html">Coaching</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <ul class="footer__social" role="list">
+          <li><a href="https://twitter.com/petrini_linda" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://linkedin.com/in/petrinilinda" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://lindapetrini.substack.com" target="_blank" rel="noopener">Substack</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Linda Petrini. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav shadow on scroll
+    (function () {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 12);
+      }, { passive: true });
+    })();
+
+    // Show desktop CTA in nav when viewport >= 768px
+    (function () {
+      var cta = document.querySelector('.nav__cta');
+      if (!cta) return;
+      var mq = window.matchMedia('(min-width: 768px)');
+      var update = function (e) { cta.style.display = e.matches ? 'inline-flex' : 'none'; };
+      mq.addEventListener('change', update);
+      update(mq);
+    })();
+
+    // Hamburger menu toggle
+    (function () {
+      var btn = document.getElementById('hamburger-btn');
+      var mobileNav = document.getElementById('mobile-nav');
+      if (!btn || !mobileNav) return;
+      btn.addEventListener('click', function () {
+        var isOpen = mobileNav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      document.addEventListener('click', function (e) {
+        if (!btn.contains(e.target) && !mobileNav.contains(e.target)) {
+          mobileNav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          mobileNav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

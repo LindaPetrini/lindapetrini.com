@@ -4,30 +4,33 @@
 
 body {
   font-family: var(--font-sans);
+  font-weight: 300;
   font-size: var(--text-base);
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: var(--leading-relaxed);
 }
 
-/* Headings */
+/* Headings — Cormorant Garamond, light weight */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 300;
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-text);
 }
 
-h1 { font-size: var(--text-4xl); font-weight: var(--weight-semibold); }
-h2 { font-size: var(--text-2xl); font-weight: var(--weight-semibold); }
-h3 { font-size: var(--text-xl);  font-weight: var(--weight-medium); }
-h4 { font-size: var(--text-lg);  font-weight: var(--weight-medium); }
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl);  }
+h4 { font-size: var(--text-lg);  }
 
 @media (min-width: 768px) {
   h1 { font-size: var(--text-5xl); }
   h2 { font-size: var(--text-3xl); }
 }
 
-/* Paragraph & running text */
+/* Paragraph */
 p {
   color: var(--color-text-light);
   line-height: var(--leading-relaxed);
@@ -40,14 +43,11 @@ p + p {
 /* Links */
 a {
   color: var(--color-accent);
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--color-accent-hover);
-  text-decoration-color: currentColor;
 }
 
 /* Lists */
@@ -61,7 +61,7 @@ li {
 
 /* Emphasis */
 strong {
-  font-weight: var(--weight-semibold);
+  font-weight: 500;
   color: var(--color-text);
 }
 
@@ -74,8 +74,9 @@ blockquote {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-style: italic;
+  font-weight: 300;
   color: var(--color-text-light);
-  border-left: 3px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
   padding-left: var(--space-6);
   margin: var(--space-8) 0;
 }
@@ -85,9 +86,8 @@ img {
   height: auto;
 }
 
-/* Focus ring — accessible */
+/* Focus ring */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 1px solid var(--color-accent);
   outline-offset: 3px;
-  border-radius: var(--radius-sm);
 }

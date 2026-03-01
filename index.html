@@ -23,9 +23,11 @@
   <meta name="twitter:description" content="AI researcher, technical writer, and coach helping people understand AI from the inside out.">
   <meta name="twitter:image"       content="https://lindapetrini.com/images/og.jpg">
 
-  <!-- Fonts: preload Inter for fastest first render -->
-  <link rel="preload" href="/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/newsreader-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
   <!-- Plausible Analytics — privacy-friendly, no cookie banner needed -->
@@ -65,7 +67,7 @@
 
   <!-- NAV -->
   <header>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
       <div class="container nav__inner">
         <a href="/index.html" class="nav__name" aria-current="page">Linda Petrini</a>
 
@@ -97,7 +99,7 @@
         <a href="/writing.html">Writing</a>
         <a href="/coaching.html">Coaching</a>
         <a href="/contact.html">Contact</a>
-        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:0.5rem;width:100%;justify-content:center;">Book a free call</a>
+        <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
       </nav>
     </nav>
   </header>
@@ -110,10 +112,13 @@
         <div class="split" style="align-items:center;">
 
           <div>
-            <p class="hero__eyebrow">Researcher · Writer · Coach</p>
+            <p class="hero__eyebrow">
+              <span class="hero__eyebrow-rule"></span>
+              Researcher &middot; Writer &middot; Coach
+            </p>
             <h1 class="hero__heading">A bridge between<br>AI and being human.</h1>
             <p class="hero__intro">
-              I'm Linda Petrini. I hold both the technical and the human side of AI — I research it,
+              I&rsquo;m Linda Petrini. I hold both the technical and the human side of AI &mdash; I research it,
               write about it, and help people process what it actually feels like to live through
               this acceleration.
             </p>
@@ -142,20 +147,24 @@
           </div>
 
           <div>
-            <!-- Replace with Linda's actual photo -->
-            <!-- Image: /images/linda-petrini.jpg — recommended 840×1050px, WebP under 150KB -->
-            <div class="hero__photo-wrap">
-              <picture>
-                <source srcset="/images/linda-petrini.webp" type="image/webp">
-                <img
-                  src="/images/linda-petrini.jpg"
-                  alt="Linda Petrini — AI researcher, writer, and coach"
-                  width="420"
-                  height="525"
-                  fetchpriority="high"
-                  style="background:var(--color-pink-100);"
-                >
-              </picture>
+            <!-- Orbit rings from the design, wrapped around the photo frame -->
+            <div class="hero__orbit-wrap">
+              <div class="hero__orbit" aria-hidden="true"></div>
+              <div class="hero__orbit hero__orbit--outer" aria-hidden="true"></div>
+              <div class="hero__photo-wrap">
+                <div class="hero__photo-frame">
+                  <picture>
+                    <source srcset="/images/linda-petrini.webp" type="image/webp">
+                    <img
+                      src="/images/linda-petrini.jpg"
+                      alt="Linda Petrini — AI researcher, writer, and coach"
+                      width="420"
+                      height="525"
+                      fetchpriority="high"
+                    >
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -163,57 +172,73 @@
       </div>
     </section>
 
+    <!-- Wave divider -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 48 C240 16, 480 40, 720 24 C960 8, 1200 36, 1440 20 L1440 0 L0 0 Z" fill="#FBF6F2"/>
+        <path d="M0 48 C240 16, 480 40, 720 24 C960 8, 1200 36, 1440 20" stroke="#E8C8C8" stroke-width="0.75" fill="none"/>
+      </svg>
+    </div>
+
     <!-- WHAT I DO (role cards) -->
-    <section class="section">
+    <section class="section section--bg" style="padding-top:var(--space-16);">
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-header" style="text-align:center;max-width:640px;margin-inline:auto;">
           <p class="section-header__label">What I do</p>
           <h2 class="section-header__title">Research. Write. Coach.</h2>
-          <p class="section-header__desc">Three ways to work with me — or just explore what I'm thinking about.</p>
+          <p class="section-header__desc">Three ways to work with me &mdash; or just explore what I&rsquo;m thinking about.</p>
         </div>
 
         <div class="role-cards">
 
           <a href="/work.html" class="role-card">
-            <div class="role-card__icon" aria-hidden="true">&#x1F52C;</div>
+            <span class="role-card__accent" aria-hidden="true"></span>
             <h3 class="role-card__title">Research</h3>
             <p class="role-card__desc">
-              Technical reports and analysis at the intersection of AI and policy —
+              Technical reports and analysis at the intersection of AI and policy &mdash;
               published with Anthropic, Palisade Research, the Bezos Earth Fund, and Foresight Institute.
             </p>
-            <span class="role-card__link">See my work →</span>
+            <span class="role-card__link">See my work &rarr;</span>
           </a>
 
           <a href="/writing.html" class="role-card">
-            <div class="role-card__icon" aria-hidden="true">&#x270D;</div>
+            <span class="role-card__accent" aria-hidden="true"></span>
             <h3 class="role-card__title">Writing</h3>
             <p class="role-card__desc">
               Essays on AI, technology, and what it means to be human in an age of increasingly
-              capable machines. Published on Substack — subscribe for new pieces.
+              capable machines. Published on Substack &mdash; subscribe for new pieces.
             </p>
-            <span class="role-card__link">Read my writing →</span>
+            <span class="role-card__link">Read my writing &rarr;</span>
           </a>
 
           <a href="/coaching.html" class="role-card">
-            <div class="role-card__icon" aria-hidden="true">&#x1F4AC;</div>
+            <span class="role-card__accent" aria-hidden="true"></span>
             <h3 class="role-card__title">Coaching</h3>
             <p class="role-card__desc">
-              1:1 sessions to help you understand AI — technically and emotionally — without getting
+              1:1 sessions to help you understand AI &mdash; technically and emotionally &mdash; without getting
               lost in the hype. Plus an upcoming course on digital sovereignty.
             </p>
-            <span class="role-card__link">Explore coaching →</span>
+            <span class="role-card__link">Explore coaching &rarr;</span>
           </a>
 
         </div>
       </div>
     </section>
 
+    <!-- Wave divider (flipped) -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 0 C240 32, 480 8, 720 24 C960 40, 1200 12, 1440 28 L1440 48 L0 48 Z" fill="#FBF6F2"/>
+        <path d="M0 0 C240 32, 480 8, 720 24 C960 40, 1200 12, 1440 28" stroke="#E8C8C8" stroke-width="0.75" fill="none"/>
+      </svg>
+    </div>
+
     <!-- TESTIMONIALS -->
-    <section class="section section--bg" aria-labelledby="testimonials-heading">
+    <section class="section" style="padding-top:var(--space-16);" aria-labelledby="testimonials-heading">
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-header" style="text-align:center;max-width:640px;margin-inline:auto;">
           <p class="section-header__label">What people say</p>
           <h2 class="section-header__title" id="testimonials-heading">From researchers, clients &amp; students</h2>
         </div>
@@ -223,11 +248,11 @@
           <div class="testimonial">
             <blockquote class="testimonial__quote">
               In the 10 years I have been involved in hiring contractors for various technical writing
-              at Foresight, Linda has been the best writer I've worked with, both in terms of the quality
+              at Foresight, Linda has been the best writer I&rsquo;ve worked with, both in terms of the quality
               of result she delivers and in terms of working style. Even if the topic is technically complex
               and outside her domain knowledge, she communicates concepts correctly, effectively and with an
               interesting lens. She hits deadlines, is kind, patient, reliable and a great communicator.
-              In a self-directed manner, she brings structure to projects whose scope is rather unclear —
+              In a self-directed manner, she brings structure to projects whose scope is rather unclear &mdash;
               frequently exceeding expectations.
             </blockquote>
             <div class="testimonial__attribution">
@@ -238,7 +263,7 @@
 
           <div class="testimonial">
             <blockquote class="testimonial__quote">
-              Linda is one of my favourite coaches to work with. Her presence is steady — both
+              Linda is one of my favourite coaches to work with. Her presence is steady &mdash; both
               authentically caring and sensitive to what feels tender, and simultaneously, relaxedly
               fearless and direct. This helps me drop into the deeper, underlying feelings that are harder
               to access and work on. I feel safe and seen with her, while exploring complex and
@@ -254,7 +279,6 @@
 
         <div style="text-align:center;margin-top:var(--space-10);">
           <a href="https://cal.com/lindapetrini/20min" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Book a free intro call</a>
-          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);">Free 20-min call &middot; No pressure, no pitch</p>
         </div>
 
       </div>
@@ -264,12 +288,12 @@
     <section class="section section--pink">
       <div class="container" style="max-width:var(--container-md);text-align:center;">
         <p class="section-header__label">Stay in the loop</p>
-        <h2 style="font-size:var(--text-2xl);margin-bottom:var(--space-4);">Essays on AI, technology &amp; what it means to be human</h2>
-        <p style="color:var(--color-text-light);margin-bottom:var(--space-6);">
+        <h2 style="font-family:var(--font-serif);font-weight:300;font-size:clamp(1.75rem,3.5vw,2.5rem);line-height:1.2;color:var(--color-text);margin-bottom:var(--space-4);">Essays on AI, technology &amp; what it means to be human</h2>
+        <p style="color:var(--color-text-light);margin-bottom:var(--space-6);font-size:var(--text-lg);">
           New pieces go out on Substack. Subscribe to receive them in your inbox.
         </p>
         <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--primary">Subscribe on Substack</a>
-        <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);">Or <a href="/writing.html">browse the archive</a> first.</p>
+        <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);">Or <a href="/writing.html" style="color:var(--color-text);text-decoration:underline;text-underline-offset:3px;">browse the archive</a> first.</p>
       </div>
     </section>
 
@@ -281,7 +305,7 @@
       <div class="footer__inner">
         <div>
           <a href="/index.html" class="footer__brand">Linda Petrini</a>
-          <p class="footer__tagline">Researcher · Writer · Coach</p>
+          <p class="footer__tagline">Researcher &middot; Writer &middot; Coach</p>
         </div>
 
         <ul class="footer__links" role="list">
@@ -306,5 +330,15 @@
   </footer>
 
   <script src="/js/main.js" defer></script>
+  <script>
+    // Sticky nav shadow on scroll
+    (function () {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 12);
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
