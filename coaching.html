@@ -87,8 +87,31 @@
       </div>
     </section>
 
+    <!-- OFFERING NAVIGATOR -->
+    <section style="background:var(--color-bg);border-bottom:1px solid var(--color-border-muted);padding:var(--space-8) 0;">
+      <div class="container" style="max-width:var(--container-md);">
+        <div class="split" style="gap:var(--space-5);">
+
+          <a href="#sessions" style="display:block;padding:var(--space-6);border:1px solid var(--color-border-muted);text-decoration:none;transition:border-color var(--transition-base),box-shadow var(--transition-base);" onmouseover="this.style.borderColor='var(--color-accent)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.borderColor='var(--color-border-muted)';this.style.boxShadow='none'">
+            <p style="font-family:var(--font-sans);font-size:0.6875rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-3);">Available now</p>
+            <p style="font-family:var(--font-serif);font-size:var(--text-2xl);font-weight:400;color:var(--color-text);margin-bottom:var(--space-3);">1:1 Sessions</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text-light);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);">Working conversations on AI &mdash; technical and human. You bring the questions, I answer them directly.</p>
+            <span style="font-family:var(--font-sans);font-size:0.75rem;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--color-accent-hover);">Book a call &rarr;</span>
+          </a>
+
+          <a href="#course" style="display:block;padding:var(--space-6);border:1px solid var(--color-accent);text-decoration:none;transition:border-color var(--transition-base),box-shadow var(--transition-base);" onmouseover="this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.boxShadow='none'">
+            <span class="badge" style="margin-bottom:var(--space-3);">Waitlist open</span>
+            <p style="font-family:var(--font-serif);font-size:var(--text-2xl);font-weight:400;color:var(--color-text);margin-bottom:var(--space-3);margin-top:var(--space-3);">Digital Sovereignty</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text-light);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);">Self-paced course on understanding AI well enough to make real choices about it &mdash; not just cope with it.</p>
+            <span style="font-family:var(--font-sans);font-size:0.75rem;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--color-accent-hover);">See the course &rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
     <!-- 1:1 SESSIONS -->
-    <section class="section">
+    <section class="section" id="sessions">
       <div class="container" style="max-width:var(--container-md);">
 
         <h2>1:1 Sessions</h2>
@@ -143,29 +166,6 @@
           <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);">
             Trusted by teams at Anthropic, Palisade &amp; Foresight Institute
           </p>
-        </div>
-
-        <!-- Cal.com inline embed -->
-        <div class="embed-wrap embed-wrap--cal" style="margin-top:var(--space-10);" id="cal-embed">
-          <script type="text/javascript">
-            (function (C, A, L) {
-              let p = function (a, ar) { a.q.push(ar); };
-              let d = C.document;
-              C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, [L, namespace, ar[2]]); } else p(cal, ar); return; } p(cal, ar); };
-            })(window, "https://app.cal.com/embed/embed.js", "init");
-            Cal("init", {origin:"https://cal.com"});
-            Cal("inline", {
-              elementOrSelector: "#cal-embed",
-              calLink: "lindapetrini/20min",
-              layout: "month_view"
-            });
-            Cal("ui", {
-              theme: "light",
-              styles: { branding: { brandColor: "#e0507e" } },
-              hideEventTypeDetails: false,
-              layout: "month_view"
-            });
-          </script>
         </div>
 
       </div>
