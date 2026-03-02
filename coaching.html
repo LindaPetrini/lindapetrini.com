@@ -87,134 +87,137 @@
       </div>
     </section>
 
-    <!-- 1:1 + COURSE SPLIT -->
+    <!-- 1:1 SESSIONS -->
     <section class="section">
-      <div class="container container--wide">
-        <div class="split">
+      <div class="container" style="max-width:var(--container-md);">
 
-          <!-- LEFT: 1:1 Sessions -->
-          <div>
-            <h2>1:1 Sessions</h2>
-            <p style="margin-top:var(--space-4);">
-              These are working conversations, not tutorials and not therapy. You bring the questions &mdash;
-              how does this technology actually work, what is it doing to my field, what should I trust and
-              what should I push back on &mdash; and I answer them directly, drawing on seven years of ML
-              research and a genuine interest in what you&rsquo;re actually dealing with.
-            </p>
+        <h2>1:1 Sessions</h2>
+        <p style="margin-top:var(--space-4);">
+          These are working conversations, not tutorials and not therapy. You bring the questions &mdash;
+          how does this technology actually work, what is it doing to my field, what should I trust and
+          what should I push back on &mdash; and I answer them directly, drawing on seven years of ML
+          research and a genuine interest in what you&rsquo;re actually dealing with.
+        </p>
 
-            <h3 style="margin-top:var(--space-8);">What we cover</h3>
-            <ul class="feature-list" style="margin-top:var(--space-4);">
-              <li><strong>How AI actually works</strong> &mdash; transformers, training, RLHF, context windows. Explained with enough precision to build a real mental model, not just a metaphor that breaks when you push on it.</li>
-              <li><strong>What AI can and cannot do</strong> &mdash; the boundary between genuine capability and impressive-seeming pattern-matching is where most of the confusion lives. Getting this right changes how you use these tools.</li>
-              <li><strong>Your emotional response to all of it</strong> &mdash; the anxiety, the attachment, the grief, the distrust, the excitement you&rsquo;re not sure you&rsquo;re allowed to feel. These responses are not noise. They are information about your values.</li>
-              <li><strong>Privacy and data sovereignty</strong> &mdash; what happens to what you share with AI systems, what the business model implies, and what you can practically do about it.</li>
-              <li><strong>Your specific situation</strong> &mdash; how AI is affecting your field, your practice, your sense of expertise, or your daily work. This is where the session gets specific to you.</li>
-            </ul>
+        <h3 style="margin-top:var(--space-10);">What we cover</h3>
+        <ul class="feature-list" style="margin-top:var(--space-4);">
+          <li><strong>How AI actually works</strong> &mdash; transformers, training, RLHF, context windows. Explained with enough precision to build a real mental model, not just a metaphor that breaks when you push on it.</li>
+          <li><strong>What AI can and cannot do</strong> &mdash; the boundary between genuine capability and impressive-seeming pattern-matching is where most of the confusion lives. Getting this right changes how you use these tools.</li>
+          <li><strong>Your emotional response to all of it</strong> &mdash; the anxiety, the attachment, the grief, the distrust, the excitement you&rsquo;re not sure you&rsquo;re allowed to feel. These responses are not noise. They are information about your values.</li>
+          <li><strong>Privacy and data sovereignty</strong> &mdash; what happens to what you share with AI systems, what the business model implies, and what you can practically do about it.</li>
+          <li><strong>Your specific situation</strong> &mdash; how AI is affecting your field, your practice, your sense of expertise, or your daily work. This is where the session gets specific to you.</li>
+        </ul>
 
-            <h3 style="margin-top:var(--space-8);">Who this is for</h3>
-            <p>
-              Coaches and therapists who want to think carefully about AI in their practice. Writers
-              and academics who feel something is at stake in how they engage with these tools.
-              Professionals whose fields are shifting and who want a real picture rather than a calming
-              one. Parents trying to explain something they don&rsquo;t fully understand themselves.
-              Anyone who has been burned by hype and wants a more honest conversation. No technical
-              background required &mdash; just a willingness to think out loud.
-            </p>
+        <h3 style="margin-top:var(--space-10);">Who this is for</h3>
+        <p style="margin-top:var(--space-4);">
+          Coaches and therapists who want to think carefully about AI in their practice. Writers
+          and academics who feel something is at stake in how they engage with these tools.
+          Professionals whose fields are shifting and who want a real picture rather than a calming
+          one. Parents trying to explain something they don&rsquo;t fully understand themselves.
+          Anyone who has been burned by hype and wants a more honest conversation. No technical
+          background required &mdash; just a willingness to think out loud.
+        </p>
 
-            <!-- Testimonial near booking CTA -->
-            <div class="testimonial" style="margin-top:var(--space-8);">
-              <blockquote class="testimonial__quote">
-                Linda is one of my favourite coaches to work with. Her presence is steady — both
-                authentically caring and sensitive to what feels tender, and simultaneously, relaxedly
-                fearless and direct. This helps me drop into the deeper, underlying feelings that are harder
-                to access and work on. I feel safe and seen with her.
-              </blockquote>
-              <div class="testimonial__attribution">
-                <p class="testimonial__name">Lalita</p>
-                <p class="testimonial__role">Coaching client</p>
-              </div>
-            </div>
-
-            <div style="margin-top:var(--space-8);">
-              <a
-                href="https://cal.com/lindapetrini/20min"
-                target="_blank"
-                rel="noopener"
-                class="btn btn--primary btn--lg"
-                data-umami-event="book-call"
-              >Book a free intro call</a>
-              <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);">
-                Trusted by teams at Anthropic, Palisade &amp; Foresight Institute
-              </p>
-            </div>
-
-            <!-- Cal.com inline embed (booking without leaving the page) -->
-            <!-- Container needs explicit min-height so the embed doesn't collapse -->
-            <div class="embed-wrap embed-wrap--cal" style="margin-top:var(--space-10);" id="cal-embed">
-              <!-- Cal.com inline embed script -->
-              <!-- Instructions: replace YOUR_CALCOM_USERNAME with lindapetrini -->
-              <script type="text/javascript">
-                (function (C, A, L) {
-                  let p = function (a, ar) { a.q.push(ar); };
-                  let d = C.document;
-                  C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, [L, namespace, ar[2]]); } else p(cal, ar); return; } p(cal, ar); };
-                })(window, "https://app.cal.com/embed/embed.js", "init");
-                Cal("init", {origin:"https://cal.com"});
-                Cal("inline", {
-                  elementOrSelector: "#cal-embed",
-                  calLink: "lindapetrini/20min",
-                  layout: "month_view"
-                });
-                Cal("ui", {
-                  theme: "light",
-                  styles: { branding: { brandColor: "#e0507e" } },
-                  hideEventTypeDetails: false,
-                  layout: "month_view"
-                });
-              </script>
-            </div>
-
+        <!-- Testimonial -->
+        <div class="testimonial" style="margin-top:var(--space-10);">
+          <blockquote class="testimonial__quote">
+            Linda is one of my favourite coaches to work with. Her presence is steady &mdash; both
+            authentically caring and sensitive to what feels tender, and simultaneously, relaxedly
+            fearless and direct. This helps me drop into the deeper, underlying feelings that are harder
+            to access and work on. I feel safe and seen with her.
+          </blockquote>
+          <div class="testimonial__attribution">
+            <p class="testimonial__name">Lalita</p>
+            <p class="testimonial__role">Coaching client</p>
           </div>
-
-          <!-- RIGHT: Digital Sovereignty Course -->
-          <div id="course">
-            <span class="badge" style="margin-bottom:var(--space-4);">Waitlist open</span>
-            <h2>Digital Sovereignty in the Age of AI</h2>
-            <p style="margin-top:var(--space-4);">
-              This is the course I wish had existed when I was burning out. It&rsquo;s for people who want
-              to understand AI well enough to make real choices about it &mdash; not just cope with it.
-              Self-paced, no technical background required, built from the inside by someone who uses
-              these systems every day and has spent years studying them professionally.
-            </p>
-
-            <h3 style="margin-top:var(--space-8);">What you'll learn</h3>
-            <ol class="module-list" style="margin-top:var(--space-4);">
-              <li><strong>What AI actually knows about you</strong> &mdash; data collection, profiling, and inference: what is being built, by whom, from what, and to what end.</li>
-              <li><strong>Your digital footprint</strong> &mdash; an honest audit of what you&rsquo;re currently sharing, with whom, under what terms. Not to produce guilt &mdash; to produce agency.</li>
-              <li><strong>Attention by design</strong> &mdash; how recommendation systems and interfaces are built to hold you. Understanding the engineering behind the experience.</li>
-              <li><strong>The privacy toolkit</strong> &mdash; messaging, browsing, email, passwords. Ranked by effort and actual impact so you can start with what matters most.</li>
-              <li><strong>Using AI without losing yourself</strong> &mdash; how to work with AI tools in ways that keep your own thinking sharp. The difference between augmentation and delegation.</li>
-              <li><strong>Teaching others</strong> &mdash; how to have this conversation without sounding alarmist or conspiratorial. Practical framing for coaches, parents, colleagues, and friends.</li>
-            </ol>
-
-            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4);font-style:italic;">
-              Self-paced &middot; 15&ndash;20 min modules &middot; No technical background required
-            </p>
-
-            <!-- Course waitlist via Beehiiv embed -->
-            <div class="highlight-box" style="margin-top:var(--space-8);">
-              <h3 style="margin-top:0;margin-bottom:var(--space-3);">Join the waitlist</h3>
-              <p style="font-size:var(--text-sm);margin-bottom:var(--space-4);">
-                The course is in development. Sign up for early access pricing &mdash; you&rsquo;ll be
-                first to know when it&rsquo;s ready.
-              </p>
-
-              <a href="https://subscribe-forms.beehiiv.com/74a002d7-b5a2-4a6f-9394-382e906e8ab8" target="_blank" rel="noopener" class="btn btn--primary" data-umami-event="beehiiv-waitlist">Join the waitlist</a>
-            </div>
-
-          </div>
-
         </div>
+
+        <div style="margin-top:var(--space-10);padding-top:var(--space-8);border-top:1px solid var(--color-border-muted);">
+          <a
+            href="https://cal.com/lindapetrini/20min"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--primary btn--lg"
+            data-umami-event="book-call"
+          >Book a free intro call</a>
+          <p style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-3);">
+            Trusted by teams at Anthropic, Palisade &amp; Foresight Institute
+          </p>
+        </div>
+
+        <!-- Cal.com inline embed -->
+        <div class="embed-wrap embed-wrap--cal" style="margin-top:var(--space-10);" id="cal-embed">
+          <script type="text/javascript">
+            (function (C, A, L) {
+              let p = function (a, ar) { a.q.push(ar); };
+              let d = C.document;
+              C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, [L, namespace, ar[2]]); } else p(cal, ar); return; } p(cal, ar); };
+            })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", {origin:"https://cal.com"});
+            Cal("inline", {
+              elementOrSelector: "#cal-embed",
+              calLink: "lindapetrini/20min",
+              layout: "month_view"
+            });
+            Cal("ui", {
+              theme: "light",
+              styles: { branding: { brandColor: "#e0507e" } },
+              hideEventTypeDetails: false,
+              layout: "month_view"
+            });
+          </script>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DIGITAL SOVEREIGNTY COURSE -->
+    <section class="section section--bg" id="course">
+      <div class="container" style="max-width:var(--container-md);">
+
+        <span class="badge" style="margin-bottom:var(--space-5);">Waitlist open</span>
+        <h2>Digital Sovereignty in the Age of AI</h2>
+        <p style="margin-top:var(--space-4);">
+          This is the course I wish had existed when I was burning out. It&rsquo;s for people who want
+          to understand AI well enough to make real choices about it &mdash; not just cope with it.
+          Self-paced, no technical background required, built from the inside by someone who uses
+          these systems every day and has spent years studying them professionally.
+        </p>
+
+        <!-- Free guide download -->
+        <div class="highlight-box" style="margin-top:var(--space-8);display:flex;gap:var(--space-6);align-items:center;flex-wrap:wrap;">
+          <div style="flex:1;min-width:240px;">
+            <p class="section-header__label" style="margin-bottom:var(--space-2);">Free download</p>
+            <p style="font-family:var(--font-serif);font-size:var(--text-xl);font-weight:400;color:var(--color-text);margin-bottom:var(--space-2);">Course overview &amp; reading list</p>
+            <p style="font-size:var(--text-sm);color:var(--color-text-light);">A one-page summary of what the course covers, who it&rsquo;s for, and where to start before it launches.</p>
+          </div>
+          <a href="/resources/digital-sovereignty-guide.html" target="_blank" rel="noopener" class="btn btn--ghost" data-umami-event="download-guide" style="flex-shrink:0;">Get the free guide &rarr;</a>
+        </div>
+
+        <h3 style="margin-top:var(--space-10);">What you&rsquo;ll learn</h3>
+        <ol class="module-list" style="margin-top:var(--space-5);">
+          <li><strong>What AI actually knows about you</strong> &mdash; data collection, profiling, and inference: what is being built, by whom, from what, and to what end.</li>
+          <li><strong>Your digital footprint</strong> &mdash; an honest audit of what you&rsquo;re currently sharing, with whom, under what terms. Not to produce guilt &mdash; to produce agency.</li>
+          <li><strong>Attention by design</strong> &mdash; how recommendation systems and interfaces are built to hold you. Understanding the engineering behind the experience.</li>
+          <li><strong>The privacy toolkit</strong> &mdash; messaging, browsing, email, passwords. Ranked by effort and actual impact so you can start with what matters most.</li>
+          <li><strong>Using AI without losing yourself</strong> &mdash; how to work with AI tools in ways that keep your own thinking sharp. The difference between augmentation and delegation.</li>
+          <li><strong>Teaching others</strong> &mdash; how to have this conversation without sounding alarmist or conspiratorial. Practical framing for coaches, parents, colleagues, and friends.</li>
+        </ol>
+
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-5);font-style:italic;">
+          Self-paced &middot; 15&ndash;20 min modules &middot; No technical background required
+        </p>
+
+        <!-- Waitlist -->
+        <div class="highlight-box" style="margin-top:var(--space-8);">
+          <h3 style="margin-top:0;margin-bottom:var(--space-3);">Join the waitlist</h3>
+          <p style="font-size:var(--text-sm);margin-bottom:var(--space-5);">
+            The course is in development. Sign up for early access pricing &mdash; you&rsquo;ll be
+            first to know when it&rsquo;s ready.
+          </p>
+          <a href="https://subscribe-forms.beehiiv.com/74a002d7-b5a2-4a6f-9394-382e906e8ab8" target="_blank" rel="noopener" class="btn btn--primary" data-umami-event="beehiiv-waitlist">Join the waitlist</a>
+        </div>
+
       </div>
     </section>
 

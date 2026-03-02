@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Sovereignty in the Age of AI — Course Overview</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
+  <style>
+    /* ── Tokens ── */
+    :root {
+      --cream:       #FBF6F2;
+      --blush:       #F5E8E8;
+      --blush-mid:   #EDD8D8;
+      --rose:        #D9A3A3;
+      --rose-deep:   #C07878;
+      --mauve:       #9B7F7F;
+      --chocolate:   #2C1810;
+      --border:      #E8C8C8;
+      --font-serif:  'Cormorant Garamond', Georgia, serif;
+      --font-sans:   'Jost', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--cream);
+      color: var(--chocolate);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── Screen layout ── */
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    /* ── Back link (screen only) ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      text-decoration: none;
+      margin-bottom: 2.5rem;
+    }
+    .back-link:hover { color: var(--chocolate); }
+
+    /* ── Header ── */
+    .guide-header {
+      border-top: 2px solid var(--rose);
+      padding-top: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .guide-header__label {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .guide-header__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--chocolate);
+      margin-bottom: 0.75rem;
+    }
+
+    .guide-header__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--mauve);
+    }
+
+    /* ── Intro ── */
+    .guide-intro {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--chocolate);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Section headings ── */
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--chocolate);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Module list ── */
+    .module-list {
+      list-style: none;
+      padding: 0;
+      counter-reset: module;
+      display: grid;
+      gap: 0.625rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .module-list li {
+      counter-increment: module;
+      padding: 0.875rem 1rem 0.875rem 3rem;
+      position: relative;
+      background: white;
+      border: 1px solid var(--border);
+      font-size: 0.9375rem;
+      color: var(--mauve);
+      line-height: 1.65;
+    }
+
+    .module-list li::before {
+      content: counter(module);
+      position: absolute;
+      left: 1rem;
+      top: 0.875rem;
+      width: 20px;
+      height: 20px;
+      background: var(--rose);
+      color: white;
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .module-list li strong {
+      color: var(--chocolate);
+      font-weight: 400;
+    }
+
+    /* ── Two-col layout ── */
+    .two-col {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ── Info boxes ── */
+    .info-box {
+      background: var(--blush);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .info-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: var(--chocolate);
+      margin-bottom: 0.625rem;
+    }
+
+    .info-box p, .info-box li {
+      font-size: 0.875rem;
+      color: var(--mauve);
+      line-height: 1.65;
+    }
+
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 0.375rem;
+    }
+
+    .info-box ul li {
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .info-box ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 6px;
+      height: 1px;
+      background: var(--rose);
+    }
+
+    /* ── About row ── */
+    .about-row {
+      border-top: 1px solid var(--border);
+      padding-top: 1.75rem;
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .about-row__text {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .about-row__name {
+      font-family: var(--font-serif);
+      font-size: 1.375rem;
+      font-weight: 400;
+      color: var(--chocolate);
+      margin-bottom: 0.25rem;
+    }
+
+    .about-row__role {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: 0.75rem;
+    }
+
+    .about-row__bio {
+      font-size: 0.875rem;
+      color: var(--mauve);
+      line-height: 1.65;
+    }
+
+    /* ── CTA block ── */
+    .cta-block {
+      background: var(--blush-mid);
+      border: 1px solid var(--rose);
+      padding: 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-block__text {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .cta-block__heading {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--chocolate);
+      margin-bottom: 0.25rem;
+    }
+
+    .cta-block__url {
+      font-size: 0.8125rem;
+      color: var(--rose-deep);
+      word-break: break-all;
+    }
+
+    .cta-block__action {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--rose-deep);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .cta-block__action:hover {
+      background: var(--chocolate);
+    }
+
+    /* ── Footer ── */
+    .guide-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .guide-footer__brand {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--chocolate);
+      text-decoration: none;
+    }
+
+    .guide-footer__note {
+      font-size: 0.75rem;
+      color: var(--mauve);
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 18mm 20mm 18mm 20mm;
+      }
+
+      body {
+        background: white;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page-wrap {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .back-link { display: none; }
+
+      .guide-header__title { font-size: 26pt; }
+
+      .two-col { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+      .module-list li { break-inside: avoid; }
+
+      .cta-block { break-inside: avoid; }
+
+      .about-row { break-inside: avoid; }
+
+      a { color: inherit; }
+      .cta-block__url { color: var(--rose-deep); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrap">
+
+    <a href="/coaching.html#course" class="back-link">&larr; Back to coaching page</a>
+
+    <!-- Header -->
+    <header class="guide-header">
+      <span class="guide-header__label">Course overview &mdash; free resource</span>
+      <h1 class="guide-header__title">Digital Sovereignty<br>in the Age of AI</h1>
+      <p class="guide-header__subtitle">A self-paced course by Linda Petrini &mdash; AI researcher &amp; coach</p>
+    </header>
+
+    <!-- Intro -->
+    <p class="guide-intro">
+      Most people are coping with AI rather than choosing how to relate to it. This course is for those
+      who want to change that. Not by becoming a technical expert, but by building the kind of understanding
+      that makes real choices possible &mdash; about your data, your attention, your thinking, and how you
+      talk about all of this with others.
+    </p>
+
+    <!-- What you'll learn -->
+    <span class="section-label">What you&rsquo;ll learn</span>
+    <h2>6 modules, 15&ndash;20 minutes each</h2>
+
+    <ol class="module-list">
+      <li><strong>What AI actually knows about you</strong> &mdash; data collection, profiling, and inference: what is being built, by whom, from what, and to what end.</li>
+      <li><strong>Your digital footprint</strong> &mdash; an honest audit of what you&rsquo;re currently sharing, with whom, under what terms. Not to produce guilt &mdash; to produce agency.</li>
+      <li><strong>Attention by design</strong> &mdash; how recommendation systems and interfaces are built to hold you. Understanding the engineering behind the experience.</li>
+      <li><strong>The privacy toolkit</strong> &mdash; messaging, browsing, email, passwords. Ranked by effort and actual impact so you can start with what matters most.</li>
+      <li><strong>Using AI without losing yourself</strong> &mdash; how to work with AI tools in ways that keep your own thinking sharp. The difference between augmentation and delegation.</li>
+      <li><strong>Teaching others</strong> &mdash; how to have this conversation without sounding alarmist or conspiratorial. Practical framing for coaches, parents, colleagues, and friends.</li>
+    </ol>
+
+    <!-- Two columns: Who it's for + Course details -->
+    <div class="two-col">
+
+      <div class="info-box">
+        <h3>Who it&rsquo;s for</h3>
+        <ul>
+          <li>Coaches &amp; therapists navigating AI in their practice</li>
+          <li>Writers &amp; academics who feel something is at stake</li>
+          <li>Professionals whose fields are shifting</li>
+          <li>Parents trying to explain what they don&rsquo;t fully understand</li>
+          <li>Anyone burned by hype who wants an honest conversation</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h3>Course details</h3>
+        <ul>
+          <li>Self-paced &mdash; work at your own speed</li>
+          <li>15&ndash;20 min modules, no filler</li>
+          <li>No technical background required</li>
+          <li>Built by someone inside the systems</li>
+          <li>Early-access pricing for waitlist members</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- About Linda -->
+    <div class="about-row">
+      <div class="about-row__text">
+        <p class="about-row__name">Linda Petrini</p>
+        <p class="about-row__role">AI Researcher &middot; Writer &middot; Coach</p>
+        <p class="about-row__bio">
+          Seven years inside AI research &mdash; interpretability, policy, safety &mdash; at Anthropic,
+          Palisade Research, Foresight Institute, and the Bezos Earth Fund. After burning out, she went
+          deep into coaching and embodiment practice. Now she works at the intersection: technically honest,
+          deeply human. This course is what she wished had existed when she was trying to make sense of it all.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <div class="cta-block__text">
+        <p class="cta-block__heading">Join the waitlist for early access</p>
+        <p class="cta-block__url">lindapetrini.com/coaching.html#course</p>
+      </div>
+      <a href="https://subscribe-forms.beehiiv.com/74a002d7-b5a2-4a6f-9394-382e906e8ab8" target="_blank" rel="noopener" class="cta-block__action">Join the waitlist</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="guide-footer">
+      <a href="https://lindapetrini.com" class="guide-footer__brand">lindapetrini.com</a>
+      <span class="guide-footer__note">&copy; 2026 Linda Petrini &middot; Free to share</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

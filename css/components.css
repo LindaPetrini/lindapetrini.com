@@ -731,7 +731,7 @@
 
 .module-list li {
   counter-increment: module;
-  padding: var(--space-3) var(--space-4) var(--space-3) calc(var(--space-8) + var(--space-2));
+  padding: var(--space-4) var(--space-4) var(--space-4) 3.25rem;
   position: relative;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border-muted);
@@ -745,8 +745,7 @@
   content: counter(module);
   position: absolute;
   left: var(--space-4);
-  top: 50%;
-  transform: translateY(-50%);
+  top: var(--space-4);
   width: 22px;
   height: 22px;
   background-color: var(--color-accent);
