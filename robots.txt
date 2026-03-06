@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+Disallow: /old_website/
+Disallow: /partials/
+Disallow: /design-1.html
+Disallow: /design-2.html
+Disallow: /design-3.html
+Disallow: /design-4.html
+Disallow: /design-5.html
+
 Sitemap: https://lindapetrini.com/sitemap.xml
