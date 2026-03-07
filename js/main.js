@@ -100,7 +100,7 @@
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (data.ok) {
-            msg.textContent = 'You\u2019re in! Check your inbox.';
+            msg.textContent = 'You\u2019re on the list!';
             msg.className = 'subscribe-form__msg';
             msg.hidden = false;
             input.value = '';
