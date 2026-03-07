@@ -637,6 +637,14 @@
   box-shadow: var(--shadow-sm);
 }
 
+.article-card__date {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: calc(-1 * var(--space-2));
+}
+
 .article-card__title {
   font-family: var(--font-serif);
   font-size: var(--text-xl);

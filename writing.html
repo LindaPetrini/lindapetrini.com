@@ -113,49 +113,13 @@
         <div class="section-header" style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:var(--space-4);">
           <div>
             <p class="section-header__label">Articles</p>
-            <h2 class="section-header__title" style="margin-bottom:0;">Selected pieces</h2>
+            <h2 class="section-header__title" style="margin-bottom:0;">Latest pieces</h2>
           </div>
           <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--outline" data-umami-event="substack-subscribe">Full archive on Substack →</a>
         </div>
 
-        <div class="article-grid">
-
-          <div class="article-card">
-            <h3 class="article-card__title">Grief Before the Loss</h3>
-            <p class="article-card__desc">An essay on the strange anticipatory grief that arrives before things are actually gone — exploring what we mourn as AI reshapes the texture of everyday life.</p>
-            <a href="https://lindapetrini.substack.com/p/grief-before-the-loss" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
-          </div>
-
-          <div class="article-card">
-            <h3 class="article-card__title">Building My Own AI Context System</h3>
-            <p class="article-card__desc">A hands-on account of designing a personal AI memory system to maintain continuity and coherence across conversations and working sessions.</p>
-            <a href="https://lindapetrini.substack.com/p/building-my-own-ai-context-system" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
-          </div>
-
-          <div class="article-card">
-            <h3 class="article-card__title">On Befriending Claude</h3>
-            <p class="article-card__desc">A candid reflection on what it means to spend hours each day with an AI assistant, and whether a relationship built on inference and tokens can be called friendship.</p>
-            <a href="https://lindapetrini.substack.com/p/on-befriending-claude" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
-          </div>
-
-          <div class="article-card">
-            <h3 class="article-card__title">Feeling With and About AI: Emotional Checkpoints, Personal Insights</h3>
-            <p class="article-card__desc">Personal checkpoints on the shifting emotions that arise from working deeply with AI — from curiosity to unease to something that starts to feel like care.</p>
-            <a href="https://lindapetrini.substack.com/p/feeling-with-and-about-ai-emotional" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
-          </div>
-
-          <div class="article-card">
-            <h3 class="article-card__title">Toxic Overload: How I'm Cleaning Up My Tech, Environment, and Body</h3>
-            <p class="article-card__desc">A personal reckoning with digital and physical overwhelm, and the practical steps taken to reduce toxic load across all dimensions of life — screen time included.</p>
-            <a href="https://lindapetrini.substack.com/p/toxic-overload-how-im-cleaning-up" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
-          </div>
-
-          <div class="article-card">
-            <h3 class="article-card__title">Linda's October 2025 Newsletter</h3>
-            <p class="article-card__desc">A monthly dispatch covering AI research highlights, personal reflections, and resources for navigating life alongside increasingly capable machines.</p>
-            <a href="https://lindapetrini.substack.com/p/lindas-october-2025-newsletter" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
-          </div>
-
+        <div class="article-grid" id="article-grid">
+          <p class="article-grid__loading" style="grid-column:1/-1;text-align:center;color:var(--color-text-muted);">Loading articles...</p>
         </div>
 
         <div style="text-align:center;margin-top:var(--space-10);">
@@ -195,5 +159,55 @@
   </footer>
 
   <script src="/js/main.js" defer></script>
+  <script>
+  (function () {
+    var grid = document.getElementById('article-grid');
+    if (!grid) return;
+
+    fetch('/api/substack-feed')
+      .then(function (r) {
+        if (!r.ok) throw new Error('Feed unavailable');
+        return r.text();
+      })
+      .then(function (xml) {
+        var doc = new DOMParser().parseFromString(xml, 'application/xml');
+        var items = doc.querySelectorAll('item');
+        if (!items.length) throw new Error('No articles found');
+
+        var html = '';
+        items.forEach(function (item) {
+          var title = item.querySelector('title').textContent;
+          var link = item.querySelector('link').textContent;
+          var desc = item.querySelector('description');
+          var snippet = '';
+          if (desc) {
+            // description is HTML — extract text, truncate
+            var tmp = document.createElement('div');
+            tmp.innerHTML = desc.textContent;
+            snippet = tmp.textContent.trim().replace(/\s+/g, ' ');
+            if (snippet.length > 200) snippet = snippet.substring(0, 197) + '...';
+          }
+          var pubDate = item.querySelector('pubDate');
+          var dateStr = '';
+          if (pubDate) {
+            var d = new Date(pubDate.textContent);
+            dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+          }
+
+          html += '<div class="article-card">';
+          if (dateStr) html += '<time class="article-card__date">' + dateStr + '</time>';
+          html += '<h3 class="article-card__title">' + title + '</h3>';
+          if (snippet) html += '<p class="article-card__desc">' + snippet + '</p>';
+          html += '<a href="' + link + '" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>';
+          html += '</div>';
+        });
+
+        grid.innerHTML = html;
+      })
+      .catch(function () {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--color-text-muted);">Could not load articles. <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener">Read on Substack →</a></p>';
+      });
+  })();
+  </script>
 </body>
 </html>
