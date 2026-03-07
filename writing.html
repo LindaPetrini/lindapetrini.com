@@ -164,7 +164,7 @@
     var grid = document.getElementById('article-grid');
     if (!grid) return;
 
-    fetch('/api/substack-feed')
+    fetch('https://subscribe.lindapetrini.workers.dev/feed')
       .then(function (r) {
         if (!r.ok) throw new Error('Feed unavailable');
         return r.text();

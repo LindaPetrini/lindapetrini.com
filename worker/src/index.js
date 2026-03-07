@@ -3,11 +3,11 @@ const ALLOWED_ORIGINS = [
   'https://www.lindapetrini.com',
 ];
 
-function corsHeaders(request) {
+function corsHeaders(request, methods) {
   const origin = request.headers.get('Origin') || '';
   return {
     'Access-Control-Allow-Origin': ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Methods': methods || 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   };
 }
@@ -18,6 +18,25 @@ export default {
 
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers });
+    }
+
+    // GET /feed — proxy Substack RSS
+    const url = new URL(request.url);
+    if (request.method === 'GET' && url.pathname === '/feed') {
+      try {
+        const feed = await fetch('https://lindapetrini.substack.com/feed', {
+          headers: { 'User-Agent': 'lindapetrini.com/1.0' },
+        });
+        if (!feed.ok) {
+          return Response.json({ error: 'Feed unavailable' }, { status: 502, headers });
+        }
+        const xml = await feed.text();
+        return new Response(xml, {
+          headers: { ...headers, 'Content-Type': 'application/xml', 'Cache-Control': 'public, max-age=3600' },
+        });
+      } catch (err) {
+        return Response.json({ error: 'Feed proxy error' }, { status: 500, headers });
+      }
     }
 
     if (request.method !== 'POST') {
