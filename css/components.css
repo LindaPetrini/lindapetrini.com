@@ -682,6 +682,54 @@
   padding: var(--space-8);
 }
 
+/* ── Subscribe form ──────────────────────────────────────── */
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 400px;
+}
+
+.subscribe-form__input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.875rem 1rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: 0;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.subscribe-form__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.subscribe-form__input:focus {
+  border-color: var(--color-accent);
+}
+
+.subscribe-form__btn {
+  padding: 0.875rem 1.5rem;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.subscribe-form__msg {
+  width: 100%;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-accent-hover);
+}
+
+.subscribe-form__msg--error {
+  color: #b44;
+}
+
 /* ── Embed containers ────────────────────────────────────── */
 .embed-wrap {
   width: 100%;

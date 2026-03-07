@@ -447,7 +447,11 @@
         <p class="cta-block__heading">Join the waitlist for early access</p>
         <p class="cta-block__url">lindapetrini.com/coaching.html#course</p>
       </div>
-      <iframe src="https://embeds.beehiiv.com/74a002d7-b5a2-4a6f-9394-382e906e8ab8?slim=true&amp;background_color=FBF6F2&amp;text_color=2C1810&amp;button_color=D9A3A3&amp;button_text=Subscribe" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin:0;border-radius:0;background-color:transparent;width:100%;max-width:400px;"></iframe>
+      <form class="subscribe-form" data-umami-event="guide-subscribe">
+        <input type="email" name="email" placeholder="Your email" required class="subscribe-form__input">
+        <button type="submit" class="btn btn--primary subscribe-form__btn">Join</button>
+        <p class="subscribe-form__msg" hidden></p>
+      </form>
     </div>
 
     <!-- Footer -->

@@ -75,4 +75,49 @@
     }
   }
 
+  /* ── Subscribe forms ───────────────────────────────────── */
+  var SUBSCRIBE_URL = 'https://subscribe.lindapetrini.workers.dev';
+
+  document.querySelectorAll('.subscribe-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('.subscribe-form__input');
+      var btn = form.querySelector('.subscribe-form__btn');
+      var msg = form.querySelector('.subscribe-form__msg');
+      var email = input.value.trim();
+
+      if (!email) return;
+
+      btn.disabled = true;
+      btn.textContent = '...';
+      msg.hidden = true;
+
+      fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.ok) {
+            msg.textContent = 'You\u2019re in! Check your inbox.';
+            msg.className = 'subscribe-form__msg';
+            msg.hidden = false;
+            input.value = '';
+          } else {
+            throw new Error(data.error || 'Something went wrong');
+          }
+        })
+        .catch(function (err) {
+          msg.textContent = err.message || 'Something went wrong. Try again.';
+          msg.className = 'subscribe-form__msg subscribe-form__msg--error';
+          msg.hidden = false;
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = form.dataset.umamiEvent === 'writing-subscribe' ? 'Subscribe' : 'Join';
+        });
+    });
+  });
+
 })();
