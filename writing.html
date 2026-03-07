@@ -177,6 +177,7 @@
         var html = '';
         items.forEach(function (item) {
           var title = item.querySelector('title').textContent;
+          if (/newsletter/i.test(title)) return;
           var link = item.querySelector('link').textContent;
           var desc = item.querySelector('description');
           var snippet = '';
