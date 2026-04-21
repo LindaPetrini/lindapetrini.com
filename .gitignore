@@ -8,3 +8,4 @@ build/
 *.log
 .claude/settings.local.json
 worker/.wrangler/
+.gstack/

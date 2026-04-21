@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Banner — Linda Petrini</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e0da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    color: #2C1810;
+  }
+
+  .banner {
+    width: 1584px;
+    height: 396px;
+    background: #FBF6F2;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* --- Decorative elements --- */
+
+  /* Large soft circle, top-left area */
+  .deco-circle-1 {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, #F5E8E8 0%, #f0dada 40%, transparent 70%);
+    top: -120px;
+    left: -80px;
+    opacity: 0.7;
+  }
+
+  /* Medium circle, bottom-right */
+  .deco-circle-2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 60% 50%, #F5E8E8 0%, #eddcdc 50%, transparent 75%);
+    bottom: -100px;
+    right: 60px;
+    opacity: 0.55;
+  }
+
+  /* Small accent circle */
+  .deco-circle-3 {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #D9A3A3 0%, transparent 70%);
+    top: 30px;
+    right: 200px;
+    opacity: 0.18;
+  }
+
+  /* Thin elegant arc — top right */
+  .deco-arc {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 1.5px solid #D9A3A3;
+    top: -380px;
+    right: -100px;
+    opacity: 0.3;
+  }
+
+  /* Second arc — bottom left */
+  .deco-arc-2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid #C07878;
+    bottom: -340px;
+    left: 200px;
+    opacity: 0.15;
+  }
+
+  /* Dot cluster — right side */
+  .dot {
+    position: absolute;
+    border-radius: 50%;
+    background: #D9A3A3;
+  }
+  .dot-1 { width: 6px; height: 6px; top: 60px; right: 420px; opacity: 0.35; }
+  .dot-2 { width: 4px; height: 4px; top: 85px; right: 390px; opacity: 0.25; }
+  .dot-3 { width: 8px; height: 8px; top: 50px; right: 360px; opacity: 0.2; }
+  .dot-4 { width: 5px; height: 5px; top: 78px; right: 440px; opacity: 0.3; }
+  .dot-5 { width: 3px; height: 3px; bottom: 80px; right: 500px; opacity: 0.25; }
+  .dot-6 { width: 7px; height: 7px; bottom: 60px; right: 460px; opacity: 0.18; }
+  .dot-7 { width: 4px; height: 4px; bottom: 95px; right: 530px; opacity: 0.22; }
+
+  /* Soft horizontal line accent */
+  .deco-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #D9A3A3 30%, #C07878 60%, transparent 100%);
+    width: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.0; /* hidden — enable if desired */
+  }
+
+  /* Soft blob shape using multiple gradients */
+  .deco-blob {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    background: radial-gradient(ellipse at 30% 50%, #F5E8E8 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 40%, #f0dada 0%, transparent 55%);
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+    left: 350px;
+    bottom: -40px;
+    opacity: 0.4;
+    transform: rotate(-10deg);
+  }
+
+  /* --- Content area (pushed center-right) --- */
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 180px; /* offset to account for profile photo overlap on left */
+    z-index: 2;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 600;
+    font-size: 72px;
+    letter-spacing: 0.02em;
+    color: #2C1810;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  /* Thin separator */
+  .separator {
+    width: 60px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #C07878, transparent);
+    margin-bottom: 18px;
+  }
+
+  .tagline {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9B7F7F;
+    margin-bottom: 20px;
+  }
+
+  .website {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    color: #C07878;
+    opacity: 0.8;
+  }
+
+  /* --- Helper note below banner --- */
+  .note {
+    margin-top: 32px;
+    font-size: 14px;
+    color: #9B7F7F;
+    text-align: center;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <!-- Decorative elements -->
+  <div class="deco-circle-1"></div>
+  <div class="deco-circle-2"></div>
+  <div class="deco-circle-3"></div>
+  <div class="deco-arc"></div>
+  <div class="deco-arc-2"></div>
+  <div class="deco-blob"></div>
+  <div class="dot dot-1"></div>
+  <div class="dot dot-2"></div>
+  <div class="dot dot-3"></div>
+  <div class="dot dot-4"></div>
+  <div class="dot dot-5"></div>
+  <div class="dot dot-6"></div>
+  <div class="dot dot-7"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="name">Linda Petrini</div>
+    <div class="separator"></div>
+    <div class="tagline">AI Technical Writer &amp; Coach</div>
+    <div class="website">lindapetrini.com</div>
+  </div>
+</div>
+
+<p class="note">Right-click the banner and save as image, or take a screenshot at 100% zoom.</p>
+
+</body>
+</html>
