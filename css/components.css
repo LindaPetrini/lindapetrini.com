@@ -186,6 +186,16 @@
   filter: grayscale(0.3) opacity(0.65);
 }
 
+.hero__logo-bar__logos .logo-bar__wordmark {
+  line-height: 28px;
+  filter: grayscale(1) opacity(0.4);
+  transition: filter var(--transition-base);
+}
+
+.hero__logo-bar__logos .logo-bar__wordmark:hover {
+  filter: grayscale(0.3) opacity(0.65);
+}
+
 /* ── Hero photo wrap ─────────────────────────────────────── */
 .hero__photo-wrap {
   position: relative;
@@ -344,6 +354,19 @@
   width: auto;
 }
 
+/* Text stand-in for organisations with no logo asset yet — sized to sit
+   optically level with the neighbouring wordmarks. */
+.logo-bar__wordmark {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 22px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
 /* ── Wave dividers ───────────────────────────────────────── */
 .wave-divider {
   display: block;
@@ -364,8 +387,9 @@
 }
 
 @media (min-width: 640px) {
+  /* auto-fit so the row stays balanced whether there are two cards or three */
   .role-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 
