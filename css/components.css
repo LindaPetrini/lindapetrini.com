@@ -181,18 +181,14 @@
   transition: filter var(--transition-base);
 }
 
+/* Wide horizontal lockups carry more optical weight per pixel of height than
+   the icon marks beside them — trim the height so the row stays balanced. */
+.hero__logo-bar__logos .logo-bar__logo--wide img {
+  height: 22px;
+}
+
 .hero__logo-bar__logos .logo-bar__logo img:hover,
 .hero__logo-bar__logos img:hover {
-  filter: grayscale(0.3) opacity(0.65);
-}
-
-.hero__logo-bar__logos .logo-bar__wordmark {
-  line-height: 28px;
-  filter: grayscale(1) opacity(0.4);
-  transition: filter var(--transition-base);
-}
-
-.hero__logo-bar__logos .logo-bar__wordmark:hover {
   filter: grayscale(0.3) opacity(0.65);
 }
 
@@ -352,19 +348,6 @@
 .logo-bar__logo img {
   height: 22px;
   width: auto;
-}
-
-/* Text stand-in for organisations with no logo asset yet — sized to sit
-   optically level with the neighbouring wordmarks. */
-.logo-bar__wordmark {
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  font-weight: 400;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  line-height: 22px;
-  color: var(--color-text);
-  white-space: nowrap;
 }
 
 /* ── Wave dividers ───────────────────────────────────────── */
