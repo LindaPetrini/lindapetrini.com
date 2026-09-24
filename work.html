@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Work &amp; Research — Linda Petrini</title>
-  <meta name="description" content="Science writing, AI safety research, technical reports, and policy analysis by Linda Petrini — including work for Nebius Science, Anthropic, Foresight Institute, the Bezos Earth Fund, and Palisade Research.">
+  <title>Work — Linda Petrini</title>
+  <meta name="description" content="Articles for Nebius Science, research communication for Anthropic, Palisade Research, Foresight Institute and the Bezos Earth Fund, academic papers, and essays on living with AI.">
 
   <link rel="canonical" href="https://lindapetrini.com/work">
 
+  <!-- Open Graph -->
   <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Work &amp; Research — Linda Petrini">
-  <meta property="og:description" content="Science writing, AI safety research, technical reports, and policy analysis by Linda Petrini.">
+  <meta property="og:title"       content="Work — Linda Petrini">
+  <meta property="og:description" content="Articles for Nebius Science, research communication for Anthropic, Palisade Research, Foresight Institute and the Bezos Earth Fund, academic papers, and essays on living with AI.">
   <meta property="og:url"         content="https://lindapetrini.com/work">
   <meta property="og:image"       content="https://lindapetrini.com/images/og.jpg">
 
+  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:site"        content="@petrini_linda">
-  <meta name="twitter:title"       content="Work &amp; Research — Linda Petrini">
-  <meta name="twitter:description" content="Science writing, AI safety research, technical reports, and policy analysis by Linda Petrini.">
+  <meta name="twitter:title"       content="Work — Linda Petrini">
+  <meta name="twitter:description" content="Articles for Nebius Science, research communication for Anthropic, Palisade Research, Foresight Institute and the Bezos Earth Fund, academic papers, and essays on living with AI.">
   <meta name="twitter:image"       content="https://lindapetrini.com/images/og.jpg">
 
   <!-- Fonts -->
@@ -27,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
   <!-- Umami Analytics — privacy-friendly, no cookie banner needed -->
   <script defer src="https://analytics.lindapetrini.com/script.js"
           data-website-id="9bd90f53-ca65-44bb-b6bf-09aa71b9be90"></script>
@@ -40,32 +43,31 @@
 
   <!-- NAV -->
   <header>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
       <div class="container nav__inner">
-        <a href="/index.html" class="nav__name">Linda Petrini</a>
+        <a href="/" class="nav__name">Linda Petrini</a>
 
-        <button class="nav__hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button
+          type="button"
+          class="nav__hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
           <span class="nav__hamburger-bar"></span>
           <span class="nav__hamburger-bar"></span>
           <span class="nav__hamburger-bar"></span>
         </button>
 
         <ul class="nav__links" role="list">
-          <li><a href="/about.html">About</a></li>
           <li><a href="/work.html" aria-current="page">Work</a></li>
-          <li><a href="/writing.html">Writing</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
-
-        <a href="/work.html" class="btn btn--primary nav__cta">Publications</a>
       </div>
 
       <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation">
-        <a href="/about.html">About</a>
         <a href="/work.html" aria-current="page">Work</a>
-        <a href="/writing.html">Writing</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/work.html" class="btn btn--primary" style="margin-top:0.5rem;width:100%;justify-content:center;">Publications</a>
+        <a href="/#contact">Contact</a>
       </nav>
     </nav>
   </header>
@@ -75,11 +77,10 @@
     <!-- PAGE HERO -->
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero__label">Work &amp; Research</p>
-        <h1 class="page-hero__title">Research and writing at the frontier of AI</h1>
+        <p class="page-hero__label">Work</p>
+        <h1 class="page-hero__title">Everything, newest first.</h1>
         <p class="page-hero__desc">
-          Science writing, technical reports, policy analysis, and research support for
-          organisations working at the intersection of AI, safety, and society.
+          Articles, reports, papers, and essays. The CV has the formal version.
         </p>
         <div style="margin-top:var(--space-6);">
           <a
@@ -93,252 +94,288 @@
     </section>
 
     <!-- SCIENCE WRITING -->
-    <section class="section section--bg" aria-labelledby="science-writing-heading">
+    <section class="section section--bg" id="articles" aria-labelledby="articles-heading">
       <div class="container">
+
         <div class="section-header">
           <p class="section-header__label">Science writing</p>
-          <h2 class="section-header__title" id="science-writing-heading">Writing about research</h2>
+          <h2 class="section-header__title" id="articles-heading">Articles for Nebius Science</h2>
           <p class="section-header__desc">
-            I&rsquo;m a Science Writer at <a href="https://nebius.science" target="_blank" rel="noopener" data-umami-event="nebius-science">Nebius Science</a>,
-            a Nebius Academy project covering AI&rsquo;s impact on research and innovation. Recent
-            pieces cover Shapley value estimation, toxicity detection, search infrastructure for
-            research agents, and the standout papers from ICML 2026.
+            I read new research and write about what it actually found.
           </p>
         </div>
-        <a href="/writing.html" class="btn btn--outline">Read the articles &rarr;</a>
+
+        <div class="article-grid">
+
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-08-20">August 20, 2026</time>
+            <h3 class="article-card__title">Compute Grants: The Research We Power</h3>
+            <p class="article-card__desc">
+              What Nebius funds through its research grants, and how applications get judged.
+            </p>
+            <a href="https://nebius.science/stories/grant-priorities" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article-nebius">Read on Nebius Science</a>
+          </div>
+
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-07-13">July 13, 2026</time>
+            <h3 class="article-card__title">Meet Yann LeCun&rsquo;s Lab and the AI World of 2030</h3>
+            <p class="article-card__desc">
+              He&rsquo;s betting big on predictive architectures. We asked him to play the predictive architect.
+            </p>
+            <a href="https://nebius.science/stories/meet-yann-lecuns-lab-and-the-ai-world-of-2030" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article-nebius">Read on Nebius Science</a>
+          </div>
+
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-07-08">July 8, 2026</time>
+            <h3 class="article-card__title">ICML 2026: Papers That Matter</h3>
+            <p class="article-card__desc">
+              Standout papers from Seoul, sorted into five research categories. Co-written with Arseniy Sokolov.
+            </p>
+            <a href="https://nebius.science/stories/icml-papers-that-matter" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article-nebius">Read on Nebius Science</a>
+          </div>
+
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-06-23">June 23, 2026</time>
+            <h3 class="article-card__title">The Web Has a New Reader</h3>
+            <p class="article-card__desc">
+              How Tavily&rsquo;s AI-optimised search layer gives research agents structured, token-efficient access to the web.
+            </p>
+            <a href="https://nebius.science/stories/tavily-research" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article-nebius">Read on Nebius Science</a>
+          </div>
+
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-06-03">June 3, 2026</time>
+            <h3 class="article-card__title">The Old Trick Behind Every Playmaker</h3>
+            <p class="article-card__desc">
+              Utrecht researchers pair 200-year-old Gauss&ndash;Legendre quadrature with game theory to compute Shapley values faster.
+            </p>
+            <a href="https://nebius.science/stories/utrecht-shapley" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article-nebius">Read on Nebius Science</a>
+          </div>
+
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-05-26">May 26, 2026</time>
+            <h3 class="article-card__title">We&rsquo;re Addicted to You, Don&rsquo;t You Know That You&rsquo;re Toxic?</h3>
+            <p class="article-card__desc">
+              T&eacute;l&eacute;com SudParis researchers argue toxicity detection has measured the wrong thing for a decade.
+            </p>
+            <a href="https://nebius.science/stories/sudparis-toxicity" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article-nebius">Read on Nebius Science</a>
+          </div>
+
+        </div>
+
+        <div style="margin-top:var(--space-10);">
+          <a href="https://nebius.science" target="_blank" rel="noopener" class="btn btn--outline" data-umami-event="nebius-science">More at Nebius Science &rarr;</a>
+        </div>
+
       </div>
     </section>
 
-    <!-- ACADEMIC PUBLICATIONS -->
-    <section class="section">
+    <!-- RESEARCH COMMUNICATION -->
+    <section class="section" id="labs" aria-labelledby="labs-heading">
       <div class="container">
+
         <div class="section-header">
-          <p class="section-header__label">Publications</p>
-          <h2 class="section-header__title">Academic publications</h2>
+          <p class="section-header__label">Research communication</p>
+          <h2 class="section-header__title" id="labs-heading">For research labs</h2>
           <p class="section-header__desc">
-            Peer-reviewed papers and contributing authorships. Full list on <a href="https://scholar.google.ca/citations?user=a5siqi0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+            Editing, figures, threads, and reports for teams whose work needs to reach people outside the lab.
           </p>
+        </div>
+
+        <div class="stack--lg">
+
+          <!-- Anthropic -->
+          <div>
+            <h3 class="mb-4">Anthropic &middot; 2024&ndash;2025</h3>
+            <div class="pub-list">
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2024</p>
+                <h4 class="pub-card__title"><a href="https://arxiv.org/abs/2412.14093" target="_blank" rel="noopener" data-umami-event="work-publication">Alignment faking in large language models</a></h4>
+                <p class="pub-card__desc">Editing and formatting.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://arxiv.org/abs/2506.15740" target="_blank" rel="noopener" data-umami-event="work-publication">SHADE-Arena: Evaluating sabotage and monitoring in LLM agents</a></h4>
+                <p class="pub-card__desc">Feedback and figures.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://arxiv.org/abs/2507.14417" target="_blank" rel="noopener" data-umami-event="work-publication">Inverse scaling in test-time compute</a></h4>
+                <p class="pub-card__desc">Writing support and the task overview figure.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://alignment.anthropic.com/2025/pretraining-data-filtering/" target="_blank" rel="noopener" data-umami-event="work-publication">Enhancing model safety through pretraining data filtering</a></h4>
+                <p class="pub-card__desc">Editing and figures.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://www.anthropic.com/research/cost-effective-constitutional-classifiers" target="_blank" rel="noopener" data-umami-event="work-publication">Cost-effective constitutional classifiers via representation re-use</a></h4>
+                <p class="pub-card__desc">Editing and figures.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://arxiv.org/abs/2506.10139" target="_blank" rel="noopener" data-umami-event="work-publication">Unsupervised elicitation of language models</a></h4>
+                <p class="pub-card__desc">Editing and figures.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Palisade Research -->
+          <div>
+            <h3 class="mb-4">Palisade Research &middot; 2025&ndash;2026</h3>
+            <div class="pub-list">
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2026</p>
+                <h4 class="pub-card__title"><a href="https://x.com/PalisadeAI/status/2022085855943569852" target="_blank" rel="noopener" data-umami-event="work-publication">Shutdown resistance in LLM-controlled robots</a></h4>
+                <p class="pub-card__desc">Thread and figures. 1.3M views.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://x.com/PalisadeAI/status/1991581102667100395" target="_blank" rel="noopener" data-umami-event="work-publication">AI is as good at hacking as at math competitions</a></h4>
+                <p class="pub-card__desc">Thread and figures. 107K views.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://x.com/PalisadeAI/status/1958253320478597367" target="_blank" rel="noopener" data-umami-event="work-publication">Network hacking demo</a></h4>
+                <p class="pub-card__desc">Thread and figures. 87K views.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://x.com/PalisadeAI/status/1966527460838711599" target="_blank" rel="noopener" data-umami-event="work-publication">Multi-stage AI hacking</a></h4>
+                <p class="pub-card__desc">Thread and figures.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Foresight Institute -->
+          <div>
+            <h3 class="mb-4">Foresight Institute &middot; 2024&ndash;2026</h3>
+            <div class="pub-list">
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2025</p>
+                <h4 class="pub-card__title"><a href="https://foresight.org/focus-areas/secure-ai/" target="_blank" rel="noopener" data-umami-event="work-publication">Secure AI Tech Tree</a></h4>
+                <p class="pub-card__desc">Concept, content, and launch video.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2024</p>
+                <h4 class="pub-card__title"><a href="https://ai-pathways.existentialhope.com/" target="_blank" rel="noopener" data-umami-event="work-publication">AI Pathways</a></h4>
+                <p class="pub-card__desc">Scenario drafting; wrote all content.</p>
+              </div>
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2026</p>
+                <h4 class="pub-card__title"><a href="https://www.existentialhope.com/hyper-entities" target="_blank" rel="noopener" data-umami-event="work-publication">Hyper Entities</a></h4>
+                <p class="pub-card__desc">Framework and report for the Existential Hope programme.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bezos Earth Fund -->
+          <div>
+            <h3 class="mb-4">Bezos Earth Fund &middot; 2024</h3>
+            <div class="pub-list">
+
+              <div class="pub-card">
+                <p class="pub-card__tag">2024</p>
+                <h4 class="pub-card__title"><a href="https://www.bezosearthfund.org/uploads/Bezos-Earth-Fund-AI-for-Climate-and-Nature-Workshop-Report.pdf" target="_blank" rel="noopener" data-umami-event="work-publication">AI for Climate and Nature workshop report</a></h4>
+                <p class="pub-card__desc">Wrote and edited the full report.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PAPERS -->
+    <section class="section section--bg" id="papers" aria-labelledby="papers-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-header__label">Academic publications</p>
+          <h2 class="section-header__title" id="papers-heading">Papers</h2>
         </div>
 
         <div class="pub-list">
 
           <div class="pub-card">
-            <p class="pub-card__tag">Machine Learning &middot; Conference</p>
-            <h3 class="pub-card__title">Locality and Compositionality in Zero-Shot Learning</h3>
-            <p class="pub-card__desc">First author. Published at ICLR 2020. Studied how locality and compositionality relate to generalisation in zero-shot learning.</p>
-            <a href="https://openreview.net/forum?id=Hye_V0NKwr" class="pub-card__link" target="_blank" rel="noopener">ICLR 2020</a>
+            <p class="pub-card__tag">ICLR 2020 &middot; First author</p>
+            <h3 class="pub-card__title"><a href="https://openreview.net/forum?id=Hye_V0NKwr" target="_blank" rel="noopener" data-umami-event="work-publication">Locality and Compositionality in Zero-Shot Learning</a></h3>
+            <p class="pub-card__desc">How locality and compositionality relate to generalisation in zero-shot learning.</p>
           </div>
 
           <div class="pub-card">
-            <p class="pub-card__tag">Simulation &middot; Conference</p>
-            <h3 class="pub-card__title">gradsim: Differentiable simulation for system identification and visuomotor control</h3>
-            <p class="pub-card__desc">Contributing author. Differentiable physics simulation framework. Published at ICLR 2021.</p>
-            <a href="https://arxiv.org/abs/2104.02646" class="pub-card__link" target="_blank" rel="noopener">ICLR 2021</a>
+            <p class="pub-card__tag">NeurIPS 2019 workshop &middot; First author</p>
+            <h3 class="pub-card__title"><a href="https://scholar.google.ca/citations?user=a5siqi0AAAAJ" target="_blank" rel="noopener" data-umami-event="work-publication">Mutual Information heatmaps as a tool for interpretability</a></h3>
           </div>
 
           <div class="pub-card">
-            <p class="pub-card__tag">Ethics &middot; Computer Vision</p>
-            <h3 class="pub-card__title">Ethics and Creativity in Computer Vision</h3>
-            <p class="pub-card__desc">Contributing author. Retrospective on ethics in creative applications of computer vision, drawing on a series of CVPR/ECCV/ICCV workshops I co-organised. Presented at the NeurIPS 2021 workshop on Machine Learning for Creativity and Design.</p>
-            <a href="https://arxiv.org/abs/2112.03111" class="pub-card__link" target="_blank" rel="noopener">arXiv (2021)</a>
+            <p class="pub-card__tag">ICLR 2021</p>
+            <h3 class="pub-card__title"><a href="https://arxiv.org/abs/2104.02646" target="_blank" rel="noopener" data-umami-event="work-publication">gradsim: Differentiable simulation for system identification and visuomotor control</a></h3>
+            <p class="pub-card__desc">Contributing author.</p>
+          </div>
+
+          <div class="pub-card">
+            <p class="pub-card__tag">2021</p>
+            <h3 class="pub-card__title"><a href="https://arxiv.org/abs/2112.03111" target="_blank" rel="noopener" data-umami-event="work-publication">Ethics and Creativity in Computer Vision</a></h3>
+            <p class="pub-card__desc">Contributing author; grew out of CVPR/ECCV/ICCV workshops I co-organised.</p>
           </div>
 
         </div>
+
+        <div style="margin-top:var(--space-10);">
+          <a href="https://scholar.google.ca/citations?user=a5siqi0AAAAJ" target="_blank" rel="noopener" class="btn btn--outline" data-umami-event="social-scholar">Full list on Google Scholar &rarr;</a>
+        </div>
+
       </div>
     </section>
 
-    <!-- RESEARCH SUPPORT CONTRIBUTIONS -->
-    <section class="section section--bg">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-header__label">Contributing author</p>
-          <h2 class="section-header__title">Research communication contributions</h2>
-          <p class="section-header__desc">
-            Publications where I provided research support — editing, feedback, writing, and figures — rather than leading the underlying research.
-          </p>
-        </div>
-
-        <div class="pub-list">
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety &middot; Alignment</p>
-            <h3 class="pub-card__title">Alignment faking in large language models</h3>
-            <p class="pub-card__desc">Demonstrated that frontier models strategically fake alignment during training. 264+ citations.</p>
-            <a href="https://arxiv.org/abs/2412.14093" class="pub-card__link" target="_blank" rel="noopener">arXiv (2024)</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety &middot; Evaluations</p>
-            <h3 class="pub-card__title">SHADE-Arena: Evaluating sabotage and monitoring in LLM agents</h3>
-            <p class="pub-card__desc">Framework for evaluating sabotage behaviors and monitoring effectiveness in agentic LLM settings.</p>
-            <a href="https://arxiv.org/abs/2506.15740" class="pub-card__link" target="_blank" rel="noopener">arXiv (2025)</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety &middot; Scaling</p>
-            <h3 class="pub-card__title">Inverse scaling in test-time compute</h3>
-            <p class="pub-card__desc">Analysis of cases where more test-time compute leads to worse model performance.</p>
-            <a href="https://arxiv.org/abs/2507.14417" class="pub-card__link" target="_blank" rel="noopener">arXiv (2025)</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety &middot; Training</p>
-            <h3 class="pub-card__title">Enhancing model safety through pretraining data filtering</h3>
-            <p class="pub-card__desc">Methods for improving model safety by filtering pretraining data.</p>
-            <a href="https://www.anthropic.com/research/pretraining-data-filtering" class="pub-card__link" target="_blank" rel="noopener">Anthropic (2025)</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety &middot; Classifiers</p>
-            <h3 class="pub-card__title">Cost-effective constitutional classifiers via representation re-use</h3>
-            <p class="pub-card__desc">Efficient safety classifiers for content filtering.</p>
-            <a href="https://www.anthropic.com/research/cost-effective-constitutional-classifiers" class="pub-card__link" target="_blank" rel="noopener">Anthropic (2025)</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety &middot; Elicitation</p>
-            <h3 class="pub-card__title">Unsupervised elicitation of language models</h3>
-            <p class="pub-card__desc">Methods for eliciting model capabilities without supervised examples.</p>
-            <a href="https://arxiv.org/abs/2506.10139" class="pub-card__link" target="_blank" rel="noopener">arXiv (2025)</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- REPORTS & ANALYSIS -->
-    <section class="section">
+    <!-- ESSAYS — Substack feed -->
+    <section class="section" id="essays" aria-labelledby="essays-heading">
       <div class="container">
 
         <div class="section-header">
-          <p class="section-header__label">Reports &amp; Analysis</p>
-          <h2 class="section-header__title">Technical reports</h2>
+          <p class="section-header__label">Essays</p>
+          <h2 class="section-header__title" id="essays-heading">On Substack</h2>
           <p class="section-header__desc">
-            Independent research and co-authored technical reports on AI safety, policy, and applications.
+            What living with AI does to us. Grief, friendship, attention, consent.
           </p>
         </div>
 
-        <div class="pub-list">
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety · Policy</p>
-            <h3 class="pub-card__title">AI Pathways Report</h3>
-            <p class="pub-card__desc">
-              An analysis of potential development trajectories for advanced AI systems and their
-              implications for safety and governance.
-            </p>
-            <a href="https://ai-pathways.existentialhope.com/" class="pub-card__link" target="_blank" rel="noopener" data-umami-event="work-publication">Read the report</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety · Foresight</p>
-            <h3 class="pub-card__title">Hyper Entities</h3>
-            <p class="pub-card__desc">
-              A report exploring hyper-entities — novel organisational structures and agents emerging
-              from advanced AI — produced for Foresight Institute's Existential Hope programme.
-            </p>
-            <a href="https://www.existentialhope.com/hyper-entities" class="pub-card__link" target="_blank" rel="noopener" data-umami-event="work-publication">Read the report</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI Safety · Technology Mapping</p>
-            <h3 class="pub-card__title">Secure AI Tech Tree</h3>
-            <p class="pub-card__desc">
-              A comprehensive mapping of the technical landscape for secure AI development —
-              produced for Foresight Institute, covering alignment, interpretability, and robustness.
-            </p>
-            <a href="https://foresight.org/focus-areas/secure-ai/" class="pub-card__link" target="_blank" rel="noopener" data-umami-event="work-publication">Read the report</a>
-          </div>
-
-          <div class="pub-card">
-            <p class="pub-card__tag">AI &amp; Climate</p>
-            <h3 class="pub-card__title">AI &amp; Climate Report (Bezos Earth Fund)</h3>
-            <p class="pub-card__desc">
-              An extensive technical report on the intersection of AI and climate science, examining
-              how machine learning can accelerate environmental research and action.
-            </p>
-            <a href="https://www.bezosearthfund.org/uploads/Bezos-Earth-Fund-AI-for-Climate-and-Nature-Workshop-Report.pdf" class="pub-card__link" target="_blank" rel="noopener" data-umami-event="work-publication">Read the report</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH SUPPORT / CLIENTS -->
-    <section class="section section--bg" aria-labelledby="clients-heading">
-      <div class="container">
-
-        <div class="section-header">
-          <p class="section-header__label">Research support</p>
-          <h2 class="section-header__title" id="clients-heading">Organisations I've worked with</h2>
-          <p class="section-header__desc">
-            Science writing, embedded research support, and analysis for teams working on some
-            of the hardest problems in AI.
-          </p>
+        <div class="article-grid" id="article-grid">
+          <p style="grid-column:1/-1;text-align:center;color:var(--color-text-muted);">Loading articles...</p>
         </div>
 
-        <div class="logo-bar" style="border:none;padding-top:0;">
-          <div class="logo-bar__logos" style="justify-content:flex-start;gap:var(--space-10);">
-
-            <div class="logo-bar__logo" style="flex-direction:column;align-items:flex-start;filter:none;opacity:1;">
-              <span style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Nebius Science</span>
-              <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Science writing</span>
-            </div>
-
-            <div class="logo-bar__logo" style="flex-direction:column;align-items:flex-start;filter:none;opacity:1;">
-              <span style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Palisade Research</span>
-              <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Research support &middot; previously</span>
-            </div>
-
-            <div class="logo-bar__logo" style="flex-direction:column;align-items:flex-start;filter:none;opacity:1;">
-              <span style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Foresight Institute</span>
-              <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Technical writing</span>
-            </div>
-
-            <div class="logo-bar__logo" style="flex-direction:column;align-items:flex-start;filter:none;opacity:1;">
-              <img src="/images/logos/anthropic.svg" alt="Anthropic" width="140" height="28" loading="lazy">
-              <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Research support</span>
-            </div>
-
-            <div class="logo-bar__logo" style="flex-direction:column;align-items:flex-start;filter:none;opacity:1;">
-              <span style="font-size:var(--text-xl);font-weight:700;color:var(--color-text);">Bezos Earth Fund</span>
-              <span style="font-size:var(--text-sm);color:var(--color-text-muted);">Research &amp; writing</span>
-            </div>
-
-          </div>
+        <div style="text-align:center;margin-top:var(--space-10);">
+          <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener" class="btn btn--outline btn--lg" data-umami-event="substack-subscribe">All articles on Substack &rarr;</a>
         </div>
 
-        <div class="testimonial" style="max-width:700px;margin-top:var(--space-10);">
-          <blockquote class="testimonial__quote">
-            In the 10 years I have been involved in hiring contractors for various technical writing
-            at Foresight, Linda has been the best writer I've worked with, both in terms of the quality
-            of result she delivers and in terms of working style. She brings structure to projects
-            whose scope is rather unclear, before launching a diligent research process that often
-            uncovers new information that shapes the trajectory of the project. She hits deadlines,
-            is kind, patient, reliable and a great communicator. Feel free to contact me for more info.
-          </blockquote>
-          <div class="testimonial__attribution">
-            <p class="testimonial__name">Allison Duettmann</p>
-            <p class="testimonial__role">President, Foresight Institute</p>
-          </div>
+        <div style="max-width:var(--container-md);margin:var(--space-10) auto 0;text-align:center;">
+          <form class="subscribe-form" data-umami-event="writing-subscribe">
+            <input type="email" name="email" placeholder="Your email" required class="subscribe-form__input" aria-label="Email address">
+            <button type="submit" class="btn btn--primary subscribe-form__btn">Subscribe</button>
+            <p class="subscribe-form__msg" hidden></p>
+          </form>
         </div>
 
-      </div>
-    </section>
-
-    <!-- OPEN TO NEW WORK CTA -->
-    <section class="section section--pink">
-      <div class="container" style="max-width:var(--container-md);">
-        <div class="section-header">
-          <p class="section-header__label">New projects</p>
-          <h2 class="section-header__title">Open to new writing and research work</h2>
-          <p class="section-header__desc">
-            I take on a limited number of writing and research projects each year. If you're working
-            on something at the intersection of AI safety, policy, or governance and need research
-            support &mdash; or someone who can read the paper and then explain it &mdash; get in touch.
-          </p>
-        </div>
-        <a href="/contact.html" class="btn btn--primary btn--lg">Get in touch</a>
       </div>
     </section>
 
@@ -349,15 +386,15 @@
     <div class="container">
       <div class="footer__inner">
         <div>
-          <a href="/index.html" class="footer__brand">Linda Petrini</a>
-          <p class="footer__tagline">Science Writer &amp; Communicator</p>
+          <a href="/" class="footer__brand">Linda Petrini</a>
+          <p class="footer__tagline">Science writer</p>
         </div>
+
         <ul class="footer__links" role="list">
-          <li><a href="/about.html">About</a></li>
           <li><a href="/work.html">Work</a></li>
-          <li><a href="/writing.html">Writing</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
+
         <ul class="footer__social" role="list">
           <li><a href="https://twitter.com/petrini_linda" target="_blank" rel="noopener" data-umami-event="social-twitter">Twitter</a></li>
           <li><a href="https://linkedin.com/in/petrinilinda" target="_blank" rel="noopener" data-umami-event="social-linkedin">LinkedIn</a></li>
@@ -366,6 +403,7 @@
           <li><a href="https://github.com/LindaPetrini" target="_blank" rel="noopener" data-umami-event="social-github">GitHub</a></li>
         </ul>
       </div>
+
       <div class="footer__bottom">
         <p class="footer__copy">&copy; 2026 Linda Petrini. All rights reserved.</p>
       </div>
@@ -373,5 +411,66 @@
   </footer>
 
   <script src="/js/main.js" defer></script>
+  <script>
+    // Sticky nav shadow on scroll
+    (function () {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 12);
+      }, { passive: true });
+    })();
+  </script>
+  <script>
+  (function () {
+    var grid = document.getElementById('article-grid');
+    if (!grid) return;
+
+    fetch('https://subscribe.lindapetrini.workers.dev/feed')
+      .then(function (r) {
+        if (!r.ok) throw new Error('Feed unavailable');
+        return r.text();
+      })
+      .then(function (xml) {
+        var doc = new DOMParser().parseFromString(xml, 'application/xml');
+        var items = doc.querySelectorAll('item');
+        if (!items.length) throw new Error('No articles found');
+
+        var html = '';
+        items.forEach(function (item) {
+          var title = item.querySelector('title').textContent;
+          if (/newsletter/i.test(title)) return;
+          var link = item.querySelector('link').textContent;
+          var desc = item.querySelector('description');
+          var snippet = '';
+          if (desc) {
+            // description is HTML — extract text, truncate
+            var tmp = document.createElement('div');
+            tmp.innerHTML = desc.textContent;
+            snippet = tmp.textContent.trim().replace(/\s+/g, ' ');
+            if (snippet.length > 200) snippet = snippet.substring(0, 197) + '...';
+          }
+          var pubDate = item.querySelector('pubDate');
+          var dateStr = '';
+          if (pubDate) {
+            var d = new Date(pubDate.textContent);
+            dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+          }
+
+          html += '<div class="article-card">';
+          if (dateStr) html += '<time class="article-card__date">' + dateStr + '</time>';
+          html += '<h3 class="article-card__title">' + title + '</h3>';
+          if (snippet) html += '<p class="article-card__desc">' + snippet + '</p>';
+          html += '<a href="' + link + '" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>';
+          html += '</div>';
+        });
+
+        grid.innerHTML = html;
+      })
+      .catch(function () {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--color-text-muted);">Could not load articles. <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener">Read on Substack →</a></p>';
+      });
+  })();
+  </script>
 </body>
 </html>

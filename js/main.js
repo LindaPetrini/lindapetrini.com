@@ -56,16 +56,16 @@
     }
   });
 
-  /* ── Carrd anchor redirect ──────────────────────────────── */
-  // If someone visits /#coaching from an old Carrd link,
-  // redirect them to the new coaching page.
+  /* ── Legacy anchor redirect ─────────────────────────────── */
+  // Old Carrd-era and pre-refactor links used hash anchors on the
+  // home page. Send them to the right place on the two-page site.
+  // '#contact' is a real on-page anchor now, so it is not redirected.
   const hashRedirects = {
-    '#coaching':   '/coaching.html',
-    '#mentorship': '/coaching.html',
+    '#coaching':   '/',
+    '#mentorship': '/',
+    '#about':      '/',
     '#work':       '/work.html',
-    '#writing':    '/writing.html',
-    '#about':      '/about.html',
-    '#contact':    '/contact.html',
+    '#writing':    '/work.html#essays',
   };
 
   const hash = window.location.hash;

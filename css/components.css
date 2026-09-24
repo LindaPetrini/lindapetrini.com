@@ -582,11 +582,24 @@
   margin-bottom: var(--space-2);
 }
 
+.pub-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-card__title a:hover {
+  color: var(--color-accent-hover);
+}
+
 .pub-card__desc {
   font-size: var(--text-base);
   color: var(--color-text-light);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-4);
+}
+
+.pub-card > :last-child {
+  margin-bottom: 0;
 }
 
 .pub-card__link {
