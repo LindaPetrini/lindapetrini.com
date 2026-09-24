@@ -7,15 +7,26 @@ Edit this file, or rewrite it from scratch. Keep the section markers; I'll put w
 ## HOME (index.html)
 
 ### Hero
-Eyebrow: Science writer
+Eyebrow: Technical writer for AI research labs
 
-Headline: Research is only finished when someone else understands it.
+Headline: Your research is good. I make sure people finish reading it.
 
-Intro: I spent seven years doing AI research. Now I write about it. I cover new work for Nebius Science, and I help AI safety labs turn their findings into papers, figures, and threads that land.
+Intro: Half of what makes a paper land is how it's told. Annoying, but true. I write papers, reports, and explainers with small research teams: Anthropic, Epoch AI, Foresight Institute, Palisade Research. Seven years as a researcher at Google Brain and Mila means I read the logs before I write the sentence.
 
-Buttons: See my work / Email me
+Buttons: Email me / See the work
 
 Logo bar label: Worked with
+
+### What I do
+Label: Two ways to work with me
+Heading: What I do
+
+1. Writing and editing (links to Work)
+   You have results, plots, and a draft nobody outside the team can follow. I turn it into a paper, a report, or a thread that lands and stays true to what you found. Alignment Faking, SHADE-Arena, the Secure AI Tech Tree, and a robot-dog thread that 1.3 million people read.
+   Link: See the work →
+2. Thinking partner (links to Contact)
+   You have the ideas and keep getting stuck. A standing weekly call for researchers who need someone to say "that makes sense, write it down", and to pull them back when they wander. For the tangent-prone, and the ones with a thousand plots.
+   Link: Email me →
 
 ### The short version
 Heading: How I got here
@@ -24,7 +35,7 @@ I trained as a mathematician, then as an AI researcher. At Google Brain I led a 
 
 In 2023 I left my PhD and started writing full time. Anthropic brought me in to edit and draw figures for papers like Alignment Faking. Palisade Research had me turn their findings into threads; one reached 1.3 million people. Foresight Institute asked me to map the whole field of secure AI, from concept to launch.
 
-Today I write for Nebius Science about how AI is changing research: Yann LeCun's lab, theorem search, the papers that mattered at ICML. On Substack I write about the part that never makes it into the paper: what living with these systems does to us.
+Today I work with a handful of labs at a time: papers with Anthropic, articles for Epoch AI and Nebius Science, and a weekly call with researchers who need a second brain. On Substack I write about the part that never makes it into the paper: what living with these systems does to us.
 
 (small, muted) I live in rural Italy. I teach acroyoga. I answer email.
 
@@ -61,18 +72,19 @@ Full text of Jeffrey's reference, for the record:
 
 ### Contact
 Label: Contact
-Heading: Working on something that deserves to be understood?
-Line: Email me. I usually reply within a couple of days.
+Heading: If someone sent you here, they probably said "technical writer."
+Line: Close enough. Email me with what you're stuck on. I usually reply within a couple of days.
 Buttons: lindapetrini@gmail.com / Download CV (PDF)
-Small line: Essays go out on Substack when there's something to say. Subscribe.
+Small line 1: From €150 an hour. Most engagements run 10 to 35 hours a week for a few months. I take on a few new teams a year.
+Small line 2: Essays go out on Substack when there's something to say. Subscribe.
 
 ### Footer
-Tagline: Science writer
+Tagline: Technical writer for AI research labs
 Links: Work · Contact · Twitter · LinkedIn · Substack · Scholar · GitHub
 
 ### Meta (what Google and link previews show)
-Title: Linda Petrini — Science Writer
-Description: Science writer with seven years inside AI research. Writes for Nebius Science and helps AI safety labs turn findings into papers, figures, and stories that land.
+Title: Linda Petrini — Technical Writer for AI Research Labs
+Description: Technical writer for AI research labs. Papers, reports, and explainers with Anthropic, Epoch AI, Foresight Institute, and Palisade Research. Seven years as a researcher at Google Brain and Mila.
 
 ---
 
