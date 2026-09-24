@@ -75,7 +75,7 @@ Label: Contact
 Heading: If someone sent you here, they probably said "technical writer."
 Line: Close enough. Email me with what you're stuck on. I usually reply within a couple of days.
 Buttons: lindapetrini@gmail.com / Download CV (PDF)
-Small line 1: From €150 an hour. Most engagements run 10 to 35 hours a week for a few months. I take on a few new teams a year.
+Small line 1: From €150 an hour. Most engagements run 10 to 35 hours a week for a few months. Next opening: October 2026.
 Small line 2: Essays go out on Substack when there's something to say. Subscribe.
 
 ### Footer
