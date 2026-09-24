@@ -130,6 +130,7 @@ Palisade Research · 2025–2026
 - Multi-stage AI hacking — Thread and figures.
 
 Foresight Institute · 2024–2026
+- Open Science Needs Open Compute (2026) — Editorial rewrite of Allison Duettmann's essay on why independent science depends on compute, not just funding.
 - Secure AI Tech Tree — Concept, content, and launch video.
 - AI Pathways — Scenario drafting; wrote all content.
 - Hyper Entities — Framework and report for the Existential Hope programme.
