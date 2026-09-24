@@ -1,9 +1,12 @@
 # Website Project
 
+## Repo context
+At the start of any site or code session, confirm the repo and branch with `git remote -v && git branch --show-current` and state them back to me before editing. My live site is not the old 2019 Hugo repo.
+
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
 Linda is an AI researcher, technical writer, and coach with 7+ years in ML/AI safety.
-Pages: Home, About, Work (publications), Writing (Substack archive), Coaching, Contact.
+Pages: Home (index.html — story, selected work, testimonial, #contact) and Work (work.html — Nebius articles, research communication for labs, papers, Substack essays). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
 Target audience: researchers, organisations, individuals interested in AI safety/policy; coaching clients.
 
 ## Tech Stack
@@ -20,7 +23,8 @@ Target audience: researchers, organisations, individuals interested in AI safety
 
 ## Project Structure
 See README.md for full file tree. Key files:
-- index.html, about.html, work.html, writing.html, coaching.html, contact.html — all pages
+- index.html, work.html — the two live pages
+- _redirects — Cloudflare Pages 301s for the retired about/writing/contact/coaching URLs
 - css/main.css — CSS entry point (@import chain)
 - css/tokens.css — design tokens (colours: pink scheme, fonts, spacing)
 - js/main.js — nav, email assembly, redirects

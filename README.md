@@ -6,60 +6,34 @@ Static HTML/CSS site. No build step, no framework, no backend.
 
 ## Pages
 
-| File | URL | Status |
-|------|-----|--------|
-| `index.html` | `/` | ✓ Built |
-| `about.html` | `/about` | ✓ Built — **needs Linda's copy** |
-| `work.html` | `/work` | ✓ Built — **needs publication URLs** |
-| `writing.html` | `/writing` | ✓ Built — **needs article cards** |
-| `coaching.html` | `/coaching` | ✓ Built |
-| `contact.html` | `/contact` | ✓ Built — **needs email + CV** |
+| File | URL | Contents |
+|------|-----|----------|
+| `index.html` | `/` | Hero, "The short version" story, six selected pieces, testimonial, `#contact` (email + CV) |
+| `work.html` | `/work` | Nebius Science articles (`#articles`), research communication for labs (`#labs`), papers (`#papers`), Substack essays feed + subscribe form (`#essays`) |
+
+Retired pages (`/about`, `/writing`, `/contact`, `/coaching`, with and without `.html`)
+301 to the new locations via `_redirects` (Cloudflare Pages format). Old hash links on the
+home page (`/#about`, `/#writing`, `/#work`, `/#coaching`) are handled in `js/main.js`.
 
 ---
 
-## Before Launch — Linda's TODO List
+## Maintenance notes
 
-### 1. About page copy (`about.html`)
-Four sections marked with `✏️ LINDA:` — fill in:
-- Present-tense intro (who you are right now)
-- Origin story (how you got here)
-- What you care about now
-- Your background (short version — CV covers the rest)
+### Contact email
+The email address is assembled at runtime from the `data-email-user`, `data-email-domain`,
+`data-email-tld` attributes on the button in the `#contact` section of `index.html`.
 
-### 2. Writing page articles (`writing.html`)
-Six article card placeholders — replace each with:
-- Article title
-- One-line description
-- Direct link to the Substack post
+### CV file
+`cv/linda-petrini-cv.pdf` — linked from the home `#contact` section and the Work page hero.
 
-### 3. Work page publication links (`work.html`)
-Four `href="#"` placeholders — replace with actual URLs:
-- AI Pathways Report
-- Secure AI Tech Tree
-- Bezos Earth Fund AI & Climate Report
-- ICLR paper (add correct title and DOI/link)
-
-### 4. Contact page email (`contact.html`)
-Update the `data-email-user`, `data-email-domain`, `data-email-tld` attributes
-to your actual email address parts. The JS assembles them at runtime.
-
-### 5. CV file
-Place `linda-petrini-cv.pdf` in the `/cv/` directory.
-Update the "Last updated [date]" note in `contact.html`.
-
-### 6. Photos & logos (see `/images/README.md`)
-- `images/linda-petrini.jpg` + `.webp` — hero and about page photo
+### Photos & logos (see `/images/README.md`)
+- `images/linda-petrini.jpg` + `.webp` — hero photo
 - `images/og.jpg` — social sharing preview (1200×630px)
-- `images/logos/anthropic.svg`, `palisade.svg`, `foresight.svg`
+- `images/logos/` — logo bar SVGs
 
-### 7. Fonts (see `/fonts/README.md`)
-Download Inter + Newsreader WOFF2 variable fonts and place in `/fonts/`.
-Until then the site uses system fonts (still looks good).
-
-### 8. Analytics
-Sign up for Plausible (plausible.io, ~$9/mo).
-The script tag is already on every page — just verify the domain matches.
-After launch: submit `sitemap.xml` to Google Search Console.
+### Analytics
+Umami, self-hosted at `analytics.lindapetrini.com`. The script tag is in the `<head>` of both pages.
+After a content change: submit `sitemap.xml` to Google Search Console.
 
 ---
 
@@ -98,18 +72,17 @@ Alternative: **Netlify** — drag and drop the folder at netlify.com/drop
 
 ## Launch checklist
 
-- [ ] All TODO items above completed
-- [ ] Open each page in browser — no broken layouts
+- [ ] Open both pages in browser — no broken layouts
 - [ ] Open on a real phone (iOS Safari + Android Chrome)
 - [ ] Test hamburger nav: opens, closes, keyboard works
-- [ ] Test Cal.com booking — complete a test booking end-to-end
-- [ ] Test Beehiiv embed on coaching page and writing page
-- [ ] Test email link assembles correctly on contact page
+- [ ] Test the Substack essays feed and subscribe form on the Work page
+- [ ] Test email link assembles correctly in the home `#contact` section
 - [ ] Test CV download
 - [ ] Check all publication links open correct pages
-- [ ] Check social links: Twitter, LinkedIn, Substack
+- [ ] Check social links: Twitter, LinkedIn, Substack, Scholar, GitHub
+- [ ] Check `_redirects` works for the retired URLs after deploy
 - [ ] Verify no `loading="lazy"` on hero image
-- [ ] Verify Plausible script appears exactly once per page
+- [ ] Verify Umami script appears exactly once per page
 - [ ] Check `robots.txt` does NOT have `Disallow: /`
 - [ ] Check all `og:image` values are absolute URLs
 - [ ] Run Lighthouse mobile audit — target ≥ 90 Performance, ≥ 95 SEO/Accessibility
@@ -121,12 +94,9 @@ Alternative: **Netlify** — drag and drop the folder at netlify.com/drop
 
 ```
 /
-├── index.html           # Home
-├── about.html           # About
-├── work.html            # Work & Research
-├── writing.html         # Writing & Newsletter
-├── coaching.html        # Tech & Soul — Coaching
-├── contact.html         # Contact
+├── index.html           # Home: story, selected work, contact
+├── work.html            # Work: articles, research communication, papers, essays
+├── _redirects           # Cloudflare Pages 301s for retired URLs
 ├── css/
 │   ├── main.css         # @import chain entry point
 │   ├── tokens.css       # Design tokens (colours, fonts, spacing)
