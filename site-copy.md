@@ -43,8 +43,8 @@ Today I work with a handful of labs at a time: papers with Anthropic, articles f
 Label: Selected work
 Heading: Six pieces
 
-1. Nebius Science · 2026 — Meet Yann LeCun's Lab and the AI World of 2030
-   He's betting big on predictive architectures. We asked him to play the predictive architect.
+1. Nebius Science · 2026 — The Web Has a New Reader
+   How Tavily's AI-optimised search layer gives research agents structured, token-efficient access to the web.
 2. Palisade Research · 2026 — Shutdown resistance in LLM-controlled robots
    A robot dog, a shutdown order, and a model that kept going. The thread reached 1.3 million people.
 3. Anthropic · 2024 — Alignment Faking in Large Language Models
@@ -100,10 +100,6 @@ Button: Download CV (PDF)
 Heading: Articles for Nebius Science
 Line: I read new research and write about what it actually found.
 
-- August 20, 2026 — Compute Grants: The Research We Power
-  What Nebius funds through its research grants, and how applications get judged.
-- July 13, 2026 — Meet Yann LeCun's Lab and the AI World of 2030
-  He's betting big on predictive architectures. We asked him to play the predictive architect.
 - July 8, 2026 — ICML 2026: Papers That Matter
   Standout papers from Seoul, sorted into five research categories. Co-written with Arseniy Sokolov.
 - June 23, 2026 — The Web Has a New Reader
