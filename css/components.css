@@ -296,8 +296,10 @@
   transform: translateX(50%);
 }
 
-@media (max-width: 639px) {
-  .hero__orbit, .hero__orbit--outer { display: none; }
+/* Mobile: hide orbit rings and cap the photo so it doesn't fill the viewport */
+@media (max-width: 767px) {
+  .hero__orbit { display: none; }
+  .hero__photo-wrap { max-width: 200px; margin-inline: auto; }
 }
 
 /* ── Logo Bar ────────────────────────────────────────────── */
