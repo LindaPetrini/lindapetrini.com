@@ -11,7 +11,7 @@ Eyebrow: Technical writer for AI research labs
 
 Headline: Your research is good. I make sure people finish reading it.
 
-Intro: Half of what makes a paper land is how it's told. Annoying, but true. I write papers, reports, and explainers with small research teams: Anthropic, Foresight Institute, Palisade Research. Seven years as a researcher at Google Brain and Mila means I read the logs before I write the sentence.
+Intro: Half of what makes a paper land is how it's told. I write papers, reports, and explainers with small research teams: Anthropic, Foresight Institute, Palisade Research. Seven years as a researcher at Google Brain and Mila means I read the logs before I write the sentence.
 
 Buttons: Email me / See the work
 
@@ -24,8 +24,8 @@ Heading: What I do
 1. Writing and editing (links to Work)
    You have results, plots, and a draft nobody outside the team can follow. I turn it into a paper, a report, or a thread that lands and stays true to what you found. Alignment Faking, SHADE-Arena, the Secure AI Tech Tree, and the robot-dog thread.
    Link: See the work →
-2. Thinking partner (links to Contact)
-   You have the ideas and keep getting stuck. A standing weekly call for researchers who need someone to say "that makes sense, write it down", and to pull them back when they wander. For the tangent-prone, and the ones with a thousand plots.
+2. Coaching for fellows (links to Contact)
+   Your fellows have results and no draft. A standing weekly call where I help each of them find the claim, outline the paper, and keep writing until it's done. For the tangent-prone, and the ones with a thousand plots.
    Link: Email me →
 
 How it works (centered block under the two cards)
@@ -80,9 +80,9 @@ Full text of Jeffrey's reference, for the record:
 Label: Contact
 Heading: If someone sent you here, they probably said "technical writer."
 Line: Close enough. Email me with what you're stuck on. I usually reply within a couple of days.
+Line 2: Rates start at €150 an hour. Most engagements run 10 to 35 hours a week for a few months. Next opening: October 2026.
 Buttons: lindapetrini@gmail.com / Download CV (PDF)
-Small line 1: From €150 an hour. Most engagements run 10 to 35 hours a week for a few months. Next opening: October 2026.
-Small line 2: Essays go out on Substack when there's something to say. Subscribe.
+Small line: Essays go out on Substack when there's something to say. Subscribe.
 
 ### Footer
 Tagline: Technical writer for AI research labs
