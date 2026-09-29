@@ -111,9 +111,7 @@ Line: Articles, reports, papers, and essays. The CV has the formal version.
 Button: Download CV (PDF)
 
 ### Written
-Label: Written
 Heading: Things I wrote
-Line: Reports, threads, and articles where the words are mine.
 
 Sub-heading: Reports
 - Foresight Institute · 2025 — Secure AI Tech Tree
@@ -149,7 +147,6 @@ Sub-heading: Articles for Nebius Science
 Link: More at Nebius Science →
 
 ### Essays
-Label: Written
 Heading: Essays on Substack
 Line: What living with AI does to us. Grief, friendship, attention, consent.
 (The essay list loads automatically from Substack.)
@@ -157,9 +154,8 @@ Link: All articles on Substack →
 Subscribe form.
 
 ### Edited
-Label: Edited
 Heading: Things I edited or contributed to
-Line: Papers and essays by other people. I did the editing, figures, and feedback; the research and the arguments are theirs.
+Line: The research and the arguments are theirs. I did the editing, figures, and feedback.
 
 Sub-heading: Anthropic · 2024–2025
 (small, muted) Editing and figures on each, unless noted.
@@ -178,7 +174,6 @@ Sub-heading: Foresight Institute · 2026
   Editorial rewrite of Allison Duettmann's essay on why independent science depends on compute, not just funding.
 
 ### Papers
-Label: Academic publications
 Heading: Papers
 Line: From my years as a researcher. First author where marked.
 - ICLR 2020 · First author — Locality and Compositionality in Zero-Shot Learning
