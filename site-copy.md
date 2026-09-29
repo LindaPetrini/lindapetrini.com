@@ -11,7 +11,7 @@ Eyebrow: Technical writer for AI research labs
 
 Headline: Your research is good. I make sure people finish reading it.
 
-Intro: Half of what makes a paper land is how it's told. I write papers, reports, and explainers with small research teams: Anthropic, Foresight Institute, Palisade Research. Seven years as a researcher at Google Brain and Mila means I read the logs before I write the sentence.
+Intro: Half of what makes a paper land is how it's told. I write papers, reports, and explainers with small research teams: Anthropic, Foresight Institute, Palisade Research. I've worked in AI research for seven years, including four at Google Brain.
 
 Buttons: Email me / See the work
 
@@ -90,7 +90,7 @@ Links: Work · Contact · Twitter · LinkedIn · Substack · Scholar · GitHub
 
 ### Meta (what Google and link previews show)
 Title: Linda Petrini — Technical Writer for AI Research Labs
-Description: Technical writer for AI research labs. Papers, reports, and explainers with Anthropic, Foresight Institute, and Palisade Research. Seven years as a researcher at Google Brain and Mila.
+Description: Technical writer for AI research labs. Papers, reports, and explainers with Anthropic, Foresight Institute, and Palisade Research. Seven years in AI research, including four at Google Brain.
 
 ---
 

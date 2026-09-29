@@ -5,7 +5,7 @@ At the start of any site or code session, confirm the repo and branch with `git 
 
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
-Positioning: "Technical writer for AI research labs". Seven years as a researcher at Google Brain and Mila; works with Anthropic, Foresight Institute, Palisade Research, Nebius Science, and the Bezos Earth Fund.
+Positioning: "Technical writer for AI research labs". Seven years in AI research, including four at Google Brain; works with Anthropic, Foresight Institute, Palisade Research, Nebius Science, and the Bezos Earth Fund.
 Pages: Home (index.html — hero, "What I do" + "How it works", story, six selected pieces, two testimonials, #contact with email, CV, and rate) and Work (work.html — #labs, #articles for Nebius Science, #papers, #essays Substack feed + subscribe form). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
 Target audience: research lab leads arriving by personal referral.
 All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
