@@ -149,34 +149,12 @@
 }
 
 /* ── Hero inline logo bar ────────────────────────────────── */
-/* The bar is the last child of the hero grid. On narrow screens it is ordered
-   between the text and the photo; from 768px it runs the full container width
-   as its own row under both columns. */
+/* The bar closes the hero text column, under the buttons, so it sits between
+   the text and the photo on narrow screens and beside the photo from 768px. */
 .hero__logo-bar {
-  order: 1;
-  margin-top: var(--space-2);
-  padding-top: var(--space-8);
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
   border-top: 1px solid var(--color-border-muted);
-}
-
-.hero__visual {
-  order: 2;
-}
-
-@media (min-width: 768px) {
-  .hero .split {
-    row-gap: var(--space-12);
-  }
-
-  .hero__logo-bar {
-    grid-column: 1 / -1;
-    order: 0;
-    margin-top: 0;
-  }
-
-  .hero__visual {
-    order: 0;
-  }
 }
 
 .hero__logo-bar__label {
@@ -191,7 +169,7 @@
 }
 
 /* Six items, each a logo with its name underneath: two columns on narrow
-   screens, three from 480px, one row of six from 768px. */
+   screens, three (two rows of three) from 480px. */
 .hero__logo-bar__logos {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -204,12 +182,6 @@
 @media (min-width: 480px) {
   .hero__logo-bar__logos {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__logo-bar__logos {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
@@ -257,7 +229,7 @@
 /* Wide horizontal lockups carry more optical weight per pixel of height than
    the icon marks beside them — trim the height so the row stays balanced. */
 .hero__logo-bar__logos .logo-bar__logo--wide img {
-  height: 22px;
+  height: 20px;
 }
 
 /* Solid single-glyph marks (the Google G) read heavier than the outlined ones. */

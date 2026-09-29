@@ -16,7 +16,7 @@ Intro: I write papers, reports, and explainers with research teams at Anthropic,
 Buttons: Email me / See the work
 
 Logo bar label: Worked with
-Logo bar names: Anthropic · Google Brain · Palisade Research · Foresight Institute · Nebius Science · Bezos Earth Fund
+Logo bar names: Anthropic · Google Brain · Palisade Research · Foresight Institute · Epoch AI · Nebius Science
 
 ### What I do
 Label: Two ways to work with me
