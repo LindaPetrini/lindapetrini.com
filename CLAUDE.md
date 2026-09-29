@@ -5,9 +5,10 @@ At the start of any site or code session, confirm the repo and branch with `git 
 
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
-Positioning: "Technical writer for AI research labs". Background in AI research at Google Brain and Mila; works with Anthropic, Foresight Institute, Palisade Research, Nebius Science, and the Bezos Earth Fund.
-Pages: Home (index.html — hero, "What I do" + "How it works", story, six selected pieces, two testimonials, #contact with email, CV, and rate) and Work (work.html — #labs, #articles for Nebius Science, #papers, #essays Substack feed + subscribe form). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
-Target audience: research lab leads arriving by personal referral.
+Positioning: "Technical writer for AI research". Background in AI research at Google Brain and Mila; works with Anthropic, Foresight Institute, Palisade Research, Epoch AI, Nebius Science, and the Bezos Earth Fund.
+Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching) + "How it works", seven selected pieces split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays Substack feed + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
+Written and edited work must stay visibly separate on both pages.
+Target audience: research leads arriving by personal referral.
 All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
 
 ## Tech Stack
@@ -52,7 +53,7 @@ docker exec -it claude-website bash  # shell in container
 
 ## SEO & Content Goals
 - Clients arrive by referral, so search is secondary; the pages mainly need to read well in link previews and name searches
-- Primary keywords: "Linda Petrini", "technical writer for AI research labs", "AI technical writer"
+- Primary keywords: "Linda Petrini", "technical writer for AI research", "AI technical writer"
 - Secondary: "AI safety technical writing", "research communication", "science communication for AI labs"
 - Structured data: Person JSON-LD on index.html (jobTitle "Technical Writer")
 - All pages: canonical URLs, OG/Twitter meta, descriptive titles
