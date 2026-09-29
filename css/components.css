@@ -149,10 +149,34 @@
 }
 
 /* ── Hero inline logo bar ────────────────────────────────── */
+/* The bar is the last child of the hero grid. On narrow screens it is ordered
+   between the text and the photo; from 768px it runs the full container width
+   as its own row under both columns. */
 .hero__logo-bar {
-  margin-top: var(--space-12);
+  order: 1;
+  margin-top: var(--space-2);
   padding-top: var(--space-8);
   border-top: 1px solid var(--color-border-muted);
+}
+
+.hero__visual {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .hero .split {
+    row-gap: var(--space-12);
+  }
+
+  .hero__logo-bar {
+    grid-column: 1 / -1;
+    order: 0;
+    margin-top: 0;
+  }
+
+  .hero__visual {
+    order: 0;
+  }
 }
 
 .hero__logo-bar__label {
@@ -167,7 +191,7 @@
 }
 
 /* Six items, each a logo with its name underneath: two columns on narrow
-   screens, two rows of three from 480px up. */
+   screens, three from 480px, one row of six from 768px. */
 .hero__logo-bar__logos {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -183,6 +207,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .hero__logo-bar__logos {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
 .hero__logo-bar__item {
   display: flex;
   flex-direction: column;
@@ -194,9 +224,12 @@
 }
 
 /* Every logo sits in a box of the same height, so the names below share a line. */
-.hero__logo-bar__item .logo-bar__logo {
+.hero__logo-bar__item .logo-bar__logo,
+.hero__logo-bar__item .logo-bar__logo:hover {
   height: 28px;
   max-width: 100%;
+  /* The grey treatment lives on the img alone, so it is not applied twice. */
+  filter: none;
 }
 
 .hero__logo-bar__name {
@@ -213,14 +246,18 @@
   height: 28px;
   width: auto;
   max-width: 100%;
-  filter: grayscale(1) opacity(0.4);
+  /* When a narrow column caps the width, scale the mark down from the left
+     edge instead of centring it in the box. */
+  object-fit: contain;
+  object-position: left center;
+  filter: grayscale(1) opacity(0.55);
   transition: filter var(--transition-base);
 }
 
 /* Wide horizontal lockups carry more optical weight per pixel of height than
    the icon marks beside them — trim the height so the row stays balanced. */
 .hero__logo-bar__logos .logo-bar__logo--wide img {
-  height: 20px;
+  height: 22px;
 }
 
 /* Solid single-glyph marks (the Google G) read heavier than the outlined ones. */
@@ -230,7 +267,7 @@
 
 .hero__logo-bar__logos .logo-bar__logo img:hover,
 .hero__logo-bar__logos img:hover {
-  filter: grayscale(0.3) opacity(0.65);
+  filter: grayscale(0.3) opacity(0.85);
 }
 
 /* ── Hero photo wrap ─────────────────────────────────────── */
@@ -340,6 +377,7 @@
 /* Mobile: hide orbit rings and cap the photo so it doesn't fill the viewport */
 @media (max-width: 767px) {
   .hero__orbit { display: none; }
+  .hero__orbit-wrap { display: block; }
   .hero__photo-wrap { max-width: 200px; margin-inline: auto; }
 }
 
