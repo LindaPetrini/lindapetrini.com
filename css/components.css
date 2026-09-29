@@ -799,6 +799,83 @@
   text-decoration: none;
 }
 
+/* ── Compact density ─────────────────────────────────────── */
+/* Opt-in modifiers for long lists of short cards (work page, and the
+   selected-work lists on the home page). Same type sizes and colours;
+   two columns, less padding, tighter rhythm. */
+.pub-list--compact {
+  gap: var(--space-4);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Two columns once each card is at least ~300px wide. An odd last card
+   keeps its single column and sits on the left. */
+@media (min-width: 680px) {
+  .pub-list--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.pub-list--compact .pub-card {
+  padding: var(--space-4) var(--space-5);
+}
+
+.pub-list--compact .pub-card__tag {
+  line-height: 1.4;
+  margin-bottom: var(--space-1);
+}
+
+/* Titles wrap more often in the narrower cards: balance the lines so a
+   single word is not left alone on the last one. */
+.pub-list--compact .pub-card__title {
+  margin-bottom: var(--space-1);
+  text-wrap: balance;
+}
+
+.pub-list--compact .pub-card__desc {
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.pub-list--compact .pub-card > :last-child {
+  margin-bottom: 0;
+}
+
+.article-grid--compact {
+  gap: var(--space-4);
+}
+
+.article-grid--compact .article-card {
+  padding: var(--space-4) var(--space-5);
+  gap: var(--space-2);
+}
+
+.article-grid--compact .article-card__date {
+  margin-bottom: calc(-1 * var(--space-1));
+}
+
+.article-grid--compact .article-card__desc {
+  line-height: 1.5;
+}
+
+/* Tighter vertical rhythm for sections that hold compact lists. */
+.section--compact {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.section--compact .section-header {
+  margin-bottom: var(--space-8);
+}
+
+.section--compact .work-group + .work-group {
+  margin-top: var(--space-8);
+}
+
+.section--compact .work-group__header {
+  margin-bottom: 0.875rem;
+}
+
 /* ── Highlight box ───────────────────────────────────────── */
 .highlight-box {
   background-color: var(--color-bg-subtle);
@@ -935,6 +1012,11 @@
   padding: var(--space-16) 0 var(--space-12);
   background-color: var(--color-bg-subtle);
   border-bottom: 1px solid var(--color-border-muted);
+}
+
+/* Shorter hero for pages that lead straight into compact lists. */
+.page-hero--compact {
+  padding: var(--space-12) 0 var(--space-8);
 }
 
 .page-hero__label {
