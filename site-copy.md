@@ -134,7 +134,7 @@ Sub-heading: Threads for Palisade Research
 - 2025 — Multi-stage AI hacking
 
 Sub-heading: Articles for Nebius Science
-(small, muted) I read new research and write about what it actually found.
+(small, muted) I read new research and wrote about what it actually found.
 - July 8, 2026 — ICML 2026: Papers That Matter
   Standout papers from Seoul, sorted into five research categories. Co-written with Arseniy Sokolov.
 - June 23, 2026 — The Web Has a New Reader
