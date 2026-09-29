@@ -68,7 +68,7 @@ I trained as a mathematician, then as an AI researcher. At Google Brain I led a 
 
 In 2023 I left my PhD and started writing full time. Anthropic brought me in to edit and draw figures for papers like Alignment Faking. Palisade Research had me sit with the researchers, read the eval logs, and turn hacking demos into threads. Foresight Institute asked me to map the whole field of secure AI, from concept to launch.
 
-Today I work with a handful of labs at a time: papers with Anthropic, articles for Nebius Science, and a weekly call with researchers who need a second brain. On Substack I write about the part that never makes it into the paper: what living with these systems does to us.
+Today most of my time goes to papers with Anthropic, with some work for Epoch AI. On Substack I write about the part that never makes it into the paper: what living with these systems does to us.
 
 (small, muted) I live in rural Italy. I teach acroyoga. I answer email.
 
