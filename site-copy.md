@@ -48,20 +48,27 @@ Today I work with a handful of labs at a time: papers with Anthropic, articles f
 
 ### Selected work
 Label: Selected work
-Heading: Six pieces
+Heading: Seven pieces
+
+Group label: I wrote these
 
 1. Nebius Science · 2026 — The Web Has a New Reader
    Search was built for people. Research agents read differently. How Tavily rebuilt it for them.
 2. Palisade Research · 2026 — Shutdown resistance in LLM-controlled robots
    A robot dog, a shutdown order, and a model that kept going. 1.3 million views.
-3. Anthropic · 2024 — Alignment Faking in Large Language Models
-   The paper that caught a frontier model playing along during training. I did the editing and figures.
-4. Foresight Institute · 2025 — Secure AI Tech Tree
+3. Foresight Institute · 2025 — Secure AI Tech Tree
    The whole field of secure AI, mapped as one tree. Concept, content, and launch.
-5. Bezos Earth Fund · 2024 — AI for Climate and Nature
-   Where machine learning helps on climate, and where it doesn't. Workshop report; I wrote it.
-6. Substack · 2026 — How Much of Your Emotional Life Runs Through a Chatbot?
+4. Bezos Earth Fund · 2024 — AI for Climate and Nature
+   Where machine learning helps on climate, and where it doesn't. Workshop report.
+5. Substack · 2026 — How Much of Your Emotional Life Runs Through a Chatbot?
    Eight long interviews about people and their AIs, and the five tensions that kept coming up.
+
+Group label: I edited these
+
+6. Anthropic · 2024 — Alignment Faking in Large Language Models
+   The paper that caught a frontier model playing along during training. Editing and figures.
+7. Foresight Institute · 2026 — Open Science Needs Open Compute
+   Allison Duettmann's essay on why independent science depends on compute, not just funding. Editorial rewrite.
 
 Link: Everything else →
 
