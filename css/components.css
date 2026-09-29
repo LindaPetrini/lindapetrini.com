@@ -583,6 +583,42 @@
   line-height: var(--leading-relaxed);
 }
 
+/* ── Group heading ───────────────────────────────────────── */
+/* Sub-heading for a group of cards inside a section: larger than a card
+   title, smaller than the section title. */
+.group-heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .group-heading {
+    font-size: 1.875rem;
+  }
+}
+
+/* A group of cards on the work page: heading, optional note, then the cards. */
+.work-group + .work-group {
+  margin-top: var(--space-12);
+}
+
+.work-group__header {
+  margin-bottom: var(--space-5);
+}
+
+.work-group__header .group-heading {
+  margin-bottom: 0;
+}
+
+.work-group__header p {
+  margin-top: var(--space-1);
+}
+
 /* ── Badge ───────────────────────────────────────────────── */
 .badge {
   display: inline-flex;
@@ -692,6 +728,13 @@
 @media (min-width: 1024px) {
   .article-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Four cards: keep two even rows of two instead of three and one. */
+@media (min-width: 1024px) {
+  .article-grid--pairs {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

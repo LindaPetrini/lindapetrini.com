@@ -106,43 +106,27 @@ Description: Technical writer for AI research labs. Papers, reports, and explain
 
 ### Page hero
 Label: Work
-Heading: Everything since 2019, grouped by who it was for.
+Heading: Everything since 2019, grouped by what I did.
 Line: Articles, reports, papers, and essays. The CV has the formal version.
 Button: Download CV (PDF)
 
-### Labs
-Heading: For research labs
-Line: Editing, figures, threads, and reports for teams whose work needs to reach people outside the lab.
+### Written
+Label: Written
+Heading: Things I wrote
+Line: Reports, articles, and threads where the words are mine.
 
-Foresight Institute · 2024–2026
-- Open Science Needs Open Compute (2026) — Editorial rewrite of Allison Duettmann's essay on why independent science depends on compute, not just funding.
-- Secure AI Tech Tree — Concept, content, and launch video.
-- AI Pathways — Scenario drafting; wrote all content.
-- Hyper Entities — Framework and report for the Existential Hope programme.
+Sub-heading: Reports
+- Foresight Institute · 2025 — Secure AI Tech Tree
+  Concept, content, and launch video.
+- Foresight Institute · 2024 — AI Pathways
+  Scenario drafting; wrote all content.
+- Foresight Institute · 2026 — Hyper Entities
+  Framework and report for the Existential Hope programme.
+- Bezos Earth Fund · 2024 — AI for Climate and Nature workshop report
+  Wrote and edited the full report.
 
-Bezos Earth Fund · 2024
-- AI for Climate and Nature workshop report — Wrote and edited the full report.
-
-Palisade Research · 2025–2026
-(small, muted) Threads and figures.
-- Shutdown resistance in LLM-controlled robots — 1.3M views.
-- AI is as good at hacking as at math competitions — 107K views.
-- Network hacking demo — 87K views.
-- Multi-stage AI hacking
-
-Anthropic · 2024–2025
-(small, muted) Editing and figures on each, unless noted.
-- Alignment faking in large language models — Plus formatting for release.
-- SHADE-Arena: Evaluating sabotage and monitoring in LLM agents — Figures and draft feedback.
-- Inverse scaling in test-time compute — Writing support and the task overview figure.
-- Enhancing model safety through pretraining data filtering
-- Cost-effective constitutional classifiers via representation re-use
-- Unsupervised elicitation of language models
-
-### Articles
-Heading: Articles for Nebius Science
-Line: I read new research and write about what it actually found.
-
+Sub-heading: Articles for Nebius Science
+(small, muted) I read new research and write about what it actually found.
 - July 8, 2026 — ICML 2026: Papers That Matter
   Standout papers from Seoul, sorted into five research categories. Co-written with Arseniy Sokolov.
 - June 23, 2026 — The Web Has a New Reader
@@ -154,9 +138,49 @@ Line: I read new research and write about what it actually found.
 
 Link: More at Nebius Science →
 
+Sub-heading: Threads for Palisade Research
+(small, muted) Threads and figures, written with the researchers.
+- 2026 — Shutdown resistance in LLM-controlled robots
+  1.3M views.
+- 2025 — AI is as good at hacking as at math competitions
+  107K views.
+- 2025 — Network hacking demo
+  87K views.
+- 2025 — Multi-stage AI hacking
+
+### Essays
+Label: Written
+Heading: Essays on Substack
+Line: What living with AI does to us. Grief, friendship, attention, consent.
+(The essay list loads automatically from Substack.)
+Link: All articles on Substack →
+Subscribe form.
+
+### Edited
+Label: Edited
+Heading: Things I edited or contributed to
+Line: Papers and essays by other people. I did the editing, figures, and feedback; the research and the arguments are theirs.
+
+Sub-heading: Anthropic · 2024–2025
+(small, muted) Editing and figures on each, unless noted.
+- 2024 — Alignment faking in large language models
+  Plus formatting for release.
+- 2025 — SHADE-Arena: Evaluating sabotage and monitoring in LLM agents
+  Figures and draft feedback.
+- 2025 — Inverse scaling in test-time compute
+  Writing support and the task overview figure.
+- 2025 — Enhancing model safety through pretraining data filtering
+- 2025 — Cost-effective constitutional classifiers via representation re-use
+- 2025 — Unsupervised elicitation of language models
+
+Sub-heading: Foresight Institute · 2026
+- 2026 — Open Science Needs Open Compute
+  Editorial rewrite of Allison Duettmann's essay on why independent science depends on compute, not just funding.
+
 ### Papers
 Label: Academic publications
 Heading: Papers
+Line: From my years as a researcher. First author where marked.
 - ICLR 2020 · First author — Locality and Compositionality in Zero-Shot Learning
   How locality and compositionality relate to generalisation in zero-shot learning.
 - NeurIPS 2019 workshop · First author — Mutual Information heatmaps as a tool for interpretability
@@ -166,14 +190,6 @@ Heading: Papers
   Contributing author; grew out of CVPR/ECCV/ICCV workshops I co-organised.
 
 Link: Full list on Google Scholar →
-
-### Essays
-Label: Essays
-Heading: On Substack
-Line: What living with AI does to us. Grief, friendship, attention, consent.
-(The essay list loads automatically from Substack.)
-Link: All articles on Substack →
-Subscribe form.
 
 ### Meta
 Title: Work — Linda Petrini
