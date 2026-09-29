@@ -26,7 +26,7 @@ Heading: What I do
    You have results, plots, and a draft nobody outside the team can follow. I turn it into a paper, a report, or a thread that lands and stays true to what you found. Alignment Faking, SHADE-Arena, the Secure AI Tech Tree, and the robot-dog thread.
    Link: See the work →
 2. Research coaching (links to Contact)
-   For researchers with results and no draft, or ideas and no plan. We work out what the claim is, what to run next, and what to drop, and I keep the project moving until it's done. I led a research team at Google Brain; this is the part I'm good at. For the tangent-prone, and the ones with a thousand plots.
+   For researchers with results and no draft, or ideas and no plan. We work out what the claim is, what to run next, and what to drop, and I keep the project moving until it's done. I coordinated a research team at Google Brain; this is the part I'm good at. For the tangent-prone, and the ones with a thousand plots.
    Link: Email me →
 
 ### Selected work
@@ -58,7 +58,7 @@ Link: Everything else →
 ### The short version
 Heading: How I got here
 
-I trained as a mathematician, then as an AI researcher. At Google Brain I led a team of computer scientists and biologists using interpretability tools to read the epigenome. My master's thesis became an ICLR paper. I was a decent researcher. I was a better explainer.
+I trained as a mathematician, then as an AI researcher. At Google Brain I coordinated a team of computer scientists and biologists using interpretability tools to read the epigenome. My master's thesis became an ICLR paper. I was a decent researcher. I was a better explainer.
 
 In 2023 I left my PhD and started writing full time. Anthropic brought me in to edit and draw figures for papers like Alignment Faking. Palisade Research had me sit with the researchers, read the eval logs, and turn hacking demos into threads. Foresight Institute asked me to map the whole field of secure AI, from concept to launch.
 
