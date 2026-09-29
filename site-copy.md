@@ -29,12 +29,6 @@ Heading: What I do
    For researchers with results and no draft, or ideas and no plan. A standing weekly call where we decide what the claim is, what to run next, and what to write down. For the tangent-prone, and the ones with a thousand plots.
    Link: Email me →
 
-How it works (centered block under the two cards)
-1. Send me the draft and the deadline.
-2. Within two days you get a read on what's blocking it and a quote.
-3. We work in your doc, with your authors, until it ships.
-(small, muted) Pre-publication drafts stay confidential.
-
 ### Selected work
 Label: Selected work
 Heading: Seven pieces
