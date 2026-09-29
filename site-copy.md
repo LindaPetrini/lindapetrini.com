@@ -106,7 +106,7 @@ Description: Technical writer for AI research labs. Papers, reports, and explain
 
 ### Page hero
 Label: Work
-Heading: Everything since 2019, grouped by what I did.
+Heading: Writing and editing since 2019
 Line: Articles, reports, papers, and essays. The CV has the formal version.
 Button: Download CV (PDF)
 
@@ -125,6 +125,16 @@ Sub-heading: Reports
 - Bezos Earth Fund · 2024 — AI for Climate and Nature workshop report
   Wrote and edited the full report.
 
+Sub-heading: Threads for Palisade Research
+(small, muted) Threads and figures, written with the researchers.
+- 2026 — Shutdown resistance in LLM-controlled robots
+  1.3M views.
+- 2025 — AI is as good at hacking as at math competitions
+  107K views.
+- 2025 — Network hacking demo
+  87K views.
+- 2025 — Multi-stage AI hacking
+
 Sub-heading: Articles for Nebius Science
 (small, muted) I read new research and write about what it actually found.
 - July 8, 2026 — ICML 2026: Papers That Matter
@@ -137,16 +147,6 @@ Sub-heading: Articles for Nebius Science
   Télécom SudParis researchers argue toxicity detection has measured the wrong thing for a decade.
 
 Link: More at Nebius Science →
-
-Sub-heading: Threads for Palisade Research
-(small, muted) Threads and figures, written with the researchers.
-- 2026 — Shutdown resistance in LLM-controlled robots
-  1.3M views.
-- 2025 — AI is as good at hacking as at math competitions
-  107K views.
-- 2025 — Network hacking demo
-  87K views.
-- 2025 — Multi-stage AI hacking
 
 ### Essays
 Label: Written
