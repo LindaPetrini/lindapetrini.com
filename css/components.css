@@ -166,17 +166,53 @@
   display: block;
 }
 
+/* Six items, each a logo with its name underneath: two columns on narrow
+   screens, two rows of three from 480px up. */
 .hero__logo-bar__logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 480px) {
+  .hero__logo-bar__logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.hero__logo-bar__item {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-6) var(--space-8);
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/* Every logo sits in a box of the same height, so the names below share a line. */
+.hero__logo-bar__item .logo-bar__logo {
+  height: 28px;
+  max-width: 100%;
+}
+
+.hero__logo-bar__name {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: var(--leading-snug);
+  color: var(--color-text-muted);
 }
 
 .hero__logo-bar__logos .logo-bar__logo img,
 .hero__logo-bar__logos img {
   height: 28px;
   width: auto;
+  max-width: 100%;
   filter: grayscale(1) opacity(0.4);
   transition: filter var(--transition-base);
 }
@@ -184,7 +220,12 @@
 /* Wide horizontal lockups carry more optical weight per pixel of height than
    the icon marks beside them — trim the height so the row stays balanced. */
 .hero__logo-bar__logos .logo-bar__logo--wide img {
-  height: 22px;
+  height: 20px;
+}
+
+/* Solid single-glyph marks (the Google G) read heavier than the outlined ones. */
+.hero__logo-bar__logos .logo-bar__logo--glyph img {
+  height: 24px;
 }
 
 .hero__logo-bar__logos .logo-bar__logo img:hover,

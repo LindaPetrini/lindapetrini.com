@@ -16,6 +16,7 @@ Intro: Half of what makes a paper land is how it's told. I write papers, reports
 Buttons: Email me / See the work
 
 Logo bar label: Worked with
+Logo bar names: Anthropic · Google Brain · Palisade Research · Foresight Institute · Nebius Science · Bezos Earth Fund
 
 ### What I do
 Label: Two ways to work with me
