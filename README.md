@@ -11,8 +11,8 @@ Worker (`worker/`) that stores subscribe-form emails and proxies the Substack RS
 
 | File | URL | Contents |
 |------|-----|----------|
-| `index.html` | `/` | Hero, "What I do", "The short version" story, six selected pieces, two testimonials, `#contact` (email, CV, rate) |
-| `work.html` | `/work` | Work for research labs (`#labs`), Nebius Science articles (`#articles`), papers (`#papers`), Substack essays feed + subscribe form (`#essays`) |
+| `index.html` | `/` | Hero, "What I do", seven selected pieces ("I wrote these" / "I edited these"), "The short version" story, two testimonials, `#contact` (email, CV, rate) |
+| `work.html` | `/work` | Grouped by role: things I wrote (`#written`: `#reports`, `#threads`, `#articles`), Substack essays feed + subscribe form (`#essays`), things I edited or contributed to (`#edited`), papers (`#papers`) |
 
 All page copy is mirrored in `site-copy.md`.
 
