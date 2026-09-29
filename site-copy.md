@@ -25,8 +25,8 @@ Heading: What I do
 1. Writing and editing (links to Work)
    You have results, plots, and a draft nobody outside the team can follow. I turn it into a paper, a report, or a thread that lands and stays true to what you found. Alignment Faking, SHADE-Arena, the Secure AI Tech Tree, and the robot-dog thread.
    Link: See the work →
-2. Coaching for fellows (links to Contact)
-   Your fellows have results and no draft. A standing weekly call where I help each of them find the claim, outline the paper, and keep writing until it's done. For the tangent-prone, and the ones with a thousand plots.
+2. Research coaching (links to Contact)
+   For researchers with results and no draft, or ideas and no plan. A standing weekly call where we decide what the claim is, what to run next, and what to write down. For the tangent-prone, and the ones with a thousand plots.
    Link: Email me →
 
 How it works (centered block under the two cards)
