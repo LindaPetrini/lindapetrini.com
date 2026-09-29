@@ -11,7 +11,7 @@ Eyebrow: Technical writer for AI research labs
 
 Headline: Your research is good. I make sure people finish reading it.
 
-Intro: Half of what makes a paper land is how it's told. I write papers, reports, and explainers with small research teams: Anthropic, Foresight Institute, Palisade Research. I've worked in AI research for seven years, at Mila and for four years at Google Brain, so I can talk to your researchers in their own terms.
+Intro: Half of what makes a paper land is how it's told. I write papers, reports, and explainers with research teams at Anthropic, Foresight Institute, and Palisade Research. I've worked in AI research for seven years, at Mila and for four years at Google Brain, so I can talk to your researchers in their own terms.
 
 Buttons: Email me / See the work
 
