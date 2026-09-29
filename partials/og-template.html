@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OG template 1200x630</title>
+<!-- Social preview template for lindapetrini.com. Render at 1200x630, device scale 1,
+     served over http next to the site (photo is /images/linda-petrini.jpg). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    background:
+      radial-gradient(ellipse 420px 300px at 2% 8%, rgba(237, 200, 200, 0.75), rgba(237, 200, 200, 0) 70%),
+      radial-gradient(ellipse 380px 260px at 46% 100%, rgba(240, 208, 208, 0.7), rgba(240, 208, 208, 0) 70%),
+      radial-gradient(ellipse 360px 260px at 100% 100%, rgba(240, 212, 212, 0.6), rgba(240, 212, 212, 0) 70%),
+      linear-gradient(100deg, #F8ECEA 0%, #FBF4F1 45%, #FBF6F2 70%, #F9EFEC 100%);
+    -webkit-font-smoothing: antialiased;
+  }
+  .eyebrow {
+    position: absolute; left: 80px; top: 226px;
+    font-family: 'Jost', sans-serif; font-weight: 400; font-size: 19px; line-height: 24px;
+    letter-spacing: 0.2em; text-transform: uppercase; color: #C07878; white-space: nowrap;
+  }
+  .name {
+    position: absolute; left: 79px; top: 261px;
+    font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 104px; line-height: 130px;
+    letter-spacing: -0.02em; color: #2C1810; white-space: nowrap;
+  }
+  .url {
+    position: absolute; left: 80px; top: 557px;
+    font-family: 'Jost', sans-serif; font-weight: 400; font-size: 18px; line-height: 24px;
+    letter-spacing: 0.08em; color: #9B7F7F;
+  }
+  .photo {
+    position: absolute; left: 740px; top: 78px; width: 380px; height: 475px;
+    border-radius: 4px; overflow: hidden;
+    box-shadow: 0 18px 44px rgba(44, 24, 16, 0.14), 0 2px 6px rgba(44, 24, 16, 0.06);
+  }
+  .photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+</style>
+</head>
+<body>
+  <div class="eyebrow">Technical writer for AI research</div>
+  <div class="name">Linda Petrini</div>
+  <div class="url">lindapetrini.com</div>
+  <div class="photo"><img src="http://localhost:8000/images/linda-petrini.jpg" alt=""></div>
+</body>
+</html>
