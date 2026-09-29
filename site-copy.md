@@ -35,17 +35,6 @@ How it works (centered block under the two cards)
 3. We work in your doc, with your authors, until it ships.
 (small, muted) Pre-publication drafts stay confidential.
 
-### The short version
-Heading: How I got here
-
-I trained as a mathematician, then as an AI researcher. At Google Brain I led a team of computer scientists and biologists using interpretability tools to read the epigenome. My master's thesis became an ICLR paper. I was a decent researcher. I was a better explainer.
-
-In 2023 I left my PhD and started writing full time. Anthropic brought me in to edit and draw figures for papers like Alignment Faking. Palisade Research had me sit with the researchers, read the eval logs, and turn hacking demos into threads. Foresight Institute asked me to map the whole field of secure AI, from concept to launch.
-
-Today I work with a handful of labs at a time: papers with Anthropic, articles for Nebius Science, and a weekly call with researchers who need a second brain. On Substack I write about the part that never makes it into the paper: what living with these systems does to us.
-
-(small, muted) I live in rural Italy. I teach acroyoga. I answer email.
-
 ### Selected work
 Label: Selected work
 Heading: Seven pieces
@@ -71,6 +60,17 @@ Group label: I edited these
    Allison Duettmann's essay on why independent science depends on compute, not just funding. Editorial rewrite.
 
 Link: Everything else →
+
+### The short version
+Heading: How I got here
+
+I trained as a mathematician, then as an AI researcher. At Google Brain I led a team of computer scientists and biologists using interpretability tools to read the epigenome. My master's thesis became an ICLR paper. I was a decent researcher. I was a better explainer.
+
+In 2023 I left my PhD and started writing full time. Anthropic brought me in to edit and draw figures for papers like Alignment Faking. Palisade Research had me sit with the researchers, read the eval logs, and turn hacking demos into threads. Foresight Institute asked me to map the whole field of secure AI, from concept to launch.
+
+Today I work with a handful of labs at a time: papers with Anthropic, articles for Nebius Science, and a weekly call with researchers who need a second brain. On Substack I write about the part that never makes it into the paper: what living with these systems does to us.
+
+(small, muted) I live in rural Italy. I teach acroyoga. I answer email.
 
 ### Testimonial
 "In the 10 years I have been involved in hiring contractors for various technical writing at Foresight, Linda has been the best writer I've worked with. […] Even if the topic is technically complex, and outside her domain knowledge, she communicates concepts correctly, effectively and with an interesting lens."
