@@ -5,34 +5,37 @@ At the start of any site or code session, confirm the repo and branch with `git 
 
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
-Linda is an AI researcher, technical writer, and coach with 7+ years in ML/AI safety.
-Pages: Home (index.html — story, selected work, testimonial, #contact) and Work (work.html — Nebius articles, research communication for labs, papers, Substack essays). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
-Target audience: researchers, organisations, individuals interested in AI safety/policy; coaching clients.
+Positioning: "Technical writer for AI research labs". Seven years as a researcher at Google Brain and Mila; works with Anthropic, Foresight Institute, Palisade Research, Nebius Science, and the Bezos Earth Fund.
+Pages: Home (index.html — hero, "What I do" + "How it works", story, six selected pieces, two testimonials, #contact with email, CV, and rate) and Work (work.html — #labs, #articles for Nebius Science, #papers, #essays Substack feed + subscribe form). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
+Target audience: research lab leads arriving by personal referral.
+All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
 
 ## Tech Stack
 - Static HTML/CSS — no build step, no framework, no JavaScript bundler
 - CSS: custom design system with tokens, modular CSS files (main.css imports chain)
-- JS: one file (main.js) — hamburger nav, email obfuscation, hash redirects
+- JS: js/main.js (hamburger nav, email obfuscation, hash redirects, subscribe form) plus small inline scripts in the pages (nav scroll shadow; Substack feed loader on work.html)
 - Analytics: Umami self-hosted (analytics.lindapetrini.com, privacy-friendly, no cookie banner)
-- Booking: Cal.com (https://cal.com/lindapetrini/20min)
-- Newsletter/waitlist: Beehiiv embed
-- Fonts: Inter (variable) + Newsreader (variable) — WOFF2, self-hosted in /fonts/
-- Hosting target: Cloudflare Pages (free tier, auto-deploy from GitHub)
+- Subscribe form + Substack feed proxy: Cloudflare Worker at subscribe.lindapetrini.workers.dev (source in worker/, emails stored in a KV namespace)
+- Fonts: Cormorant Garamond + Jost, loaded from the Google Fonts CDN in each page's `<head>`. The self-hosted WOFF2 files in /fonts/ (Inter, Newsreader) are present but not used by the live pages.
+- Hosting: Cloudflare Pages (auto-deploy from GitHub on push to main)
 - Dev server: python3 -m http.server 8000 OR npx serve .
 - Agent environment: Docker (node:20-bookworm-slim + Claude Code), workspace at /workspace
 
 ## Project Structure
 See README.md for full file tree. Key files:
 - index.html, work.html — the two live pages
+- site-copy.md — plain-text mirror of all page copy
 - _redirects — Cloudflare Pages 301s for the retired about/writing/contact/coaching URLs
 - css/main.css — CSS entry point (@import chain)
-- css/tokens.css — design tokens (colours: pink scheme, fonts, spacing)
-- js/main.js — nav, email assembly, redirects
-- images/ — linda-petrini.jpg/webp (hero photo), og.jpg (social preview), logos/
-- fonts/ — inter-variable.woff2, newsreader-variable.woff2 (not yet present)
-- cv/ — linda-petrini-cv.pdf (not yet present)
+- css/tokens.css — design tokens (colours: warm cream/rose scheme, fonts, spacing)
+- js/main.js — nav, email assembly, redirects, subscribe form
+- images/ — linda-petrini.jpg/webp (hero photo), og.jpg (social preview), favicon.svg, logos/
+- fonts/ — inter-variable.woff2, newsreader-variable.woff2, newsreader-italic-variable.woff2 (present, unused)
+- cv/ — linda-petrini-cv.pdf (linked from both pages)
+- worker/ — Cloudflare Worker for the subscribe form and Substack feed proxy
 - partials/ — reference copies of nav/footer HTML
 - sitemap.xml, robots.txt
+- Not part of the two-page site but in the repo and deployed: dateme/ (redirect stub to date.lindapetrini.com), playwithme/ (Twine game), insights.html, resources/, design-1..5.html, linkedin-banner.html, old_website/
 
 ## Development Workflow
 ```bash
@@ -48,9 +51,10 @@ docker exec -it claude-website bash  # shell in container
 ```
 
 ## SEO & Content Goals
-- Primary keywords: "AI researcher", "AI safety researcher", "Linda Petrini", "AI coach"
-- Secondary: "digital sovereignty", "AI technical writing", "AI policy research"
-- Structured data: Person JSON-LD on index.html
+- Clients arrive by referral, so search is secondary; the pages mainly need to read well in link previews and name searches
+- Primary keywords: "Linda Petrini", "technical writer for AI research labs", "AI technical writer"
+- Secondary: "AI safety technical writing", "research communication", "science communication for AI labs"
+- Structured data: Person JSON-LD on index.html (jobTitle "Technical Writer")
 - All pages: canonical URLs, OG/Twitter meta, descriptive titles
 - Target: Lighthouse ≥90 Performance, ≥95 SEO/Accessibility on mobile
 - Sitemap submitted to Google Search Console after launch

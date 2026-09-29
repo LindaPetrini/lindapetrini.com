@@ -1,6 +1,9 @@
 # Linda Petrini — Personal Website
 
-Static HTML/CSS site. No build step, no framework, no backend.
+Positioning: technical writer for AI research labs.
+
+Static HTML/CSS site. No build step, no framework. The only backend is a small Cloudflare
+Worker (`worker/`) that stores subscribe-form emails and proxies the Substack RSS feed.
 
 ---
 
@@ -8,12 +11,18 @@ Static HTML/CSS site. No build step, no framework, no backend.
 
 | File | URL | Contents |
 |------|-----|----------|
-| `index.html` | `/` | Hero, "The short version" story, six selected pieces, testimonial, `#contact` (email + CV) |
-| `work.html` | `/work` | Nebius Science articles (`#articles`), research communication for labs (`#labs`), papers (`#papers`), Substack essays feed + subscribe form (`#essays`) |
+| `index.html` | `/` | Hero, "What I do" + "How it works", "The short version" story, six selected pieces, two testimonials, `#contact` (email, CV, rate) |
+| `work.html` | `/work` | Work for research labs (`#labs`), Nebius Science articles (`#articles`), papers (`#papers`), Substack essays feed + subscribe form (`#essays`) |
+
+All page copy is mirrored in `site-copy.md`.
 
 Retired pages (`/about`, `/writing`, `/contact`, `/coaching`, with and without `.html`)
 301 to the new locations via `_redirects` (Cloudflare Pages format). Old hash links on the
-home page (`/#about`, `/#writing`, `/#work`, `/#coaching`) are handled in `js/main.js`.
+home page (`/#about`, `/#writing`, `/#work`, `/#coaching`, `/#mentorship`) are handled in `js/main.js`.
+
+Also in the repo and deployed, but not part of the two-page site: `dateme/` (redirect to
+date.lindapetrini.com), `playwithme/` (Twine game), `insights.html`, `resources/`,
+`design-1..5.html`, `linkedin-banner.html`, `old_website/`.
 
 ---
 
@@ -31,6 +40,10 @@ The email address is assembled at runtime from the `data-email-user`, `data-emai
 - `images/og.jpg` — social sharing preview (1200×630px)
 - `images/logos/` — logo bar SVGs
 
+### Fonts
+Cormorant Garamond and Jost load from the Google Fonts CDN (`<link>` in each page's `<head>`).
+The WOFF2 files in `fonts/` (Inter, Newsreader) are present but not used by the live pages.
+
 ### Analytics
 Umami, self-hosted at `analytics.lindapetrini.com`. The script tag is in the `<head>` of both pages.
 After a content change: submit `sitemap.xml` to Google Search Console.
@@ -39,9 +52,8 @@ After a content change: submit `sitemap.xml` to Google Search Console.
 
 ## Development
 
-Open any HTML file directly in your browser — no server needed.
-
-Or serve locally with Python:
+Asset paths are root-relative (`/css/main.css`), so serve the folder rather than opening
+the HTML files directly. With Python:
 ```bash
 python3 -m http.server 8000
 # Open http://localhost:8000
@@ -57,16 +69,8 @@ npx serve .
 
 ## Hosting
 
-Recommended: **Cloudflare Pages** (free tier, unlimited bandwidth)
-
-1. Push this repo to GitHub
-2. Connect GitHub repo to Cloudflare Pages (dashboard.cloudflare.com → Pages → Create)
-3. Build command: *(leave blank — no build step)*
-4. Output directory: `/` (root)
-5. Add custom domain: `lindapetrini.com`
-6. SSL is automatic
-
-Alternative: **Netlify** — drag and drop the folder at netlify.com/drop
+**Cloudflare Pages**, connected to the GitHub repo. Pushing to `main` on origin deploys
+the live site. No build command; output directory is the repo root.
 
 ---
 
@@ -95,7 +99,8 @@ Alternative: **Netlify** — drag and drop the folder at netlify.com/drop
 ```
 /
 ├── index.html           # Home: story, selected work, contact
-├── work.html            # Work: articles, research communication, papers, essays
+├── work.html            # Work: labs, articles, papers, essays
+├── site-copy.md         # Plain-text mirror of all page copy
 ├── _redirects           # Cloudflare Pages 301s for retired URLs
 ├── css/
 │   ├── main.css         # @import chain entry point
@@ -108,14 +113,15 @@ Alternative: **Netlify** — drag and drop the folder at netlify.com/drop
 │   ├── components.css   # Buttons, cards, testimonials, embeds
 │   └── utilities.css    # Helper classes
 ├── js/
-│   └── main.js          # Hamburger nav, email obfuscation, hash redirects
+│   └── main.js          # Hamburger nav, email obfuscation, hash redirects, subscribe form
 ├── images/
-│   ├── README.md        # Image spec + download instructions
+│   ├── linda-petrini.jpg / .webp, og.jpg, favicon.svg
+│   ├── README.md        # Image spec (written pre-launch)
 │   └── logos/           # Organisation SVG logos
-├── fonts/
-│   └── README.md        # Font download instructions
+├── fonts/               # Inter + Newsreader WOFF2 (present, unused by live pages)
 ├── cv/
-│   └── README.md        # CV upload instructions
+│   └── linda-petrini-cv.pdf
+├── worker/              # Cloudflare Worker: subscribe form + Substack feed proxy
 ├── partials/
 │   ├── nav.html         # Canonical nav (reference copy)
 │   └── footer.html      # Canonical footer (reference copy)
