@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
+/* Avoid a single orphaned word on the last line */
+h1, h2, h3, h4 {
+  text-wrap: pretty;
+}
+
 h1 { font-size: var(--text-4xl); }
 h2 { font-size: var(--text-2xl); }
 h3 { font-size: var(--text-xl);  }
@@ -34,6 +39,7 @@ h4 { font-size: var(--text-lg);  }
 p {
   color: var(--color-text-light);
   line-height: var(--leading-relaxed);
+  text-wrap: pretty;
 }
 
 p + p {
@@ -57,6 +63,7 @@ ul, ol {
 
 li {
   margin-bottom: var(--space-2);
+  text-wrap: pretty;
 }
 
 /* Emphasis */
