@@ -1,6 +1,6 @@
 # Linda Petrini — Personal Website
 
-Positioning: technical writer for AI research labs.
+Positioning: technical writer for AI research.
 
 Static HTML/CSS site. No build step, no framework. The only backend is a small Cloudflare
 Worker (`worker/`) that stores subscribe-form emails and proxies the Substack RSS feed.

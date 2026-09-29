@@ -7,7 +7,7 @@ Edit this file, or rewrite it from scratch. Keep the section markers; I'll put w
 ## HOME (index.html)
 
 ### Hero
-Eyebrow: Technical writer for AI research labs
+Eyebrow: Technical writer for AI research
 
 Headline: Your research is good. I make sure people finish reading it.
 
@@ -93,12 +93,12 @@ Buttons: lindapetrini@gmail.com / Download CV (PDF)
 Small line: Essays go out on Substack when there's something to say. Subscribe.
 
 ### Footer
-Tagline: Technical writer for AI research labs
+Tagline: Technical writer for AI research
 Links: Work · Contact · Twitter · LinkedIn · Substack · Scholar · GitHub
 
 ### Meta (what Google and link previews show)
-Title: Linda Petrini — Technical Writer for AI Research Labs
-Description: Technical writer for AI research labs. Papers, reports, and explainers with Anthropic, Foresight Institute, and Palisade Research. Background in AI research at Google Brain and Mila.
+Title: Linda Petrini — Technical Writer for AI Research
+Description: Technical writer for AI research. Papers, reports, and explainers with Anthropic, Foresight Institute, and Palisade Research. Background in AI research at Google Brain and Mila.
 
 ---
 
@@ -113,7 +113,7 @@ Button: Download CV (PDF)
 ### Written
 Label: Written
 Heading: Things I wrote
-Line: Reports, articles, and threads where the words are mine.
+Line: Reports, threads, and articles where the words are mine.
 
 Sub-heading: Reports
 - Foresight Institute · 2025 — Secure AI Tech Tree
@@ -193,4 +193,4 @@ Link: Full list on Google Scholar →
 
 ### Meta
 Title: Work — Linda Petrini
-Description: Technical writing for AI research labs: reports and papers with Foresight Institute, the Bezos Earth Fund, Palisade Research and Anthropic, articles for Nebius Science, academic papers, and essays on living with AI.
+Description: Technical writing for AI research: reports and papers with Foresight Institute, the Bezos Earth Fund, Palisade Research and Anthropic, articles for Nebius Science, academic papers, and essays on living with AI.
