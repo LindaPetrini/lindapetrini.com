@@ -6,7 +6,7 @@ At the start of any site or code session, confirm the repo and branch with `git 
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
 Positioning: "Technical writer for AI research". Background in AI research at Google Brain and Mila. Current clients (Sept 2026): mostly Anthropic, some Epoch AI. Past clients: Foresight Institute, Palisade Research, Nebius Science, Bezos Earth Fund; describe past work in the past tense.
-Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching), seven selected pieces split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays Substack feed + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
+Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching), selected work split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays Substack feed + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
 Written and edited work must stay visibly separate on both pages.
 Target audience: research leads arriving by personal referral.
 All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.

@@ -30,8 +30,7 @@ Heading: What I do
    Link: Email me →
 
 ### Selected work
-Label: Selected work
-Heading: Seven pieces
+Heading: Selected work
 
 Group label: I wrote these
 
