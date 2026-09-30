@@ -51,6 +51,8 @@ Group label: I edited these
    The paper that caught a frontier model playing along during training. Editing and figures.
 7. Foresight Institute · 2026 — Open Science Needs Open Compute
    Allison Duettmann's essay on why independent science depends on compute, not just funding. Editorial rewrite.
+8. Epoch AI · 2026 — The Plunging Price of Thought
+   The cost of a given level of AI performance has fallen about 47% a quarter since 2023, faster than any earlier technology. Editing.
 
 Link: Everything else →
 
@@ -161,6 +163,10 @@ Sub-heading: Anthropic · 2024–2025
 - 2025 — Enhancing model safety through pretraining data filtering
 - 2025 — Cost-effective constitutional classifiers via representation re-use
 - 2025 — Unsupervised elicitation of language models
+
+Sub-heading: Epoch AI · 2026
+- 2026 — The plunging price of thought
+  The cost of a given level of AI performance has fallen about 47% a quarter since 2023, faster than electricity, compute, batteries, or DNA sequencing ever did. Editing.
 
 Sub-heading: Foresight Institute · 2026
 - 2026 — Open Science Needs Open Compute
