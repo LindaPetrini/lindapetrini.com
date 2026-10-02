@@ -26,7 +26,7 @@ Heading: What I do
    You have results, plots, and a draft nobody outside the team can follow. I turn it into a paper, a report, or a thread that lands and stays true to what you found. Alignment Faking, SHADE-Arena, the Secure AI Tech Tree, and the robot-dog thread.
    Link: See the work →
 2. Research coaching (links to Contact)
-   For researchers with results and no draft, or ideas and no plan. We work out what the claim is, what to run next, and what to drop, and I keep the project moving until it's done. I coordinated a research team at Google Brain; this is the part I'm good at. For the tangent-prone, and the ones with a thousand plots.
+   For researchers with results and no draft, or ideas and no plan. We work out what the claim is, what to run next, and what to drop, and I keep the project moving until it's done. For the tangent-prone, and the ones with a thousand plots.
    Link: Email me →
 
 ### Selected work
