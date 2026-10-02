@@ -6,7 +6,7 @@ At the start of any site or code session, confirm the repo and branch with `git 
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
 Positioning: "Technical writer for AI research". Background in AI research at Google Brain and Mila. Current clients (Sept 2026): mostly Anthropic, some Epoch AI. Past clients: Foresight Institute, Palisade Research, Nebius Science, Bezos Earth Fund; describe past work in the past tense.
-Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching), selected work split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays Substack feed + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs are served by redirect stub HTML files (about.html, writing.html, contact.html, coaching.html); `_redirects` is kept but not honoured by GitHub Pages.
+Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching), selected work split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays hand-curated static list of Substack essays + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs are served by redirect stub HTML files (about.html, writing.html, contact.html, coaching.html); `_redirects` is kept but not honoured by GitHub Pages.
 Written and edited work must stay visibly separate on both pages.
 Target audience: research leads arriving by personal referral.
 All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
@@ -14,9 +14,9 @@ All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
 ## Tech Stack
 - Static HTML/CSS — no build step, no framework, no JavaScript bundler
 - CSS: custom design system with tokens, modular CSS files (main.css imports chain)
-- JS: js/main.js (hamburger nav, email obfuscation, hash redirects, subscribe form) plus small inline scripts in the pages (nav scroll shadow; Substack feed loader on work.html)
+- JS: js/main.js (hamburger nav, email obfuscation, hash redirects, subscribe form) plus small inline scripts in the pages (nav scroll shadow)
 - Analytics: Umami self-hosted (analytics.lindapetrini.com, privacy-friendly, no cookie banner)
-- Subscribe form + Substack feed proxy: Cloudflare Worker at subscribe.lindapetrini.workers.dev (source in worker/, emails stored in a KV namespace)
+- Subscribe form: Cloudflare Worker at subscribe.lindapetrini.workers.dev (source in worker/, emails stored in a KV namespace). The worker also has a Substack feed proxy endpoint, no longer used by the site (essays are a static list in work.html)
 - Fonts: Cormorant Garamond + Jost, loaded from the Google Fonts CDN in each page's `<head>`. The self-hosted WOFF2 files in /fonts/ (Inter, Newsreader) are present but not used by the live pages.
 - Hosting: GitHub Pages (legacy build from main, CNAME lindapetrini.com)
 - Dev server: python3 -m http.server 8000 OR npx serve .
@@ -34,7 +34,7 @@ See README.md for full file tree. Key files:
 - images/ — linda-petrini.jpg/webp (hero photo), og.jpg (social preview), favicon.svg, logos/
 - fonts/ — inter-variable.woff2, newsreader-variable.woff2, newsreader-italic-variable.woff2 (present, unused)
 - cv/ — linda-petrini-cv.pdf (linked from both pages)
-- worker/ — Cloudflare Worker for the subscribe form and Substack feed proxy
+- worker/ — Cloudflare Worker for the subscribe form (its feed proxy endpoint is unused)
 - partials/ — reference copies of nav/footer HTML
 - sitemap.xml, robots.txt
 - Not part of the two-page site but in the repo and deployed: dateme/ (redirect stub to date.lindapetrini.com), playwithme/ (Twine game), insights.html, resources/, design-1..5.html, linkedin-banner.html, old_website/

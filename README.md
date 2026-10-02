@@ -3,7 +3,7 @@
 Positioning: technical writer for AI research.
 
 Static HTML/CSS site. No build step, no framework. The only backend is a small Cloudflare
-Worker (`worker/`) that stores subscribe-form emails and proxies the Substack RSS feed.
+Worker (`worker/`) that stores subscribe-form emails (its Substack feed proxy is no longer used; the essays list is static HTML).
 
 ---
 
@@ -12,7 +12,7 @@ Worker (`worker/`) that stores subscribe-form emails and proxies the Substack RS
 | File | URL | Contents |
 |------|-----|----------|
 | `index.html` | `/` | Hero, "What I do", selected work ("I wrote these" / "I edited these"), "The short version" story, two testimonials, `#contact` (email, CV, rate) |
-| `work.html` | `/work` | Grouped by role: things I wrote (`#written`: `#reports`, `#threads`, `#articles`), Substack essays feed + subscribe form (`#essays`), things I edited or contributed to (`#edited`), papers (`#papers`) |
+| `work.html` | `/work` | Grouped by role: things I wrote (`#written`: `#reports`, `#threads`, `#articles`), hand-curated Substack essays list + subscribe form (`#essays`), things I edited or contributed to (`#edited`), papers (`#papers`) |
 
 All page copy is mirrored in `site-copy.md`.
 
@@ -82,7 +82,7 @@ Pages; the retired URLs are served by redirect stub HTML files.
 - [ ] Open both pages in browser — no broken layouts
 - [ ] Open on a real phone (iOS Safari + Android Chrome)
 - [ ] Test hamburger nav: opens, closes, keyboard works
-- [ ] Test the Substack essays feed and subscribe form on the Work page
+- [ ] Test the Substack essay links and subscribe form on the Work page
 - [ ] Test email link assembles correctly in the home `#contact` section
 - [ ] Test CV download
 - [ ] Check all publication links open correct pages
@@ -125,7 +125,7 @@ Pages; the retired URLs are served by redirect stub HTML files.
 ├── fonts/               # Inter + Newsreader WOFF2 (present, unused by live pages)
 ├── cv/
 │   └── linda-petrini-cv.pdf
-├── worker/              # Cloudflare Worker: subscribe form + Substack feed proxy
+├── worker/              # Cloudflare Worker: subscribe form (feed proxy unused)
 ├── partials/
 │   ├── nav.html         # Canonical nav (reference copy)
 │   └── footer.html      # Canonical footer (reference copy)
