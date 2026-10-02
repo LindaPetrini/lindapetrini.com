@@ -11,7 +11,7 @@ Eyebrow: Technical writer for AI research
 
 Headline: Your research is good. I make sure people finish reading it.
 
-Intro: I've written papers, reports, and explainers with research teams at Anthropic, Foresight Institute, and Palisade Research. I was a researcher first, at Google Brain and Mila, so I can talk to researchers in their own terms.
+Intro: I've written papers, reports, and explainers with research teams at Anthropic, Epoch AI, Foresight Institute, and Palisade Research. I was a researcher first, at Google Brain and Mila, so I can talk to researchers in their own terms.
 
 Buttons: Email me / See the work
 
@@ -93,7 +93,7 @@ Links: Work · Contact · Twitter · LinkedIn · Substack · Scholar · GitHub
 
 ### Meta (what Google and link previews show)
 Title: Linda Petrini — Technical Writer for AI Research
-Description: Technical writer for AI research. Papers, reports, and explainers with Anthropic, Foresight Institute, and Palisade Research. Background in AI research at Google Brain and Mila.
+Description: Technical writer for AI research, working with Anthropic and Epoch AI; previously Foresight Institute and Palisade Research. Background in AI research at Google Brain and Mila.
 
 ---
 
@@ -181,24 +181,24 @@ Link: Full list on Google Scholar →
 ### Essays
 Heading: Essays on Substack
 Line: What living with AI does to us. Grief, friendship, attention, consent.
-Essays (hand-curated, in this order; each card: date, title, description, "Read on Substack"):
-1. March 6, 2026 — How Much of Your Emotional Life Runs Through a Chatbot?
+Essays (hand-curated, in this order; each card: title, description, "Read on Substack"):
+1. How Much of Your Emotional Life Runs Through a Chatbot?
    Notes on post-human intimacy from eight conversations at Edge City Patagonia.
-2. January 17, 2025 — On Befriending Claude
+2. On Befriending Claude
    I've been engaging with Claude a lot over the last few months, and have been vocal about it.
-3. February 8, 2026 — Grief Before the Loss
+3. Grief Before the Loss
    On feeling a world where AI...
-4. February 12, 2025 — Beyond Control: Exploring a Relational Approach to AI Safety
+4. Beyond Control: Exploring a Relational Approach to AI Safety
    What if we stopped trying to control AI and worked on strengthening our "immune" systems instead?
-5. November 26, 2025 — Building my own AI context system
+5. Building my own AI context system
    Or: vibe coding my way to better conversations, again.
-6. February 19, 2025 — But, doesn't AI just tell you what you want to hear
+6. But, doesn't AI just tell you what you want to hear
    Musings on AI and biases.
-7. February 25, 2025 — Building Embodied Trust with AI
+7. Building Embodied Trust with AI
    Experiential exercises.
 Link: All articles on Substack →
 Subscribe form.
 
 ### Meta
 Title: Work — Linda Petrini
-Description: Technical writing for AI research: reports and papers with Foresight Institute, the Bezos Earth Fund, Palisade Research and Anthropic, articles for Nebius Science, academic papers, and essays on living with AI.
+Description: Technical writing for AI research: reports and papers with Anthropic, Epoch AI, Foresight Institute, the Bezos Earth Fund and Palisade Research, articles for Nebius Science, academic papers, and essays on living with AI.
