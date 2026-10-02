@@ -141,27 +141,6 @@ Sub-heading: Articles for Nebius Science
 
 Link: More at Nebius Science →
 
-### Essays
-Heading: Essays on Substack
-Line: What living with AI does to us. Grief, friendship, attention, consent.
-Essays (hand-curated, in this order; each card: date, title, description, "Read on Substack"):
-1. March 6, 2026 — How Much of Your Emotional Life Runs Through a Chatbot?
-   Notes on post-human intimacy from eight conversations at Edge City Patagonia.
-2. January 17, 2025 — On Befriending Claude
-   I've been engaging with Claude a lot over the last few months, and have been vocal about it.
-3. February 8, 2026 — Grief Before the Loss
-   On feeling a world where AI...
-4. February 12, 2025 — Beyond Control: Exploring a Relational Approach to AI Safety
-   What if we stopped trying to control AI and worked on strengthening our "immune" systems instead?
-5. November 26, 2025 — Building my own AI context system
-   Or: vibe coding my way to better conversations, again.
-6. February 19, 2025 — But, doesn't AI just tell you what you want to hear
-   Musings on AI and biases.
-7. February 25, 2025 — Building Embodied Trust with AI
-   Experiential exercises.
-Link: All articles on Substack →
-Subscribe form.
-
 ### Edited
 Heading: Things I edited or contributed to
 Line: The research and the arguments are theirs. I did the editing, figures, and feedback.
@@ -198,6 +177,27 @@ Line: From my years as a researcher. First author where marked.
   Contributing author; grew out of CVPR/ECCV/ICCV workshops I co-organised.
 
 Link: Full list on Google Scholar →
+
+### Essays
+Heading: Essays on Substack
+Line: What living with AI does to us. Grief, friendship, attention, consent.
+Essays (hand-curated, in this order; each card: date, title, description, "Read on Substack"):
+1. March 6, 2026 — How Much of Your Emotional Life Runs Through a Chatbot?
+   Notes on post-human intimacy from eight conversations at Edge City Patagonia.
+2. January 17, 2025 — On Befriending Claude
+   I've been engaging with Claude a lot over the last few months, and have been vocal about it.
+3. February 8, 2026 — Grief Before the Loss
+   On feeling a world where AI...
+4. February 12, 2025 — Beyond Control: Exploring a Relational Approach to AI Safety
+   What if we stopped trying to control AI and worked on strengthening our "immune" systems instead?
+5. November 26, 2025 — Building my own AI context system
+   Or: vibe coding my way to better conversations, again.
+6. February 19, 2025 — But, doesn't AI just tell you what you want to hear
+   Musings on AI and biases.
+7. February 25, 2025 — Building Embodied Trust with AI
+   Experiential exercises.
+Link: All articles on Substack →
+Subscribe form.
 
 ### Meta
 Title: Work — Linda Petrini
