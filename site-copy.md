@@ -103,6 +103,7 @@ Description: Technical writer for AI research, working with Anthropic and Epoch 
 Label: Work
 Heading: Writing and editing since 2019
 Line: Articles, reports, papers, and essays. The CV has the formal version.
+On this page: Things I wrote · Things I edited · Papers · Essays on Substack
 Button: Download CV (PDF)
 
 ### Written
