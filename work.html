@@ -224,7 +224,7 @@
       </div>
     </section>
 
-    <!-- WRITTEN: ESSAYS — Substack feed -->
+    <!-- WRITTEN: ESSAYS — hand-curated Substack list -->
     <section class="section section--compact" id="essays" aria-labelledby="essays-heading">
       <div class="container">
 
@@ -236,7 +236,48 @@
         </div>
 
         <div class="article-grid article-grid--compact" id="article-grid">
-          <p style="grid-column:1/-1;text-align:center;color:var(--color-text-muted);">Loading articles...</p>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-03-06">March 6, 2026</time>
+            <h3 class="article-card__title">How Much of Your Emotional Life Runs Through a Chatbot?</h3>
+            <p class="article-card__desc">Notes on post-human intimacy from eight conversations at Edge City Patagonia.</p>
+            <a href="https://lindapetrini.substack.com/p/how-much-of-your-emotional-life-runs" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2025-01-17">January 17, 2025</time>
+            <h3 class="article-card__title">On Befriending Claude</h3>
+            <p class="article-card__desc">I&rsquo;ve been engaging with Claude a lot over the last few months, and have been vocal about it.</p>
+            <a href="https://lindapetrini.substack.com/p/on-befriending-claude" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2026-02-08">February 8, 2026</time>
+            <h3 class="article-card__title">Grief Before the Loss</h3>
+            <p class="article-card__desc">On feeling a world where AI...</p>
+            <a href="https://lindapetrini.substack.com/p/grief-before-the-loss" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2025-02-12">February 12, 2025</time>
+            <h3 class="article-card__title">Beyond Control: Exploring a Relational Approach to AI Safety</h3>
+            <p class="article-card__desc">What if we stopped trying to control AI and worked on strengthening our &ldquo;immune&rdquo; systems instead?</p>
+            <a href="https://lindapetrini.substack.com/p/beyond-control-exploring-a-relational" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2025-11-26">November 26, 2025</time>
+            <h3 class="article-card__title">Building my own AI context system</h3>
+            <p class="article-card__desc">Or: vibe coding my way to better conversations, again.</p>
+            <a href="https://lindapetrini.substack.com/p/building-my-own-ai-context-system" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2025-02-19">February 19, 2025</time>
+            <h3 class="article-card__title">But, doesn&rsquo;t AI just tell you what you want to hear</h3>
+            <p class="article-card__desc">Musings on AI and biases.</p>
+            <a href="https://lindapetrini.substack.com/p/but-doesnt-ai-just-tell-you-what" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
+          <div class="article-card">
+            <time class="article-card__date" datetime="2025-02-25">February 25, 2025</time>
+            <h3 class="article-card__title">Building Embodied Trust with AI</h3>
+            <p class="article-card__desc">Experiential exercises.</p>
+            <a href="https://lindapetrini.substack.com/p/building-embodied-trust-with-ai" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>
+          </div>
         </div>
 
         <div style="text-align:center;margin-top:var(--space-10);">
@@ -430,57 +471,6 @@
         nav.classList.toggle('scrolled', window.scrollY > 12);
       }, { passive: true });
     })();
-  </script>
-  <script>
-  (function () {
-    var grid = document.getElementById('article-grid');
-    if (!grid) return;
-
-    fetch('https://subscribe.lindapetrini.workers.dev/feed')
-      .then(function (r) {
-        if (!r.ok) throw new Error('Feed unavailable');
-        return r.text();
-      })
-      .then(function (xml) {
-        var doc = new DOMParser().parseFromString(xml, 'application/xml');
-        var items = doc.querySelectorAll('item');
-        if (!items.length) throw new Error('No articles found');
-
-        var html = '';
-        items.forEach(function (item) {
-          var title = item.querySelector('title').textContent;
-          if (/newsletter/i.test(title)) return;
-          var link = item.querySelector('link').textContent;
-          var desc = item.querySelector('description');
-          var snippet = '';
-          if (desc) {
-            // description is HTML — extract text, truncate
-            var tmp = document.createElement('div');
-            tmp.innerHTML = desc.textContent;
-            snippet = tmp.textContent.trim().replace(/\s+/g, ' ');
-            if (snippet.length > 200) snippet = snippet.substring(0, 197) + '...';
-          }
-          var pubDate = item.querySelector('pubDate');
-          var dateStr = '';
-          if (pubDate) {
-            var d = new Date(pubDate.textContent);
-            dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-          }
-
-          html += '<div class="article-card">';
-          if (dateStr) html += '<time class="article-card__date">' + dateStr + '</time>';
-          html += '<h3 class="article-card__title">' + title + '</h3>';
-          if (snippet) html += '<p class="article-card__desc">' + snippet + '</p>';
-          html += '<a href="' + link + '" class="article-card__link" target="_blank" rel="noopener" data-umami-event="writing-article">Read on Substack</a>';
-          html += '</div>';
-        });
-
-        grid.innerHTML = html;
-      })
-      .catch(function () {
-        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--color-text-muted);">Could not load articles. <a href="https://lindapetrini.substack.com" target="_blank" rel="noopener">Read on Substack →</a></p>';
-      });
-  })();
   </script>
 </body>
 </html>
