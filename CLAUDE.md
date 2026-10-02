@@ -6,7 +6,7 @@ At the start of any site or code session, confirm the repo and branch with `git 
 ## Project Overview
 Linda Petrini's personal website — lindapetrini.com.
 Positioning: "Technical writer for AI research". Background in AI research at Google Brain and Mila. Current clients (Sept 2026): mostly Anthropic, some Epoch AI. Past clients: Foresight Institute, Palisade Research, Nebius Science, Bezos Earth Fund; describe past work in the past tense.
-Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching), selected work split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays Substack feed + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs 301 via `_redirects`.
+Pages: Home (index.html — hero, "What I do" (writing and editing; research coaching), selected work split into "I wrote these" / "I edited these", story, two testimonials, #contact with email, CV, and rate) and Work (work.html, grouped by role — #written with #reports, #threads, #articles; #essays Substack feed + subscribe form; #edited; #papers). Old /about, /writing, /contact, /coaching URLs are served by redirect stub HTML files (about.html, writing.html, contact.html, coaching.html); `_redirects` is kept but not honoured by GitHub Pages.
 Written and edited work must stay visibly separate on both pages.
 Target audience: research leads arriving by personal referral.
 All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
@@ -18,7 +18,7 @@ All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
 - Analytics: Umami self-hosted (analytics.lindapetrini.com, privacy-friendly, no cookie banner)
 - Subscribe form + Substack feed proxy: Cloudflare Worker at subscribe.lindapetrini.workers.dev (source in worker/, emails stored in a KV namespace)
 - Fonts: Cormorant Garamond + Jost, loaded from the Google Fonts CDN in each page's `<head>`. The self-hosted WOFF2 files in /fonts/ (Inter, Newsreader) are present but not used by the live pages.
-- Hosting: Cloudflare Pages (auto-deploy from GitHub on push to main)
+- Hosting: GitHub Pages (legacy build from main, CNAME lindapetrini.com)
 - Dev server: python3 -m http.server 8000 OR npx serve .
 - Agent environment: Docker (node:20-bookworm-slim + Claude Code), workspace at /workspace
 
@@ -26,7 +26,8 @@ All page copy is mirrored in `site-copy.md`; keep it in sync with the HTML.
 See README.md for full file tree. Key files:
 - index.html, work.html — the two live pages
 - site-copy.md — plain-text mirror of all page copy
-- _redirects — Cloudflare Pages 301s for the retired about/writing/contact/coaching URLs
+- _redirects — Cloudflare Pages-format 301s, not honoured by GitHub Pages (kept for reference)
+- about.html, writing.html, contact.html, coaching.html — redirect stubs for the retired URLs
 - css/main.css — CSS entry point (@import chain)
 - css/tokens.css — design tokens (colours: warm cream/rose scheme, fonts, spacing)
 - js/main.js — nav, email assembly, redirects, subscribe form

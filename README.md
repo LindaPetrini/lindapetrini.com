@@ -17,7 +17,9 @@ Worker (`worker/`) that stores subscribe-form emails and proxies the Substack RS
 All page copy is mirrored in `site-copy.md`.
 
 Retired pages (`/about`, `/writing`, `/contact`, `/coaching`, with and without `.html`)
-301 to the new locations via `_redirects` (Cloudflare Pages format). Old hash links on the
+redirect to the new locations via stub HTML files (`about.html`, `writing.html`,
+`contact.html`, `coaching.html`: meta refresh + `location.replace`). `_redirects` (Cloudflare Pages
+format) is kept but not honoured by GitHub Pages. Old hash links on the
 home page (`/#about`, `/#writing`, `/#work`, `/#coaching`, `/#mentorship`) are handled in `js/main.js`.
 
 Also in the repo and deployed, but not part of the two-page site: `dateme/` (redirect to
@@ -69,8 +71,9 @@ npx serve .
 
 ## Hosting
 
-**Cloudflare Pages**, connected to the GitHub repo. Pushing to `main` on origin deploys
-the live site. No build command; output directory is the repo root.
+**GitHub Pages** (legacy build from `main`, repo root, CNAME lindapetrini.com). Pushing to
+`main` on origin deploys the live site. No build step. `_redirects` is not honoured by GitHub
+Pages; the retired URLs are served by redirect stub HTML files.
 
 ---
 
@@ -84,7 +87,7 @@ the live site. No build command; output directory is the repo root.
 - [ ] Test CV download
 - [ ] Check all publication links open correct pages
 - [ ] Check social links: Twitter, LinkedIn, Substack, Scholar, GitHub
-- [ ] Check `_redirects` works for the retired URLs after deploy
+- [ ] Check the redirect stubs work for the retired URLs after deploy
 - [ ] Verify no `loading="lazy"` on hero image
 - [ ] Verify Umami script appears exactly once per page
 - [ ] Check `robots.txt` does NOT have `Disallow: /`
@@ -101,7 +104,8 @@ the live site. No build command; output directory is the repo root.
 ├── index.html           # Home: story, selected work, contact
 ├── work.html            # Work: labs, articles, papers, essays
 ├── site-copy.md         # Plain-text mirror of all page copy
-├── _redirects           # Cloudflare Pages 301s for retired URLs
+├── _redirects           # Cloudflare-format 301s (not honoured by GitHub Pages)
+├── about.html, writing.html, contact.html, coaching.html  # redirect stubs for retired URLs
 ├── css/
 │   ├── main.css         # @import chain entry point
 │   ├── tokens.css       # Design tokens (colours, fonts, spacing)
