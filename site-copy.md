@@ -159,6 +159,8 @@ Sub-heading: Anthropic · 2024–2025
 - 2025 — Unsupervised elicitation of language models
 
 Sub-heading: Epoch AI · 2026
+- 2026 — How many AI agents could run on the AI chips shipped through 2027?
+  AI chips shipped through 2027 could run tens to hundreds of millions of frontier-model agents at once, matching the working hours of about 140–720 million full-time employees, or billions of agents on more efficient models. Editing.
 - 2026 — The plunging price of thought
   The cost of a given level of AI performance has fallen about 47% a quarter since 2023, faster than electricity, compute, batteries, or DNA sequencing ever did. Editing.
 
