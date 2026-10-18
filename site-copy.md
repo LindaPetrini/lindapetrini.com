@@ -81,8 +81,8 @@ Full text of Jeffrey's reference, for the record:
 
 ### Contact
 Label: Contact
-Heading: If someone sent you here, they probably said "technical writer."
-Line: Close enough. Email me with what you're stuck on. I usually reply within a couple of days.
+Heading: Send me a draft, a paper in progress, or a rough idea of what needs writing.
+Line: I'll tell you within a couple of days whether I can help.
 Line 2: Rates start at €150 an hour. Most engagements run 10 to 35 hours a week for a few months.
 Buttons: lindapetrini@gmail.com / Download CV (PDF)
 Small line: Essays go out on Substack when there's something to say. Subscribe.
